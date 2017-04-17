@@ -1,9 +1,13 @@
 {
   "name": "ember-x-tabs",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A mix of various tab component styles with theme customization options.",
   "keywords": [
-      "ember-addon","tabs", "component", "tab component", "tab"
+    "ember-addon",
+    "tabs",
+    "component",
+    "tab component",
+    "tab"
   ],
   "license": "MIT",
   "author": "Rajasegar Chandran",
