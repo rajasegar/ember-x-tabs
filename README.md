@@ -1,13 +1,18 @@
 # ember-x-tabs
 
-This README outlines the details of collaborating on this Ember addon.
+An Ember component addon for Tab component with various style options and theme customization.
+
+Heavily inspired by this Codrops article:
+https://tympanus.net/codrops/2014/09/02/tab-styles-inspiration/
+
+## Demo
+
+http://careless-poison.surge.sh/
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* `cd ember-x-tabs`
-* `npm install`
-* `bower install`
+* `ember install ember-x-tabs`
+
 
 ## Running
 
