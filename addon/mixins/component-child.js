@@ -7,15 +7,12 @@ const {
 } = Ember;
 
 export default Ember.Mixin.create({
-    _parent: computed(function() {
-        return this.nearestOfType(ComponentParentMixin);
-    }),
 
     _didRegister: false,
 
     _registerWithParent() {
         if(!(this._didRegister)) {
-            let parent = this.get('_parent');
+            let parent = this.get('parent');
             if(parent) {
                 parent.registerChild(this);
                 this._didRegister = true;
@@ -24,7 +21,7 @@ export default Ember.Mixin.create({
     },
 
     _unregisterFromParent() {
-        let parent = this.get('_parent');
+        let parent = this.get('parent');
         if(this._didRegister && parent) {
             parent.removeChild(this);
             this._didRegister = false;
