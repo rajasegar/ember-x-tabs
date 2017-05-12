@@ -8,16 +8,21 @@
 
 An Ember component addon for Tab component with various style options and theme customization.
 
-Heavily inspired by this Codrops article:
-https://tympanus.net/codrops/2014/09/02/tab-styles-inspiration/
+Heavily inspired by this [Codrops article]:(https://tympanus.net/codrops/2014/09/02/tab-styles-inspiration/)
 
 ## Demo
 
-http://careless-poison.surge.sh/
+[Demo](http://careless-poison.surge.sh/)
 
 ## Installation
 
 * `ember install ember-x-tabs`
+
+## Features
+* Declarative
+* 14+ Styles to choose from
+* Fully composable
+* Customizable
 
 ## Usage
 

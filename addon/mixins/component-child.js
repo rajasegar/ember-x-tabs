@@ -1,11 +1,5 @@
 import Ember from 'ember';
 
-import ComponentParentMixin from 'ember-x-tabs/mixins/component-parent';
-
-const {
-    computed
-} = Ember;
-
 export default Ember.Mixin.create({
 
     _didRegister: false,
