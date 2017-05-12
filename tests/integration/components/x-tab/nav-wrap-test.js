@@ -10,13 +10,20 @@ test('it renders', function(assert) {
   // Set any properties with this.set('myProperty', 'value');
   // Handle any actions with this.on('myAction', function(val) { ... });
 
-  this.render(hbs`{{x-tab/nav-wrap}}`);
+
+    let tab = {
+        activeId: '1',
+        selectAction: () => {}
+    };
+    this.set('tab', tab);
+
+  this.render(hbs`{{x-tab/nav-wrap tab=tab}}`);
 
   assert.equal(this.$().text().trim(), '');
 
   // Template block usage:
   this.render(hbs`
-    {{#x-tab/nav-wrap}}
+    {{#x-tab/nav-wrap tab=tab}}
       template block text
     {{/x-tab/nav-wrap}}
   `);

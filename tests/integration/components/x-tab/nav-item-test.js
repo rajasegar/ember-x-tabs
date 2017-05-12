@@ -10,13 +10,17 @@ test('it renders', function(assert) {
   // Set any properties with this.set('myProperty', 'value');
   // Handle any actions with this.on('myAction', function(val) { ... });
 
-  this.render(hbs`{{x-tab/nav-item}}`);
+    this.set('externalAction', () => {
+        assert.equal(true, true);
+    });
+
+  this.render(hbs`{{x-tab/nav-item selectAction=(action externalAction)}}`);
 
   assert.equal(this.$().text().trim(), '');
 
   // Template block usage:
   this.render(hbs`
-    {{#x-tab/nav-item}}
+    {{#x-tab/nav-item selectAction=(action externalAction)}}
       template block text
     {{/x-tab/nav-item}}
   `);
