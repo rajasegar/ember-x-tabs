@@ -13,6 +13,7 @@ export default Ember.Component.extend(ComponentParent, {
     layout,
     classNames:['tabs'],
     classNameBindings: ['tab-style'],
+    'tab-style':'tabs-style-bar', // Default tab style
 
     childPanes: computed.filter('children', function(view) {
         return view instanceof TabPane;

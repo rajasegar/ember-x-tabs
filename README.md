@@ -8,7 +8,7 @@
 
 An Ember component addon for Tab component with various style options and theme customization.
 
-Heavily inspired by this [Codrops article]:(https://tympanus.net/codrops/2014/09/02/tab-styles-inspiration/)
+Heavily inspired by this [Codrops article](https://tympanus.net/codrops/2014/09/02/tab-styles-inspiration/)
 
 ## Demo
 
@@ -33,497 +33,80 @@ Example markup:
 ```hbs
     {{#x-tab  tab-style="tabs-style-bar" as |tab| }}
 
-      {{#tab.pane title="Home" icon="home"}}
-        <h1>Home</h1>
-        <p>This is home content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Archive" icon="box"}}
-        <h1>Archive</h1>
-        <p>This is archive content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Analytics" icon="display"}}
-        <h1>Analytics</h1>
-        <p>This is analytics content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Settings" icon="tools"}}
-        <h1>Settings</h1>
-        <p>This is settings content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Upload" icon="upload"}}
-        <h1>Upload</h1>
-        <p>This is upload content</p>
-      {{/tab.pane}}
-
-    {{/x-tab}}
-```
-
-###  Iconbox style
-
-``` hbs
-
-    {{#x-tab  tab-style="tabs-style-iconbox" as |tab| }}
-
-      {{#tab.pane title="Home" icon="home"}}
-        <h1>Home</h1>
-        <p>This is home content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Archive" icon="box"}}
-        <h1>Archive</h1>
-        <p>This is archive content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Analytics" icon="display"}}
-        <h1>Analytics</h1>
-        <p>This is analytics content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Settings" icon="tools"}}
-        <h1>Settings</h1>
-        <p>This is settings content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Upload" icon="upload"}}
-        <h1>Upload</h1>
-        <p>This is upload content</p>
-      {{/tab.pane}}
-
-    {{/x-tab}}
-```
-
-###  Underline style
-``` hbs
-
-    {{#x-tab  tab-style="tabs-style-underline" as |tab| }}
-
-      {{#tab.pane title="Home" icon="home"}}
-        <h1>Home</h1>
-        <p>This is home content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Archive" icon="box"}}
-        <h1>Archive</h1>
-        <p>This is archive content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Analytics" icon="display"}}
-        <h1>Analytics</h1>
-        <p>This is analytics content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Settings" icon="tools"}}
-        <h1>Settings</h1>
-        <p>This is settings content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Upload" icon="upload"}}
-        <h1>Upload</h1>
-        <p>This is upload content</p>
-      {{/tab.pane}}
-
-    {{/x-tab}}
-```
-
-### Line-triangle style
-
-``` hbs
-
-    {{#x-tab  tab-style="tabs-style-linetriangle" as |tab| }}
-
-      {{#tab.pane title="Home" }}
-        <h1>Home</h1>
-        <p>This is home content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Archive" }}
-        <h1>Archive</h1>
-        <p>This is archive content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Analytics" }}
-        <h1>Analytics</h1>
-        <p>This is analytics content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Settings" }}
-        <h1>Settings</h1>
-        <p>This is settings content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Upload" }}
-        <h1>Upload</h1>
-        <p>This is upload content</p>
-      {{/tab.pane}}
-
-    {{/x-tab}}
-```
-
-### Topline style
-``` hbs
-
-    {{#x-tab  tab-style="tabs-style-topline" as |tab| }}
-
-      {{#tab.pane title="Home" icon="home"}}
-        <h1>Home</h1>
-        <p>This is home content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Archive" icon="box"}}
-        <h1>Archive</h1>
-        <p>This is archive content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Analytics" icon="display"}}
-        <h1>Analytics</h1>
-        <p>This is analytics content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Settings" icon="tools"}}
-        <h1>Settings</h1>
-        <p>This is settings content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Upload" icon="upload"}}
-        <h1>Upload</h1>
-        <p>This is upload content</p>
-      {{/tab.pane}}
-
-    {{/x-tab}}
-```
-
-### Iconfall style
-``` hbs
-    {{#x-tab  tab-style="tabs-style-iconfall" as |tab| }}
-
-      {{#tab.pane title="Home" icon="home"}}
-        <h1>Home</h1>
-        <p>This is home content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Archive" icon="box"}}
-        <h1>Archive</h1>
-        <p>This is archive content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Analytics" icon="display"}}
-        <h1>Analytics</h1>
-        <p>This is analytics content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Settings" icon="tools"}}
-        <h1>Settings</h1>
-        <p>This is settings content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Upload" icon="upload"}}
-        <h1>Upload</h1>
-        <p>This is upload content</p>
-      {{/tab.pane}}
-
-    {{/x-tab}}
-```
-
-###  Linemove style
-``` hbs
-    {{#x-tab  tab-style="tabs-style-linemove" as |tab| }}
-
-      {{#tab.pane title="Home" icon="home"}}
-        <h1>Home</h1>
-        <p>This is home content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Archive" icon="box"}}
-        <h1>Archive</h1>
-        <p>This is archive content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Analytics" icon="display"}}
-        <h1>Analytics</h1>
-        <p>This is analytics content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Settings" icon="tools"}}
-        <h1>Settings</h1>
-        <p>This is settings content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Upload" icon="upload"}}
-        <h1>Upload</h1>
-        <p>This is upload content</p>
-      {{/tab.pane}}
-
-    {{/x-tab}}
-```
-
-###  Line style
-``` hbs
-    {{#x-tab  tab-style="tabs-style-line" as |tab| }}
-
-      {{#tab.pane title="Home" icon="home"}}
-        <h1>Home</h1>
-        <p>This is home content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Archive" icon="box"}}
-        <h1>Archive</h1>
-        <p>This is archive content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Analytics" icon="display"}}
-        <h1>Analytics</h1>
-        <p>This is analytics content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Settings" icon="tools"}}
-        <h1>Settings</h1>
-        <p>This is settings content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Upload" icon="upload"}}
-        <h1>Upload</h1>
-        <p>This is upload content</p>
-      {{/tab.pane}}
-
-    {{/x-tab}}
-```
-
-### Circle style
-``` hbs
-
-    {{#x-tab  tab-style="tabs-style-circle" as |tab| }}
-
-      {{#tab.pane title="Home" icon="home"}}
-        <h1>Home</h1>
-        <p>This is home content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Archive" icon="box"}}
-        <h1>Archive</h1>
-        <p>This is archive content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Analytics" icon="display"}}
-        <h1>Analytics</h1>
-        <p>This is analytics content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Settings" icon="tools"}}
-        <h1>Settings</h1>
-        <p>This is settings content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Upload" icon="upload"}}
-        <h1>Upload</h1>
-        <p>This is upload content</p>
-      {{/tab.pane}}
-
-    {{/x-tab}}
-```
-
-### Shape style
-``` hbs
-    {{#x-tab  tab-style="tabs-style-shape" as |tab| }}
-
-      {{#tab.pane title="Home" }}
-        <h1>Home</h1>
-        <p>This is home content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Archive" }}
-        <h1>Archive</h1>
-        <p>This is archive content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Analytics" }}
-        <h1>Analytics</h1>
-        <p>This is analytics content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Settings" }}
-        <h1>Settings</h1>
-        <p>This is settings content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Upload" }}
-        <h1>Upload</h1>
-        <p>This is upload content</p>
-      {{/tab.pane}}
-
-    {{/x-tab}}
-```
-
-### Linebox style
-``` hbs
-
-    {{#x-tab  tab-style="tabs-style-linebox" as |tab| }}
-
-      {{#tab.pane title="Home" icon="home"}}
-        <h1>Home</h1>
-        <p>This is home content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Archive" icon="box"}}
-        <h1>Archive</h1>
-        <p>This is archive content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Analytics" icon="display"}}
-        <h1>Analytics</h1>
-        <p>This is analytics content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Settings" icon="tools"}}
-        <h1>Settings</h1>
-        <p>This is settings content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Upload" icon="upload"}}
-        <h1>Upload</h1>
-        <p>This is upload content</p>
-      {{/tab.pane}}
-
-    {{/x-tab}}
-```
-
-### Flip style
-``` hbs
-
-    {{#x-tab  tab-style="tabs-style-flip" as |tab| }}
-
-      {{#tab.pane title="Home" icon="home"}}
-        <h1>Home</h1>
-        <p>This is home content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Archive" icon="box"}}
-        <h1>Archive</h1>
-        <p>This is archive content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Analytics" icon="display"}}
-        <h1>Analytics</h1>
-        <p>This is analytics content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Settings" icon="tools"}}
-        <h1>Settings</h1>
-        <p>This is settings content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Upload"}}
-        <h1>Upload</h1>
-        <p>This is upload content</p>
-      {{/tab.pane}}
-
-    {{/x-tab}}
-``` 
-
-
-### Circle-fill style
-
-``` hbs
-
-    {{#x-tab  tab-style="tabs-style-circlefill" as |tab| }}
-
-      {{#tab.pane title="Home" icon="home"}}
-        <h1>Home</h1>
-        <p>This is home content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Archive" icon="box"}}
-        <h1>Archive</h1>
-        <p>This is archive content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Analytics" icon="display"}}
-        <h1>Analytics</h1>
-        <p>This is analytics content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Settings" icon="tools"}}
-        <h1>Settings</h1>
-        <p>This is settings content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Upload" icon="upload"}}
-        <h1>Upload</h1>
-        <p>This is upload content</p>
-      {{/tab.pane}}
-
-    {{/x-tab}}
-```
-
-### Tzoid style
-``` hbs
-
-    {{#x-tab  tab-style="tabs-style-tzoid" as |tab| }}
-
-      {{#tab.pane title="Home" icon="home"}}
-        <h1>Home</h1>
-        <p>This is home content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Archive" icon="box"}}
-        <h1>Archive</h1>
-        <p>This is archive content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Analytics" icon="display"}}
-        <h1>Analytics</h1>
-        <p>This is analytics content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Settings" icon="tools"}}
-        <h1>Settings</h1>
-        <p>This is settings content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Upload" icon="upload"}}
-        <h1>Upload</h1>
-        <p>This is upload content</p>
-      {{/tab.pane}}
+      {{!-- tab navigation --}}
+      {{#x-tab/navigation}}
+        {{#x-tab/nav-wrap paneId="home" tab=tab}}
+          <i class="icon icon-home"></i>
+          <span>Home</span>
+        {{/x-tab/nav-wrap}}
+        {{#x-tab/nav-wrap paneId="archive" tab=tab}}
+          <i class="icon icon-box"></i>
+          <span>Archive</span>
+        {{/x-tab/nav-wrap}}
+        {{#x-tab/nav-wrap paneId="analytics" tab=tab}}
+          <i class="icon icon-display"></i>
+          <span>Analytics</span>
+        {{/x-tab/nav-wrap}}
+        {{#x-tab/nav-wrap paneId="settings" tab=tab}}
+          <i class="icon icon-tools"></i>
+          <span>Settings</span>
+        {{/x-tab/nav-wrap}}
+        {{#x-tab/nav-wrap paneId="upload" tab=tab}}
+          <i class="icon icon-upload"></i>
+          <span>Upload</span>
+        {{/x-tab/nav-wrap}}
+      {{/x-tab/navigation}}
+
+      {{!-- tab content --}}
+      <div class="content-wrap">
+        {{#tab.pane elementId="home"}}
+          <h1>Home</h1>
+          <p>This is home content</p>
+        {{/tab.pane}}
+
+        {{#tab.pane elementId="archive"}}
+          <h1>Archive</h1>
+          <p>This is archive content</p>
+        {{/tab.pane}}
+        {{#tab.pane elementId="analytics"}}
+          <h1>Analytics</h1>
+          <p>This is analytics content</p>
+        {{/tab.pane}}
+        {{#tab.pane elementId="settings"}}
+          <h1>Settings</h1>
+          <p>This is settings content</p>
+        {{/tab.pane}}
+        {{#tab.pane elementId="upload"}}
+          <h1>Upload</h1>
+          <p>This is upload content</p>
+        {{/tab.pane}}
+      </div>
 
     {{/x-tab}}
     
 ```
 
+## Tab styles
 
-###  Fillup style
-``` hbs
+You can replace the *tab-style* property of the component to any of the following styles to get 
+a different style variation of your tab component.
 
-    {{#x-tab  tab-style="tabs-style-fillup" as |tab| }}
+* tab-style-bar (Default)
+* tab-style-iconbox
+* tab-style-underline
+* tab-style-linetriangle
+* tab-style-topline
+* tab-style-iconfall
+* tab-style-linemove
+* tab-style-line
+* tab-style-circle
+* tab-style-shape
+* tab-style-linebox
+* tab-style-flip
+* tab-style-circlefill
+* tab-style-tzoid
+* tab-style-fillup
 
-      {{#tab.pane title="Home" icon="home"}}
-        <h1>Home</h1>
-        <p>This is home content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Archive" icon="box"}}
-        <h1>Archive</h1>
-        <p>This is archive content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Analytics" icon="display"}}
-        <h1>Analytics</h1>
-        <p>This is analytics content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Settings" icon="tools"}}
-        <h1>Settings</h1>
-        <p>This is settings content</p>
-      {{/tab.pane}}
-
-      {{#tab.pane title="Upload" icon="upload"}}
-        <h1>Upload</h1>
-        <p>This is upload content</p>
-      {{/tab.pane}}
-
-    {{/x-tab}}
-```
 
 
 ## Customization - Theming
