@@ -91,23 +91,21 @@ Example markup:
 You can replace the *tab-style* property of the component to any of the following styles to get 
 a different style variation of your tab component.
 
-* tab-style-bar (Default)
-* tab-style-iconbox
-* tab-style-underline
-* tab-style-linetriangle
-* tab-style-topline
-* tab-style-iconfall
-* tab-style-linemove
-* tab-style-line
-* tab-style-circle
-* tab-style-shape
-* tab-style-linebox
-* tab-style-flip
-* tab-style-circlefill
-* tab-style-tzoid
-* tab-style-fillup
-
-
+* tabs-style-bar (Default)
+* tabs-style-iconbox
+* tabs-style-underline
+* tabs-style-linetriangle
+* tabs-style-topline
+* tabs-style-iconfall
+* tabs-style-linemove
+* tabs-style-line
+* tabs-style-circle
+* tabs-style-shape
+* tabs-style-linebox
+* tabs-style-flip
+* tabs-style-circlefill
+* tabs-style-tzoid
+* tabs-style-fillup
 
 ## Customization - Theming
 
