@@ -15,7 +15,7 @@
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": "https://github.com/rajasegar/ember-x-tabs",
   "scripts": {
     "build": "ember build",
     "start": "ember server",
