@@ -88,7 +88,7 @@ Example markup:
 
 ## Tab styles
 
-You can replace the *tab-style* property of the component to any of the following styles to get 
+You can replace the **tab-style** property of the component to any of the following styles to get 
 a different style variation of your tab component.
 
 * tabs-style-bar (Default)
