@@ -278,3 +278,24 @@ body #cdawrap {
 		display: none;
 	}
 }
+
+.myTabClass nav  {
+    background: lightblue;
+}
+.myTabClass nav ul a {
+    color: lightblue;
+}
+.myTabClass nav ul a:hover {
+    color: steelblue;
+}
+.myTabClass nav ul li.tab-current {
+    background: steelblue;
+}
+.myTabClass nav ul li {
+    background: white;
+    margin: 4px 2px;
+}
+
+.myTabClass nav ul li.tab-current a {
+    color: white;
+}

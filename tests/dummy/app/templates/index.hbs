@@ -1,0 +1,870 @@
+{{outlet}}
+<svg class="hidden">
+	<defs>
+		<path id="tabshape" d="M80,60C34,53.5,64.417,0,0,0v60H80z"/>
+	</defs>
+</svg>
+
+<h1> 1. Bar - Default  style</h1>
+{{!-- Bar - default style --}}
+<section>
+  {{#x-tab tab-style="tabs-style-bar" as |tab|}}
+
+    {{!-- tab navigation --}}
+    {{#x-tab/navigation}}
+      {{#x-tab/nav-wrap paneId="home" tab=tab}}
+        <i class="icon icon-home"></i>
+        <span>Home</span>
+      {{/x-tab/nav-wrap}}
+      {{#x-tab/nav-wrap paneId="archive" tab=tab}}
+        <i class="icon icon-box"></i>
+        <span>Archive</span>
+      {{/x-tab/nav-wrap}}
+      {{#x-tab/nav-wrap paneId="analytics" tab=tab}}
+        <i class="icon icon-display"></i>
+        <span>Analytics</span>
+      {{/x-tab/nav-wrap}}
+      {{#x-tab/nav-wrap paneId="settings" tab=tab}}
+        <i class="icon icon-tools"></i>
+        <span>Settings</span>
+      {{/x-tab/nav-wrap}}
+      {{#x-tab/nav-wrap paneId="upload" tab=tab}}
+        <i class="icon icon-upload"></i>
+        <span>Upload</span>
+      {{/x-tab/nav-wrap}}
+    {{/x-tab/navigation}}
+
+    {{!-- tab content --}}
+    <div class="content-wrap">
+      {{#tab.pane elementId="home"}}
+        <h1>Home</h1>
+        <p>This is home content</p>
+      {{/tab.pane}}
+
+      {{#tab.pane elementId="archive"}}
+        <h1>Archive</h1>
+        <p>This is archive content</p>
+      {{/tab.pane}}
+      {{#tab.pane elementId="analytics"}}
+        <h1>Analytics</h1>
+        <p>This is analytics content</p>
+      {{/tab.pane}}
+      {{#tab.pane elementId="settings"}}
+        <h1>Settings</h1>
+        <p>This is settings content</p>
+      {{/tab.pane}}
+      {{#tab.pane elementId="upload"}}
+        <h1>Upload</h1>
+        <p>This is upload content</p>
+      {{/tab.pane}}
+    </div>
+
+  {{/x-tab}}
+</section>
+
+
+<h1>2. Iconbox</h1>
+
+{{!-- Iconbox  --}}
+<section>
+  {{#x-tab  tab-style="tabs-style-iconbox" as |tab| }}
+
+    {{!-- tab navigation --}}
+    {{#x-tab/navigation}}
+      {{#x-tab/nav-item paneId="home2" active=(eq tab.activeId "home2") selectAction=tab.selectAction}}
+        <i class="icon icon-home"></i>
+        <span>Home</span>
+      {{/x-tab/nav-item}}
+      {{#x-tab/nav-item paneId="archive2" active=(eq tab.activeId "archive2") selectAction=tab.selectAction}}
+        <i class="icon icon-box"></i>
+        <span>Archive</span>
+      {{/x-tab/nav-item}}
+      {{#x-tab/nav-item paneId="analytics2" active=(eq tab.activeId "analytics2") selectAction=tab.selectAction}}
+        <i class="icon icon-display"></i>
+        <span>Analytics</span>
+      {{/x-tab/nav-item}}
+      {{#x-tab/nav-item paneId="settings2" active=(eq tab.activeId "settings2") selectAction=tab.selectAction}}
+        <i class="icon icon-tools"></i>
+        <span>Settings</span>
+      {{/x-tab/nav-item}}
+      {{#x-tab/nav-item paneId="upload2" active=(eq tab.activeId "upload2") selectAction=tab.selectAction}}
+        <i class="icon icon-upload"></i>
+        <span>Upload</span>
+      {{/x-tab/nav-item}}
+    {{/x-tab/navigation}}
+
+    {{!-- tab content --}}
+    <div class="content-wrap">
+      {{#tab.pane elementId="home2"}}
+        <h1>Home</h1>
+        <p>This is home content</p>
+      {{/tab.pane}}
+
+      {{#tab.pane elementId="archive2"}}
+        <h1>Archive</h1>
+        <p>This is archive content</p>
+      {{/tab.pane}}
+      {{#tab.pane elementId="analytics2"}}
+        <h1>Analytics</h1>
+        <p>This is analytics content</p>
+      {{/tab.pane}}
+      {{#tab.pane elementId="settings2"}}
+        <h1>Settings</h1>
+        <p>This is settings content</p>
+      {{/tab.pane}}
+      {{#tab.pane elementId="upload2"}}
+        <h1>Upload</h1>
+        <p>This is upload content</p>
+      {{/tab.pane}}
+    </div>
+
+  {{/x-tab}}
+</section>
+
+<h1>3. Underline</h1>
+{{!-- Underline  --}}
+<section>
+  {{#x-tab  tab-style="tabs-style-underline" as |tab| }}
+
+    {{!-- tab navigation --}}
+    {{#x-tab/navigation}}
+      {{#x-tab/nav-wrap paneId="home3" tab=tab}}
+        <i class="icon icon-home"></i>
+        <span>Home</span>
+      {{/x-tab/nav-wrap}}
+      {{#x-tab/nav-wrap paneId="archive3" tab=tab}}
+        <i class="icon icon-box"></i>
+        <span>Archive</span>
+      {{/x-tab/nav-wrap}}
+      {{#x-tab/nav-wrap paneId="analytics3" tab=tab}}
+        <i class="icon icon-display"></i>
+        <span>Analytics</span>
+      {{/x-tab/nav-wrap}}
+      {{#x-tab/nav-wrap paneId="settings3" tab=tab}}
+        <i class="icon icon-tools"></i>
+        <span>Settings</span>
+      {{/x-tab/nav-wrap}}
+      {{#x-tab/nav-wrap paneId="upload3" tab=tab}}
+        <i class="icon icon-upload"></i>
+        <span>Upload</span>
+      {{/x-tab/nav-wrap}}
+    {{/x-tab/navigation}}
+
+    {{!-- tab content --}}
+    <div class="content-wrap">
+      {{#tab.pane elementId="home3"}}
+        <h1>Home</h1>
+        <p>This is home content</p>
+      {{/tab.pane}}
+
+      {{#tab.pane elementId="archive3"}}
+        <h1>Archive</h1>
+        <p>This is archive content</p>
+      {{/tab.pane}}
+      {{#tab.pane elementId="analytics3"}}
+        <h1>Analytics</h1>
+        <p>This is analytics content</p>
+      {{/tab.pane}}
+      {{#tab.pane elementId="settings3"}}
+        <h1>Settings</h1>
+        <p>This is settings content</p>
+      {{/tab.pane}}
+      {{#tab.pane elementId="upload3"}}
+        <h1>Upload</h1>
+        <p>This is upload content</p>
+      {{/tab.pane}}
+    </div>
+
+  {{/x-tab}}
+</section>
+
+<h1>4. Linetriangle</h1>
+{{!-- Linetriangle  --}}
+<section>
+  {{#x-tab  tab-style="tabs-style-linetriangle" as |tab| }}
+
+    {{!-- tab navigation --}}
+    {{#x-tab/navigation}}
+      {{#x-tab/nav-wrap paneId="home-linetriangle" tab=tab}}
+        <i class="icon icon-home"></i>
+        <span>Home</span>
+      {{/x-tab/nav-wrap}}
+      {{#x-tab/nav-wrap paneId="archive-linetriangle" tab=tab}}
+        <i class="icon icon-box"></i>
+        <span>Archive</span>
+      {{/x-tab/nav-wrap}}
+      {{#x-tab/nav-wrap paneId="analytics-linetriangle" tab=tab}}
+        <i class="icon icon-display"></i>
+        <span>Analytics</span>
+      {{/x-tab/nav-wrap}}
+      {{#x-tab/nav-wrap paneId="settings-linetriangle" tab=tab}}
+        <i class="icon icon-tools"></i>
+        <span>Settings</span>
+      {{/x-tab/nav-wrap}}
+      {{#x-tab/nav-wrap paneId="upload-linetriangle" tab=tab}}
+        <i class="icon icon-upload"></i>
+        <span>Upload</span>
+      {{/x-tab/nav-wrap}}
+    {{/x-tab/navigation}}
+
+    {{!-- tab content --}}
+    <div class="content-wrap">
+      {{#tab.pane elementId="home-linetriangle"}}
+        <h1>Home</h1>
+        <p>This is home content</p>
+      {{/tab.pane}}
+
+      {{#tab.pane elementId="archive-linetriangle"}}
+        <h1>Archive</h1>
+        <p>This is archive content</p>
+      {{/tab.pane}}
+      {{#tab.pane elementId="analytics-linetriangle"}}
+        <h1>Analytics</h1>
+        <p>This is analytics content</p>
+      {{/tab.pane}}
+      {{#tab.pane elementId="settings-linetriangle"}}
+        <h1>Settings</h1>
+        <p>This is settings content</p>
+      {{/tab.pane}}
+      {{#tab.pane elementId="upload-linetriangle"}}
+        <h1>Upload</h1>
+        <p>This is upload content</p>
+      {{/tab.pane}}
+    </div>
+
+  {{/x-tab}}
+</section>
+
+<h1>5. Topline</h1>
+{{!-- Topline  --}}
+<section>
+  {{#x-tab  tab-style="tabs-style-topline" as |tab| }}
+
+    {{!-- tab navigation --}}
+    {{#x-tab/navigation}}
+      {{#x-tab/nav-wrap paneId="hometopline" tab=tab}}
+        <i class="icon icon-home"></i>
+        <span>Home</span>
+      {{/x-tab/nav-wrap}}
+      {{#x-tab/nav-wrap paneId="archivetopline" tab=tab}}
+        <i class="icon icon-box"></i>
+        <span>Archive</span>
+      {{/x-tab/nav-wrap}}
+      {{#x-tab/nav-wrap paneId="analyticstopline" tab=tab}}
+        <i class="icon icon-display"></i>
+        <span>Analytics</span>
+      {{/x-tab/nav-wrap}}
+      {{#x-tab/nav-wrap paneId="settingstopline" tab=tab}}
+        <i class="icon icon-tools"></i>
+        <span>Settings</span>
+      {{/x-tab/nav-wrap}}
+      {{#x-tab/nav-wrap paneId="uploadtopline" tab=tab}}
+        <i class="icon icon-upload"></i>
+        <span>Upload</span>
+      {{/x-tab/nav-wrap}}
+    {{/x-tab/navigation}}
+
+    {{!-- tab content --}}
+    <div class="content-wrap">
+      {{#tab.pane elementId="hometopline"}}
+        <h1>Home</h1>
+        <p>This is home content</p>
+      {{/tab.pane}}
+
+      {{#tab.pane elementId="archivetopline"}}
+        <h1>Archive</h1>
+        <p>This is archive content</p>
+      {{/tab.pane}}
+      {{#tab.pane elementId="analyticstopline"}}
+        <h1>Analytics</h1>
+        <p>This is analytics content</p>
+      {{/tab.pane}}
+      {{#tab.pane elementId="settingstopline"}}
+        <h1>Settings</h1>
+        <p>This is settings content</p>
+      {{/tab.pane}}
+      {{#tab.pane elementId="uploadtopline"}}
+        <h1>Upload</h1>
+        <p>This is upload content</p>
+      {{/tab.pane}}
+    </div>
+
+  {{/x-tab}}
+</section>
+
+<h1>6. Iconfall</h1>
+{{!-- Iconfall  --}}
+<section>
+  {{#x-tab  tab-style="tabs-style-iconfall" as |tab| }}
+
+    {{!-- tab navigation --}}
+    {{#x-tab/navigation}}
+      {{#x-tab/nav-wrap paneId="homeiconfall" tab=tab}}
+        <i class="icon icon-home"></i>
+        <span>Home</span>
+      {{/x-tab/nav-wrap}}
+      {{#x-tab/nav-wrap paneId="archiveiconfall" tab=tab}}
+        <i class="icon icon-box"></i>
+        <span>Archive</span>
+      {{/x-tab/nav-wrap}}
+      {{#x-tab/nav-wrap paneId="analyticsiconfall" tab=tab}}
+        <i class="icon icon-display"></i>
+        <span>Analytics</span>
+      {{/x-tab/nav-wrap}}
+      {{#x-tab/nav-wrap paneId="settingsiconfall" tab=tab}}
+        <i class="icon icon-tools"></i>
+        <span>Settings</span>
+      {{/x-tab/nav-wrap}}
+      {{#x-tab/nav-wrap paneId="uploadiconfall" tab=tab}}
+        <i class="icon icon-upload"></i>
+        <span>Upload</span>
+      {{/x-tab/nav-wrap}}
+    {{/x-tab/navigation}}
+
+    {{!-- tab content --}}
+    <div class="content-wrap">
+      {{#tab.pane elementId="homeiconfall"}}
+        <h1>Home</h1>
+        <p>This is home content</p>
+      {{/tab.pane}}
+
+      {{#tab.pane elementId="archiveiconfall"}}
+        <h1>Archive</h1>
+        <p>This is archive content</p>
+      {{/tab.pane}}
+      {{#tab.pane elementId="analyticsiconfall"}}
+        <h1>Analytics</h1>
+        <p>This is analytics content</p>
+      {{/tab.pane}}
+      {{#tab.pane elementId="settingsiconfall"}}
+        <h1>Settings</h1>
+        <p>This is settings content</p>
+      {{/tab.pane}}
+      {{#tab.pane elementId="uploadiconfall"}}
+        <h1>Upload</h1>
+        <p>This is upload content</p>
+      {{/tab.pane}}
+    </div>
+
+  {{/x-tab}}
+</section>
+
+<h1>7. Linemove</h1>
+{{!-- Linemove --}}
+<section>
+  {{#x-tab  tab-style="tabs-style-linemove" as |tab| }}
+
+    {{!-- tab navigation --}}
+    {{#x-tab/navigation}}
+      {{#x-tab/nav-wrap paneId="home-linemove" tab=tab}}
+        <i class="icon icon-home"></i>
+        <span>Home</span>
+      {{/x-tab/nav-wrap}}
+      {{#x-tab/nav-wrap paneId="archive-linemove" tab=tab}}
+        <i class="icon icon-box"></i>
+        <span>Archive</span>
+      {{/x-tab/nav-wrap}}
+      {{#x-tab/nav-wrap paneId="analytics-linemove" tab=tab}}
+        <i class="icon icon-display"></i>
+        <span>Analytics</span>
+      {{/x-tab/nav-wrap}}
+      {{#x-tab/nav-wrap paneId="settings-linemove" tab=tab}}
+        <i class="icon icon-tools"></i>
+        <span>Settings</span>
+      {{/x-tab/nav-wrap}}
+      {{#x-tab/nav-wrap paneId="upload-linemove" tab=tab}}
+        <i class="icon icon-upload"></i>
+        <span>Upload</span>
+      {{/x-tab/nav-wrap}}
+    {{/x-tab/navigation}}
+
+    {{!-- tab content --}}
+    <div class="content-wrap">
+      {{#tab.pane elementId="home-linemove"}}
+        <h1>Home</h1>
+        <p>This is home content</p>
+      {{/tab.pane}}
+
+      {{#tab.pane elementId="archive-linemove"}}
+        <h1>Archive</h1>
+        <p>This is archive content</p>
+      {{/tab.pane}}
+      {{#tab.pane elementId="analytics-linemove"}}
+        <h1>Analytics</h1>
+        <p>This is analytics content</p>
+      {{/tab.pane}}
+      {{#tab.pane elementId="settings-linemove"}}
+        <h1>Settings</h1>
+        <p>This is settings content</p>
+      {{/tab.pane}}
+      {{#tab.pane elementId="upload-linemove"}}
+        <h1>Upload</h1>
+        <p>This is upload content</p>
+      {{/tab.pane}}
+    </div>
+
+  {{/x-tab}}
+</section>
+
+<h1>8. Line</h1>
+{{!-- Line --}}
+<section>
+  {{#x-tab  tab-style="tabs-style-line" as |tab| }}
+
+    {{!-- tab navigation --}}
+    {{#x-tab/navigation}}
+      {{#x-tab/nav-wrap paneId="home-line" tab=tab}}
+        <i class="icon icon-home"></i>
+        <span>Home</span>
+      {{/x-tab/nav-wrap}}
+      {{#x-tab/nav-wrap paneId="archive-line" tab=tab}}
+        <i class="icon icon-box"></i>
+        <span>Archive</span>
+      {{/x-tab/nav-wrap}}
+      {{#x-tab/nav-wrap paneId="analytics-line" tab=tab}}
+        <i class="icon icon-display"></i>
+        <span>Analytics</span>
+      {{/x-tab/nav-wrap}}
+      {{#x-tab/nav-wrap paneId="settings-line" tab=tab}}
+        <i class="icon icon-tools"></i>
+        <span>Settings</span>
+      {{/x-tab/nav-wrap}}
+      {{#x-tab/nav-wrap paneId="upload-line" tab=tab}}
+        <i class="icon icon-upload"></i>
+        <span>Upload</span>
+      {{/x-tab/nav-wrap}}
+    {{/x-tab/navigation}}
+
+    {{!-- tab content --}}
+    <div class="content-wrap">
+      {{#tab.pane elementId="home-line"}}
+        <h1>Home</h1>
+        <p>This is home content</p>
+      {{/tab.pane}}
+
+      {{#tab.pane elementId="archive-line"}}
+        <h1>Archive</h1>
+        <p>This is archive content</p>
+      {{/tab.pane}}
+      {{#tab.pane elementId="analytics-line"}}
+        <h1>Analytics</h1>
+        <p>This is analytics content</p>
+      {{/tab.pane}}
+      {{#tab.pane elementId="settings-line"}}
+        <h1>Settings</h1>
+        <p>This is settings content</p>
+      {{/tab.pane}}
+      {{#tab.pane elementId="upload-line"}}
+        <h1>Upload</h1>
+        <p>This is upload content</p>
+      {{/tab.pane}}
+    </div>
+
+  {{/x-tab}}
+</section>
+
+<h1>9. Circle</h1>
+{{!-- Circle --}}
+<section>
+  {{#x-tab  tab-style="tabs-style-circle" as |tab| }}
+
+    {{!-- tab navigation --}}
+    {{#x-tab/navigation}}
+      {{#x-tab/nav-wrap paneId="home-circle" tab=tab}}
+        <i class="icon icon-home"></i>
+        <span>Home</span>
+      {{/x-tab/nav-wrap}}
+      {{#x-tab/nav-wrap paneId="archive-circle" tab=tab}}
+        <i class="icon icon-box"></i>
+        <span>Archive</span>
+      {{/x-tab/nav-wrap}}
+      {{#x-tab/nav-wrap paneId="analytics-circle" tab=tab}}
+        <i class="icon icon-display"></i>
+        <span>Analytics</span>
+      {{/x-tab/nav-wrap}}
+      {{#x-tab/nav-wrap paneId="settings-circle" tab=tab}}
+        <i class="icon icon-tools"></i>
+        <span>Settings</span>
+      {{/x-tab/nav-wrap}}
+      {{#x-tab/nav-wrap paneId="upload-circle" tab=tab}}
+        <i class="icon icon-upload"></i>
+        <span>Upload</span>
+      {{/x-tab/nav-wrap}}
+    {{/x-tab/navigation}}
+
+    {{!-- tab content --}}
+    <div class="content-wrap">
+      {{#tab.pane elementId="home-circle"}}
+        <h1>Home</h1>
+        <p>This is home content</p>
+      {{/tab.pane}}
+
+      {{#tab.pane elementId="archive-circle"}}
+        <h1>Archive</h1>
+        <p>This is archive content</p>
+      {{/tab.pane}}
+      {{#tab.pane elementId="analytics-circle"}}
+        <h1>Analytics</h1>
+        <p>This is analytics content</p>
+      {{/tab.pane}}
+      {{#tab.pane elementId="settings-circle"}}
+        <h1>Settings</h1>
+        <p>This is settings content</p>
+      {{/tab.pane}}
+      {{#tab.pane elementId="upload-circle"}}
+        <h1>Upload</h1>
+        <p>This is upload content</p>
+      {{/tab.pane}}
+    </div>
+
+  {{/x-tab}}
+</section>
+
+
+<h1>10. Shape</h1>
+{{!-- Shape --}}
+<section>
+  {{#x-tab  tab-style="tabs-style-shape" as |tab| }}
+
+    {{!-- tab navigation --}}
+    {{#x-tab/navigation}}
+      {{#x-tab/nav-wrap paneId="home-shape" tab=tab}}
+        <svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
+        <span>Home</span>
+      {{/x-tab/nav-wrap}}
+      {{#x-tab/nav-wrap paneId="archive-shape" tab=tab}}
+        <svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
+				<svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
+        <span>Archive</span>
+      {{/x-tab/nav-wrap}}
+      {{#x-tab/nav-wrap paneId="analytics-shape" tab=tab}}
+        <svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
+				<svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
+        <span>Analytics</span>
+      {{/x-tab/nav-wrap}}
+      {{#x-tab/nav-wrap paneId="settings-shape" tab=tab}}
+        <svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
+				<svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
+        <span>Settings</span>
+      {{/x-tab/nav-wrap}}
+      {{#x-tab/nav-wrap paneId="upload-shape" tab=tab}}
+        <svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
+        <span>Upload</span>
+      {{/x-tab/nav-wrap}}
+    {{/x-tab/navigation}}
+
+    {{!-- tab content --}}
+    <div class="content-wrap">
+      {{#tab.pane elementId="home-shape"}}
+        <h1>Home</h1>
+        <p>This is home content</p>
+      {{/tab.pane}}
+
+      {{#tab.pane elementId="archive-shape"}}
+        <h1>Archive</h1>
+        <p>This is archive content</p>
+      {{/tab.pane}}
+      {{#tab.pane elementId="analytics-shape"}}
+        <h1>Analytics</h1>
+        <p>This is analytics content</p>
+      {{/tab.pane}}
+      {{#tab.pane elementId="settings-shape"}}
+        <h1>Settings</h1>
+        <p>This is settings content</p>
+      {{/tab.pane}}
+      {{#tab.pane elementId="upload-shape"}}
+        <h1>Upload</h1>
+        <p>This is upload content</p>
+      {{/tab.pane}}
+    </div>
+
+  {{/x-tab}}
+</section>
+
+
+<h1>11. Linebox</h1>
+{{!-- Linebox --}}
+<section>
+  {{#x-tab  tab-style="tabs-style-linebox" as |tab| }}
+
+    {{!-- tab navigation --}}
+    {{#x-tab/navigation}}
+      {{#x-tab/nav-wrap paneId="home-linebox" tab=tab}}
+        <i class="icon icon-home"></i>
+        <span>Home</span>
+      {{/x-tab/nav-wrap}}
+      {{#x-tab/nav-wrap paneId="archive-linebox" tab=tab}}
+        <i class="icon icon-box"></i>
+        <span>Archive</span>
+      {{/x-tab/nav-wrap}}
+      {{#x-tab/nav-wrap paneId="analytics-linebox" tab=tab}}
+        <i class="icon icon-display"></i>
+        <span>Analytics</span>
+      {{/x-tab/nav-wrap}}
+      {{#x-tab/nav-wrap paneId="settings-linebox" tab=tab}}
+        <i class="icon icon-tools"></i>
+        <span>Settings</span>
+      {{/x-tab/nav-wrap}}
+      {{#x-tab/nav-wrap paneId="upload-linebox" tab=tab}}
+        <i class="icon icon-upload"></i>
+        <span>Upload</span>
+      {{/x-tab/nav-wrap}}
+    {{/x-tab/navigation}}
+
+    {{!-- tab content --}}
+    <div class="content-wrap">
+      {{#tab.pane elementId="home-linebox"}}
+        <h1>Home</h1>
+        <p>This is home content</p>
+      {{/tab.pane}}
+
+      {{#tab.pane elementId="archive-linebox"}}
+        <h1>Archive</h1>
+        <p>This is archive content</p>
+      {{/tab.pane}}
+      {{#tab.pane elementId="analytics-linebox"}}
+        <h1>Analytics</h1>
+        <p>This is analytics content</p>
+      {{/tab.pane}}
+      {{#tab.pane elementId="settings-linebox"}}
+        <h1>Settings</h1>
+        <p>This is settings content</p>
+      {{/tab.pane}}
+      {{#tab.pane elementId="upload-linebox"}}
+        <h1>Upload</h1>
+        <p>This is upload content</p>
+      {{/tab.pane}}
+    </div>
+
+  {{/x-tab}}
+</section>
+
+
+<h1>12. Flip</h1>
+{{!-- Flip --}}
+<section>
+  {{#x-tab  tab-style="tabs-style-flip" as |tab| }}
+
+    {{!-- tab navigation --}}
+    {{#x-tab/navigation}}
+      {{#x-tab/nav-wrap paneId="home-flip" tab=tab}}
+        <i class="icon icon-home"></i>
+        <span>Home</span>
+      {{/x-tab/nav-wrap}}
+      {{#x-tab/nav-wrap paneId="archive-flip" tab=tab}}
+        <i class="icon icon-box"></i>
+        <span>Archive</span>
+      {{/x-tab/nav-wrap}}
+      {{#x-tab/nav-wrap paneId="analytics-flip" tab=tab}}
+        <i class="icon icon-display"></i>
+        <span>Analytics</span>
+      {{/x-tab/nav-wrap}}
+      {{#x-tab/nav-wrap paneId="settings-flip" tab=tab}}
+        <i class="icon icon-tools"></i>
+        <span>Settings</span>
+      {{/x-tab/nav-wrap}}
+      {{#x-tab/nav-wrap paneId="upload-flip" tab=tab}}
+        <i class="icon icon-upload"></i>
+        <span>Upload</span>
+      {{/x-tab/nav-wrap}}
+    {{/x-tab/navigation}}
+
+    {{!-- tab content --}}
+    <div class="content-wrap">
+      {{#tab.pane elementId="home-flip"}}
+        <h1>Home</h1>
+        <p>This is home content</p>
+      {{/tab.pane}}
+
+      {{#tab.pane elementId="archive-flip"}}
+        <h1>Archive</h1>
+        <p>This is archive content</p>
+      {{/tab.pane}}
+      {{#tab.pane elementId="analytics-flip"}}
+        <h1>Analytics</h1>
+        <p>This is analytics content</p>
+      {{/tab.pane}}
+      {{#tab.pane elementId="settings-flip"}}
+        <h1>Settings</h1>
+        <p>This is settings content</p>
+      {{/tab.pane}}
+      {{#tab.pane elementId="upload-flip"}}
+        <h1>Upload</h1>
+        <p>This is upload content</p>
+      {{/tab.pane}}
+    </div>
+
+  {{/x-tab}}
+</section>
+
+
+<h1>13. Circlefill</h1>
+{{!-- Circlefill --}}
+<section>
+  {{#x-tab  tab-style="tabs-style-circlefill" as |tab| }}
+
+    {{!-- tab navigation --}}
+    {{#x-tab/navigation}}
+      {{#x-tab/nav-wrap paneId="home-circlefill" tab=tab}}
+        <i class="icon icon-home"></i>
+        <span>Home</span>
+      {{/x-tab/nav-wrap}}
+      {{#x-tab/nav-wrap paneId="archive-circlefill" tab=tab}}
+        <i class="icon icon-box"></i>
+        <span>Archive</span>
+      {{/x-tab/nav-wrap}}
+      {{#x-tab/nav-wrap paneId="analytics-circlefill" tab=tab}}
+        <i class="icon icon-display"></i>
+        <span>Analytics</span>
+      {{/x-tab/nav-wrap}}
+      {{#x-tab/nav-wrap paneId="settings-circlefill" tab=tab}}
+        <i class="icon icon-tools"></i>
+        <span>Settings</span>
+      {{/x-tab/nav-wrap}}
+      {{#x-tab/nav-wrap paneId="upload-circlefill" tab=tab}}
+        <i class="icon icon-upload"></i>
+        <span>Upload</span>
+      {{/x-tab/nav-wrap}}
+    {{/x-tab/navigation}}
+
+    {{!-- tab content --}}
+    <div class="content-wrap">
+      {{#tab.pane elementId="home-circlefill"}}
+        <h1>Home</h1>
+        <p>This is home content</p>
+      {{/tab.pane}}
+
+      {{#tab.pane elementId="archive-circlefill"}}
+        <h1>Archive</h1>
+        <p>This is archive content</p>
+      {{/tab.pane}}
+      {{#tab.pane elementId="analytics-circlefill"}}
+        <h1>Analytics</h1>
+        <p>This is analytics content</p>
+      {{/tab.pane}}
+      {{#tab.pane elementId="settings-circlefill"}}
+        <h1>Settings</h1>
+        <p>This is settings content</p>
+      {{/tab.pane}}
+      {{#tab.pane elementId="upload-circlefill"}}
+        <h1>Upload</h1>
+        <p>This is upload content</p>
+      {{/tab.pane}}
+    </div>
+
+  {{/x-tab}}
+</section>
+
+<h1>14. Tzoid</h1>
+{{!-- Tzoid --}}
+<section>
+  {{#x-tab  tab-style="tabs-style-tzoid" as |tab| }}
+
+    {{!-- tab navigation --}}
+    {{#x-tab/navigation}}
+      {{#x-tab/nav-wrap paneId="home-tzoid" tab=tab}}
+        <i class="icon icon-home"></i>
+        <span>Home</span>
+      {{/x-tab/nav-wrap}}
+      {{#x-tab/nav-wrap paneId="archive-tzoid" tab=tab}}
+        <i class="icon icon-box"></i>
+        <span>Archive</span>
+      {{/x-tab/nav-wrap}}
+      {{#x-tab/nav-wrap paneId="analytics-tzoid" tab=tab}}
+        <i class="icon icon-display"></i>
+        <span>Analytics</span>
+      {{/x-tab/nav-wrap}}
+      {{#x-tab/nav-wrap paneId="settings-tzoid" tab=tab}}
+        <i class="icon icon-tools"></i>
+        <span>Settings</span>
+      {{/x-tab/nav-wrap}}
+      {{#x-tab/nav-wrap paneId="upload-tzoid" tab=tab}}
+        <i class="icon icon-upload"></i>
+        <span>Upload</span>
+      {{/x-tab/nav-wrap}}
+    {{/x-tab/navigation}}
+
+    {{!-- tab content --}}
+    <div class="content-wrap">
+      {{#tab.pane elementId="home-tzoid"}}
+        <h1>Home</h1>
+        <p>This is home content</p>
+      {{/tab.pane}}
+
+      {{#tab.pane elementId="archive-tzoid"}}
+        <h1>Archive</h1>
+        <p>This is archive content</p>
+      {{/tab.pane}}
+      {{#tab.pane elementId="analytics-tzoid"}}
+        <h1>Analytics</h1>
+        <p>This is analytics content</p>
+      {{/tab.pane}}
+      {{#tab.pane elementId="settings-tzoid"}}
+        <h1>Settings</h1>
+        <p>This is settings content</p>
+      {{/tab.pane}}
+      {{#tab.pane elementId="upload-tzoid"}}
+        <h1>Upload</h1>
+        <p>This is upload content</p>
+      {{/tab.pane}}
+    </div>
+
+  {{/x-tab}}
+</section>
+
+<h1>15. Fillup</h1>
+{{!-- Fillup --}}
+<section>
+  {{#x-tab  tab-style="tabs-style-fillup" as |tab| }}
+
+    {{!-- tab navigation --}}
+    {{#x-tab/navigation}}
+      {{#x-tab/nav-wrap paneId="home-fillup" tab=tab}}
+        <i class="icon icon-home"></i>
+        <span>Home</span>
+      {{/x-tab/nav-wrap}}
+      {{#x-tab/nav-wrap paneId="archive-fillup" tab=tab}}
+        <i class="icon icon-box"></i>
+        <span>Archive</span>
+      {{/x-tab/nav-wrap}}
+      {{#x-tab/nav-wrap paneId="analytics-fillup" tab=tab}}
+        <i class="icon icon-display"></i>
+        <span>Analytics</span>
+      {{/x-tab/nav-wrap}}
+      {{#x-tab/nav-wrap paneId="settings-fillup" tab=tab}}
+        <i class="icon icon-tools"></i>
+        <span>Settings</span>
+      {{/x-tab/nav-wrap}}
+      {{#x-tab/nav-wrap paneId="upload-fillup" tab=tab}}
+        <i class="icon icon-upload"></i>
+        <span>Upload</span>
+      {{/x-tab/nav-wrap}}
+    {{/x-tab/navigation}}
+
+    {{!-- tab content --}}
+    <div class="content-wrap">
+      {{#tab.pane elementId="home-fillup"}}
+        <h1>Home</h1>
+        <p>This is home content</p>
+      {{/tab.pane}}
+
+      {{#tab.pane elementId="archive-fillup"}}
+        <h1>Archive</h1>
+        <p>This is archive content</p>
+      {{/tab.pane}}
+      {{#tab.pane elementId="analytics-fillup"}}
+        <h1>Analytics</h1>
+        <p>This is analytics content</p>
+      {{/tab.pane}}
+      {{#tab.pane elementId="settings-fillup"}}
+        <h1>Settings</h1>
+        <p>This is settings content</p>
+      {{/tab.pane}}
+      {{#tab.pane elementId="upload-fillup"}}
+        <h1>Upload</h1>
+        <p>This is upload content</p>
+      {{/tab.pane}}
+    </div>
+
+  {{/x-tab}}
+</section>
