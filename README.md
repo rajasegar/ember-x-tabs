@@ -12,7 +12,7 @@ Heavily inspired by this [Codrops article](https://tympanus.net/codrops/2014/09/
 
 ## Demo
 
-[Demo](http://careless-poison.surge.sh/)
+[Demo](http://rajasegar.github.io/ember-x-tabs/)
 
 ## Installation
 

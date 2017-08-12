@@ -54,6 +54,6 @@
   },
   "ember-addon": {
     "configPath": "tests/dummy/config",
-    "demoURL": "http://careless-poison.surge.sh/"
+    "demoURL": "http://rajasegar.github.io/ember-x-tabs/"
   }
 }
