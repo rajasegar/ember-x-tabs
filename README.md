@@ -123,6 +123,38 @@ For example:
 }
 ```
 
+### Custom class name
+Use the **customClass** option to add your own custom classnames.
+```hbs
+  {{#x-tab customClass="myTabClass" as |tab|}}
+```
+
+Write your own definition for the classnames
+```css
+.myTabClass nav  {
+    background: lightblue;
+}
+.myTabClass nav ul a {
+    color: lightblue;
+}
+.myTabClass nav ul a:hover {
+    color: steelblue;
+}
+.myTabClass nav ul li.tab-current {
+    background: steelblue;
+}
+.myTabClass nav ul li {
+    background: white;
+    margin: 4px 2px;
+}
+
+.myTabClass nav ul li.tab-current a {
+    color: white;
+}
+```
+
+
+
 ## Running
 
 * `ember serve`
