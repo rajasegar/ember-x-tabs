@@ -73,6 +73,3 @@ test('first tab is active by default', function(assert) {
   assertActiveTab.call(this, assert, 1, false);
 });
 
-test('should have a default style = tabs-style-bar', function(assert) {
-  assert.equal(this.$('.tabs-style-bar').length, 1, ' has default style tabs-style-bar');
-});
