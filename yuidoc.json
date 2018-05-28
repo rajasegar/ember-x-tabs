@@ -1,7 +1,7 @@
 {
   "name": "ember-x-tabs",
   "description": "A mix of various tab component styles with theme customization options.",
-  "version": "0.0.8",
+  "version": "0.0.17",
   "options": {
     "paths": [
       "addon"
@@ -12,7 +12,7 @@
     "quiet": true,
     "parseOnly": false,
     "lint": false,
-    "enabledEnvironments": ["development","production"],
+    "enabledEnvironments": ["development"],
     "themedir": "node_modules/yuidoc-ember-theme",
     "helpers": ["node_modules/yuidoc-ember-theme/helpers/helpers.js"]
   }
