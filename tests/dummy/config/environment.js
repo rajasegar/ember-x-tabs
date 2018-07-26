@@ -64,7 +64,7 @@ module.exports = function(environment) {
 
   if (environment === 'production') {
     ENV.locationType = 'hash';
-    // ENV.baseUrl = '/ember-x-tabs/';
+    ENV.baseUrl = '/ember-x-tabs';
 
   }
 
