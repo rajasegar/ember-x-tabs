@@ -18,17 +18,13 @@ matrix:
   allow_failures:
     - env: EMBER_TRY_SCENARIO=ember-canary
 
-before_install:
-  - curl -o- -L https://yarnpkg.com/install.sh | bash
-  - export PATH=$HOME/.yarn/bin:$PATH
-  - yarn global add phantomjs@1.9.20
-  - phantomjs --version
-
-install:
-  - yarn install --no-lockfile
-
-
 script:
   # Usually, it's ok to finish the test scenario without reverting
   #  to the addon's original dependency state, skipping "cleanup".
   - node_modules/.bin/ember try:one $EMBER_TRY_SCENARIO test --skip-cleanup
+
+addons:
+  chrome: stable
+before_install:
+  - # start your web application and listen on `localhost`
+  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &

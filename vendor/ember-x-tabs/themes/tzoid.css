@@ -1,0 +1,71 @@
+
+/*****************************/
+/* Trapezoid, based on http://lea.verou.me/2013/10/slanted-tabs-with-css-3d-transforms/ */
+/*****************************/ 
+
+.tabs-style-tzoid {
+	max-width: 1200px;
+}
+
+.tabs-style-tzoid nav {
+	padding: 0 1em;
+}
+
+.tabs-style-tzoid nav ul li {
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.tabs-style-tzoid nav ul li a {
+	padding: 0 1.5em 0 0.3em;
+	color: #0d9564;
+	-webkit-transition: color 0.2s;
+	transition: color 0.2s;
+}
+
+@media screen and (max-width: 54em) {
+	.tabs-style-tzoid nav ul li a {
+		padding: 0 0.5em 0 0.3em;
+	}
+}
+
+.tabs-style-tzoid nav ul li a:hover,
+.tabs-style-tzoid nav ul li a:focus {
+	color: #fff;
+}
+
+.tabs-style-tzoid nav ul li.tab-current a,
+.tabs-style-tzoid nav ul li.tab-current a:hover {
+	color: #2CC185;
+}
+
+.tabs-style-tzoid nav ul li a span {
+	font-weight: 500;
+	font-size: 0.75em;
+}
+
+.tabs-style-tzoid nav ul li a::after {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+	outline: 1px solid transparent;
+	border-radius: 10px 10px 0 0;
+	background: #2CC185;
+	box-shadow: inset 0 -3px 3px rgba(0,0,0,0.05);
+	content: '';
+	-webkit-transform: perspective(5px) rotateX(0.93deg) translateZ(-1px);
+	transform: perspective(5px) rotateX(0.93deg) translateZ(-1px);
+	-webkit-transform-origin: 0 0;
+	transform-origin: 0 0;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.tabs-style-tzoid nav ul li.tab-current a::after,
+.tabs-style-tzoid .content-wrap {
+	background: #fff;
+	box-shadow: none;
+}

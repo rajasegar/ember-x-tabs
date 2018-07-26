@@ -1,14 +1,10 @@
-import Ember from 'ember';
+import Component from '@ember/component';
+import { observer, computed } from '@ember/object';
+import { scheduleOnce } from '@ember/runloop';
 import layout from '../../templates/components/x-tab/pane';
 import ComponentChild from '../../mixins/component-child';
 
-const {
-    computed,
-    observer,
-    run: { scheduleOnce }
-} = Ember;
-
-export default Ember.Component.extend(ComponentChild, {
+export default Component.extend(ComponentChild, {
     layout,
     classNameBindings: ['contentCurrent'],
 

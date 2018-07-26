@@ -1,24 +1,21 @@
-import Ember from 'ember';
+import { filter, oneWay } from '@ember/object/computed';
+import Component from '@ember/component';
+import { A } from '@ember/array';
+import { getWithDefault, computed } from '@ember/object';
 import layout from '../templates/components/x-tab';
 import ComponentParent from '../mixins/component-parent';
 import TabPane from './x-tab/pane';
 
-const {
-  computed,
-  A,
-  getWithDefault
-} = Ember;
-
-export default Ember.Component.extend(ComponentParent, {
+export default Component.extend(ComponentParent, {
   layout,
   classNames:['tabs'],
   classNameBindings: ['tab-style', 'customClass'],
 
-  childPanes: computed.filter('children', function(view) {
+  childPanes: filter('children', function(view) {
     return view instanceof TabPane;
   }),
 
-  activeId: computed.oneWay('childPanes.firstObject.elementId'),
+  activeId: oneWay('childPanes.firstObject.elementId'),
 
   isActiveId: computed('activeId',  {
     get() {

@@ -1,4 +1,5 @@
 import { moduleForComponent, test } from 'ember-qunit';
+
 import hbs from 'htmlbars-inline-precompile';
 
 moduleForComponent('x-tab/pane', 'Integration | Component | x tab/pane', {

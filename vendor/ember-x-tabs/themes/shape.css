@@ -1,0 +1,130 @@
+/*****************************/
+/* Shape */
+/*****************************/
+
+.tabs-style-shape {
+	max-width: 1200px;
+}
+
+.tabs-style-shape nav ul li {
+	margin: 0 3em;
+}
+
+.tabs-style-shape nav ul li:first-child {
+	margin-left: 0;
+}
+
+.tabs-style-shape nav ul li.tab-current {
+	z-index: 100;
+}
+
+.tabs-style-shape nav li a {
+	overflow: visible;
+	margin: 0 -3em 0 0;
+	padding: 0;
+	color: #fff;
+	font-weight: 500;
+}
+
+.tabs-style-shape nav li:first-child a span {
+	padding-left: 2em;
+	border-radius: 30px 0 0 0;
+}
+
+.tabs-style-shape nav li:last-child a span {
+	padding-right: 2em;
+	border-radius: 0 30px 0 0;
+}
+
+.tabs-style-shape nav li a svg {
+	position: absolute;
+	left: 100%;
+	margin: 0;
+	width: 3em;
+	height: 100%;
+	fill: #bdc2c9;
+}
+
+.tabs-style-shape nav li a svg:nth-child(2),
+.tabs-style-shape nav li:last-child a svg {
+	right: 100%;
+	left: auto;
+	-webkit-transform: scale3d(-1,1,1);
+	transform: scale3d(-1,1,1);
+}
+
+.tabs-style-shape nav li a span {
+	display: block;
+	overflow: hidden;
+	padding: 0.65em 0;
+	background-color: #bdc2c9;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.tabs-style-shape nav li a:hover span {
+	background-color: #2CC185;
+}
+
+.tabs-style-shape nav li a:hover svg {
+	fill: #2CC185;
+}
+
+/* Make only shape clickable */
+.tabs-style-shape nav li a svg {
+	pointer-events: none;
+}
+
+.tabs-style-shape nav li a svg use {
+	pointer-events: auto;
+}
+
+.tabs-style-shape nav li.tab-current a span,
+.tabs-style-shape nav li.tab-current a svg {
+	-webkit-transition: none;
+	transition: none;
+}
+
+.tabs-style-shape nav li.tab-current a span {
+	background: #fff;
+}
+
+.tabs-style-shape nav li.tab-current a svg {
+	fill: #fff;
+}
+
+.tabs-style-shape .content-wrap {
+	background: #fff;
+}
+
+@media screen and (max-width: 58em) {
+	.tabs-style-shape nav ul {
+		display: block;
+		padding-top: 1.5em;
+	}
+	.tabs-style-shape nav ul li {
+		display: block;
+		margin: -1.25em 0 0;
+		-webkit-flex: none;
+		flex: none;
+	}
+	.tabs-style-shape nav ul li a {
+		margin: 0;
+	}
+	.tabs-style-shape nav ul li svg {
+		display: none;
+	}
+	.tabs-style-shape nav ul li a span {
+		padding: 1.25em 0 2em !important;
+		border-radius: 30px 30px 0 0 !important;
+		box-shadow: 0 -1px 2px rgba(0,0,0,0.1);
+		line-height: 1;
+	}
+	.tabs-style-shape nav ul li:last-child a span {
+		padding: 1.25em 0 !important;
+	}
+	.tabs-style-shape nav ul li.tab-current {
+		z-index: 1;
+	}
+}
+

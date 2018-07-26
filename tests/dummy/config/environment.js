@@ -30,6 +30,25 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV['ember-x-tabs'] = {
+      includedThemes: [
+        'bar',
+        'circle',
+        'circlefill',
+        'fillup',
+        'flip',
+        'iconbox',
+        'iconfall',
+        'line',
+        'linebox',
+        'linemove',
+        'linetriangle',
+        'shape',
+        'topline',
+        'tzoid',
+        'underline'
+      ]
+    };
   }
 
   if (environment === 'test') {
