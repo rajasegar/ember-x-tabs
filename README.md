@@ -172,6 +172,7 @@ To exclude or not include a theme, means that it's css styles will not be bundle
 
     Note: you may also want to set excludeBaseStyles: true so that this addon doesn't include the styles used by all the themes.
 
+
 A big Thanks to Ilya Radchenko for making this configuration possible to have a small memory footprint of css in your app when you are using the addon.
 
 ## Running
