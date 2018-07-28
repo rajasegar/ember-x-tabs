@@ -1,6 +1,6 @@
 {
   "name": "ember-x-tabs",
-  "version": "0.0.25",
+  "version": "0.1.0",
   "description": "A mix of various tab component styles with theme customization options.",
   "keywords": [
     "ember-addon",
