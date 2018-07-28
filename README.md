@@ -11,7 +11,7 @@ Heavily inspired by this [Codrops article](https://tympanus.net/codrops/2014/09/
 
 ## Demo
 
-[Demo](http://rajasegar.github.io/ember-x-tabs/)
+[Demo](http://hangaroundtheweb.com/labs/ember-x-tabs/)
 
 ## Installation
 

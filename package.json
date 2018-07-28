@@ -55,6 +55,6 @@
   },
   "ember-addon": {
     "configPath": "tests/dummy/config",
-    "demoURL": "http://rajasegar.github.io/ember-x-tabs/"
+    "demoURL": "http://hangaroundtheweb.com/labs/ember-x-tabs/"
   }
 }
