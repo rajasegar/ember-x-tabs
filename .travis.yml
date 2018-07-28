@@ -6,7 +6,8 @@ node_js:
 sudo: required
 
 cache:
-  yarn: true
+  directories:
+    - $HOME/.npm
 
 env:
   # we recommend testing LTS's and latest stable release (bonus points to beta/canary)
