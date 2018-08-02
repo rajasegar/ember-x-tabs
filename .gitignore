@@ -23,3 +23,7 @@ package.json.ember-try
 
 # .DS_Store
 .DS_Store
+
+# Intellij + plugins
+/.idea
+**/atlassian-ide-plugin.xml
