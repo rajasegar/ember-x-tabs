@@ -27,3 +27,6 @@ package.json.ember-try
 # Intellij + plugins
 /.idea
 **/atlassian-ide-plugin.xml
+
+# Gradle
+/.gradle

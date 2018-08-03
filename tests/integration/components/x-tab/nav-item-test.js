@@ -1,29 +1,31 @@
-import { moduleForComponent, test } from 'ember-qunit';
+import { module, test } from 'qunit';
+import { setupRenderingTest } from 'ember-qunit';
+import { render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
-moduleForComponent('x-tab/nav-item', 'Integration | Component | x tab/nav item', {
-  integration: true
-});
+module('Integration | Component | x tab/nav item', function(hooks) {
+  setupRenderingTest(hooks);
 
-test('it renders', function(assert) {
+  test('it renders', async function(assert) {
 
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
+    // Set any properties with this.set('myProperty', 'value');
+    // Handle any actions with this.on('myAction', function(val) { ... });
 
-    this.set('externalAction', () => {
-        assert.equal(true, true);
-    });
+      this.set('externalAction', () => {
+          assert.equal(true, true);
+      });
 
-  this.render(hbs`{{x-tab/nav-item selectAction=(action externalAction)}}`);
+    await render(hbs`{{x-tab/nav-item selectAction=(action externalAction)}}`);
 
-  assert.equal(this.$().text().trim(), '');
+    assert.dom('*').hasText('');
 
-  // Template block usage:
-  this.render(hbs`
-    {{#x-tab/nav-item selectAction=(action externalAction)}}
-      template block text
-    {{/x-tab/nav-item}}
-  `);
+    // Template block usage:
+    await render(hbs`
+      {{#x-tab/nav-item selectAction=(action externalAction)}}
+        template block text
+      {{/x-tab/nav-item}}
+    `);
 
-  assert.equal(this.$().text().trim(), 'template block text');
+    assert.dom('*').hasText('template block text');
+  });
 });
