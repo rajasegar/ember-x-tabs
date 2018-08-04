@@ -1,0 +1,191 @@
+{{outlet}}
+<svg class="hidden">
+  <defs>
+    <path id="tabshape" d="M80,60C34,53.5,64.417,0,0,0v60H80z"/>
+  </defs>
+</svg>
+
+<h1>X-Tab as a Page Control</h1>
+<section>
+  {{#x-tabs activeName="archive" tab-style="tabs-style-topline" as | xt | }}
+
+    {{#xt.tabs as | tabs |}}
+      {{#tabs.tab name="home" data=(hash name="Home data")}}
+        <i class="icon icon-home"></i>
+        <span>Home</span>
+      {{/tabs.tab}}
+      {{#tabs.tab name="archive" data=(hash name="Archive Data")}}
+        <i class="icon icon-box"></i>
+        <span>Archive</span>
+      {{/tabs.tab}}
+      {{#tabs.tab name="analytics" data=(hash name="Analytics Data")}}
+        <i class="icon icon-display"></i>
+        <span>Analytics</span>
+      {{/tabs.tab}}
+      {{#tabs.tab name="settings" data=(hash name="Settings Data")}}
+        <i class="icon icon-tools"></i>
+        <span>Settings</span>
+      {{/tabs.tab}}
+      {{#tabs.tab name="upload" data=(hash name="Upload Data")}}
+        <i class="icon icon-upload"></i>
+        <span>Upload</span>
+      {{/tabs.tab}}
+
+    {{/xt.tabs}}
+
+    {{#xt.dataPane as | pane |}}
+      <h1>Page Control</h1>
+      <p>Data: {{pane.data.name}}</p>
+    {{/xt.dataPane}}
+
+  {{/x-tabs}}
+</section>
+
+<h1> 1. Bar - Default  style</h1>
+{{!-- Bar - default style --}}
+<section>
+  {{tab-example tabStyle="tabs-style-bar"}}
+</section>
+
+
+<h1>2. Iconbox</h1>
+
+{{!-- Iconbox  --}}
+<section>
+  {{tab-example tabStyle="tabs-style-iconbox"}}
+</section>
+
+<h1>3. Underline</h1>
+{{!-- Underline  --}}
+<section>
+  {{tab-example tabStyle="tabs-style-underline"}}
+</section>
+
+<h1>4. Linetriangle</h1>
+{{!-- Linetriangle  --}}
+<section>
+  {{tab-example tabStyle="tabs-style-linetriangle"}}
+</section>
+
+<h1>5. Topline</h1>
+{{!-- Topline  --}}
+<section>
+  {{tab-example tabStyle="tabs-style-topline"}}
+</section>
+
+<h1>6. Iconfall</h1>
+{{!-- Iconfall  --}}
+<section>
+  {{tab-example tabStyle="tabs-style-iconfall"}}
+</section>
+
+<h1>7. Linemove</h1>
+{{!-- Linemove --}}
+<section>
+  {{tab-example tabStyle="tabs-style-linemove"}}
+</section>
+
+<h1>8. Line</h1>
+{{!-- Line --}}
+<section>
+  {{tab-example tabStyle="tabs-style-line"}}
+</section>
+
+<h1>9. Circle</h1>
+{{!-- Circle --}}
+<section>
+  {{tab-example tabStyle="tabs-style-circle"}}
+</section>
+
+
+<h1>10. Shape</h1>
+{{!-- Shape --}}
+<section>
+  {{#x-tabs tab-style="tabs-style-shape" as | xt | }}
+
+  {{!-- tab content --}}
+    {{#xt.tabs as | tabs |}}
+      {{#tabs.tab name="home"}}
+        <svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
+        <span>Home</span>
+      {{/tabs.tab}}
+      {{#tabs.tab name="archive"}}
+        <svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
+        <svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
+        <span>Archive</span>
+      {{/tabs.tab}}
+      {{#tabs.tab name="analytics"}}
+        <svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
+        <svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
+        <span>Analytics</span>
+      {{/tabs.tab}}
+      {{#tabs.tab name="settings"}}
+        <svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
+        <svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
+        <span>Settings</span>
+      {{/tabs.tab}}
+      {{#tabs.tab name="upload"}}
+        <svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
+        <span>Upload</span>
+      {{/tabs.tab}}
+    {{/xt.tabs}}
+
+    {{!-- tab content --}}
+    {{#xt.panes as | panes |}}
+      {{#panes.pane name="home"}}
+        <h1>Home</h1>
+        <p>This is home content</p>
+      {{/panes.pane}}
+      {{#panes.pane name="archive"}}
+        <h1>Archive</h1>
+        <p>This is archive content</p>
+      {{/panes.pane}}
+      {{#panes.pane name="analytics"}}
+        <h1>Analytics</h1>
+        <p>This is analytics content</p>
+      {{/panes.pane}}
+      {{#panes.pane name="settings"}}
+        <h1>Settings</h1>
+        <p>This is settings content</p>
+      {{/panes.pane}}
+      {{#panes.pane name="upload"}}
+        <h1>Upload</h1>
+        <p>This is upload content</p>
+      {{/panes.pane}}
+    {{/xt.panes}}
+
+  {{/x-tabs}}
+</section>
+
+
+<h1>11. Linebox</h1>
+{{!-- Linebox --}}
+<section>
+  {{tab-example tabStyle="tabs-style-linebox"}}
+</section>
+
+
+<h1>12. Flip</h1>
+{{!-- Flip --}}
+<section>
+  {{tab-example tabStyle="tabs-style-flip"}}
+</section>
+
+
+<h1>13. Circlefill</h1>
+{{!-- Circlefill --}}
+<section>
+  {{tab-example tabStyle="tabs-style-circlefill"}}
+</section>
+
+<h1>14. Tzoid</h1>
+{{!-- Tzoid --}}
+<section>
+  {{tab-example tabStyle="tabs-style-tzoid"}}
+</section>
+
+<h1>15. Fillup</h1>
+{{!-- Fillup --}}
+<section>
+  {{tab-example tabStyle="tabs-style-fillup"}}
+</section>

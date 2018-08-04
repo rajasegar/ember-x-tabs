@@ -8,6 +8,7 @@ const Router = EmberRouter.extend({
 
 Router.map(function() {
   this.route('custom-class');
+  this.route('xtabs-example');
 });
 
 export default Router;

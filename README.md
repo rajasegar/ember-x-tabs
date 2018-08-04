@@ -27,7 +27,7 @@ Heavily inspired by this [Codrops article](https://tympanus.net/codrops/2014/09/
 
 Example markup:
 
-### Bar style
+### Bar style (x-tab)
 
 ```hbs
     {{#x-tab  tab-style="tabs-style-bar" as |tab| }}
@@ -83,6 +83,116 @@ Example markup:
 
     {{/x-tab}}
     
+```
+
+### Bar style (x-tabs)
+
+A fully contextual version of the tab component is provided under the name x-tabs 
+
+```hbs
+{{#x-tabs tab-style=tabStyle as | xt | }}
+
+    {{!-- tab content --}}
+      {{#xt.tabs as | tabs |}}
+
+        {{#tabs.tab name="home"}}
+          <i class="icon icon-home"></i>
+          <span>Home</span>
+        {{/tabs.tab}}
+
+        {{#tabs.tab name="archive"}}
+          <i class="icon icon-box"></i>
+          <span>Archive</span>
+        {{/tabs.tab}}
+
+        {{#tabs.tab name="analytics"}}
+          <i class="icon icon-display"></i>
+          <span>Analytics</span>
+        {{/tabs.tab}}
+
+        {{#tabs.tab name="settings"}}
+          <i class="icon icon-tools"></i>
+          <span>Settings</span>
+        {{/tabs.tab}}
+
+        {{#tabs.tab name="upload"}}
+          <i class="icon icon-upload"></i>
+          <span>Upload</span>
+        {{/tabs.tab}}
+
+      {{/xt.tabs}}
+    
+      {{!-- tab content --}}
+      {{#xt.panes as | panes |}}
+
+        {{#panes.pane name="home"}}
+          <h1>Home</h1>
+          <p>This is home content</p>
+        {{/panes.pane}}
+
+        {{#panes.pane name="archive"}}
+          <h1>Archive</h1>
+          <p>This is archive content</p>
+        {{/panes.pane}}
+
+        {{#panes.pane name="analytics"}}
+          <h1>Analytics</h1>
+          <p>This is analytics content</p>
+        {{/panes.pane}}
+
+        {{#panes.pane name="settings"}}
+          <h1>Settings</h1>
+          <p>This is settings content</p>
+        {{/panes.pane}}
+
+        {{#panes.pane name="upload"}}
+          <h1>Upload</h1>
+          <p>This is upload content</p>
+        {{/panes.pane}}
+
+      {{/xt.panes}}
+    
+    {{/x-tabs}}
+    
+```
+
+x-tabs can also be used as a page-control, that is a control that has several tabs each with an
+associated data object. There is only one dataPane and as the tabs are selected, the tabs data is
+yielded to the dataPane
+
+```
+    {{#x-tabs activeName="archive" tab-style="tabs-style-topline" as | xt | }}
+  
+      {{#xt.tabs as | tabs |}}
+        {{#tabs.tab name="home" data=(hash name="Home data")}}
+          <i class="icon icon-home"></i>
+          <span>Home</span>
+        {{/tabs.tab}}
+        {{#tabs.tab name="archive" data=(hash name="Archive Data")}}
+          <i class="icon icon-box"></i>
+          <span>Archive</span>
+        {{/tabs.tab}}
+        {{#tabs.tab name="analytics" data=(hash name="Analytics Data")}}
+          <i class="icon icon-display"></i>
+          <span>Analytics</span>
+        {{/tabs.tab}}
+        {{#tabs.tab name="settings" data=(hash name="Settings Data")}}
+          <i class="icon icon-tools"></i>
+          <span>Settings</span>
+        {{/tabs.tab}}
+        {{#tabs.tab name="upload" data=(hash name="Upload Data")}}
+          <i class="icon icon-upload"></i>
+          <span>Upload</span>
+        {{/tabs.tab}}
+  
+      {{/xt.tabs}}
+  
+      {{#xt.dataPane as | pane |}}
+        <h1>Page Control</h1>
+        <p>Data: {{pane.data.name}}</p>
+      {{/xt.dataPane}}
+  
+    {{/x-tabs}}
 ```
 
 ## Tab styles
