@@ -1,6 +1,7 @@
 import Component from '@ember/component';
 import layout from '../templates/components/x-tabs';
 import { scheduleOnce } from '@ember/runloop';
+import { computed } from '@ember/object';
 
 export default Component.extend({
   layout,
@@ -8,7 +9,14 @@ export default Component.extend({
   classNames:['tabs'],
   classNameBindings: ['tab-style', 'customClass'],
 
-  activeName: undefined,
+  activeName: computed({
+    get() {
+      return undefined;
+    },
+    set(k, v) {
+      return v;
+    }
+  }),
   activeData: undefined,
 
   name: "x-tabs",

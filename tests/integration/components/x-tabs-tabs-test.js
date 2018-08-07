@@ -1,25 +1,36 @@
-import { moduleForComponent, test } from 'ember-qunit';
+import { module, test } from 'qunit';
+import { setupRenderingTest } from 'ember-qunit';
+import { render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
-moduleForComponent('x-tabs-tabs', 'Integration | Component | x-tabs-tabs', {
-  integration: true
+import {
+  create,
+  text,
+} from 'ember-cli-page-object';
+
+const page = create({
+  text: text()
 });
 
-test('it renders', function(assert) {
+module('Integration | Component | x-tabs-tabs', function(hooks) {
+  setupRenderingTest(hooks);
 
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
+  test('it renders', async function(assert) {
 
-  this.render(hbs`{{x-tabs-tabs}}`);
+    // Set any properties with this.set('myProperty', 'value');
+    // Handle any actions with this.on('myAction', function(val) { ... });
 
-  assert.equal(this.$().text().trim(), '');
+    await render(hbs`{{x-tabs-tabs}}`);
 
-  // Template block usage:
-  this.render(hbs`
-    {{#x-tabs-tabs}}
-      template block text
-    {{/x-tabs-tabs}}
-  `);
+    assert.equal(page.text, '');
 
-  assert.equal(this.$().text().trim(), 'template block text');
+    // Template block usage:
+    await render(hbs`
+      {{#x-tabs-tabs}}
+        template block text
+      {{/x-tabs-tabs}}
+    `);
+
+    assert.equal(page.text, 'template block text');
+  });
 });
