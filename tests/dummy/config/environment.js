@@ -5,7 +5,7 @@ module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'dummy',
     environment,
-    rootURL: '/labs/ember-x-tabs',
+    rootURL: '/',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
@@ -65,7 +65,7 @@ module.exports = function(environment) {
 
   if (environment === 'production') {
     ENV.locationType = 'hash';
-    ENV.baseUrl = 'http://hangaroundtheweb.com/labs/ember-x-tabs';
+    ENV.baseUrl = '/ember-x-tabs/';
 
   }
 

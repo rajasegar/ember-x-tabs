@@ -11,7 +11,7 @@ Heavily inspired by this [Codrops article](https://tympanus.net/codrops/2014/09/
 
 ## Demo
 
-[Demo](http://hangaroundtheweb.com/labs/ember-x-tabs/)
+[Demo](https://rajasegar.githuh.io/ember-x-tabs/)
 
 ## Installation
 
@@ -265,14 +265,14 @@ Write your own definition for the classnames
 
 ## Configuring
 
-Add a configuration for ember-stylish-buttons to include only the themes that you will use.
+Add a configuration for ember-x-tabs to include only the themes that you will use.
 
 ```
 ENV['ember-stylish-buttons'] = {
-  includedThemes: ['winona', 'ujarak', 'shikoba'],
-  excludedThemes: ['wapasha'],
+  includedThemes: ['bar', 'circle', 'flip'],
+  excludedThemes: ['iconbox'],
   excludeBaseStyles: false, // defaults to false
-  defaultTheme: 'winona',    // defaults to 'winona'
+  defaultTheme: 'bar',    // defaults to 'bar'
 };
 ```
 
@@ -292,7 +292,7 @@ A big Thanks to Ilya Radchenko for making this configuration possible to have a 
 
 ## Running Tests
 
-* `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
+* `npm test` 
 * `ember test`
 * `ember test --server`
 
