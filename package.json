@@ -20,7 +20,8 @@
     "build": "ember build",
     "start": "ember server",
     "test": "ember test",
-    "deploy": "rm -Rf dist/ && ember build --environment production && ember github-pages:commit --message \"Deploy gh-pages from commit $(git rev-parse HEAD)\" && git push origin gh-pages:gh-pages"
+    "deploy": "npm version patch && git push && git push --tags && npm publish",
+    "deploy-demo": "rm -Rf dist/ && ember build --environment production && ember github-pages:commit --message \"Deploy gh-pages from commit $(git rev-parse HEAD)\" && git push origin gh-pages:gh-pages"
   },
   "dependencies": {
     "ember-cli-babel": "^6.16.0",
