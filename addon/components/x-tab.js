@@ -8,7 +8,7 @@ import TabPane from './x-tab/pane';
 
 export default Component.extend(ComponentParent, {
   layout,
-  classNames:['tabs'],
+  classNames: ['tabs'],
   classNameBindings: ['tab-style', 'customClass'],
 
   childPanes: filter('children', function(view) {
@@ -17,20 +17,20 @@ export default Component.extend(ComponentParent, {
 
   activeId: oneWay('childPanes.firstObject.elementId'),
 
-  isActiveId: computed('activeId',  {
+  isActiveId: computed('activeId', {
     get() {
-        return getWithDefault(this, 'activeId', null);
+      return getWithDefault(this, 'activeId', null);
     },
     set(key, value) {
-        return value;
+      return value;
     }
   }),
 
   navItems: computed('childPanes.@each.{elementId,title,icon}', function() {
     let items = A();
     this.get('childPanes').forEach((pane) => {
-        let item = pane.getProperties('elementId', 'title', 'icon');
-        items.push(item);
+      let item = pane.getProperties('elementId', 'title', 'icon');
+      items.push(item);
     });
     return items;
   }),

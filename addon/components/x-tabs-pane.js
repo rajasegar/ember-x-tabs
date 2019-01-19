@@ -10,9 +10,9 @@ export default Component.extend({
 
   name: undefined,
 
-  isActive: computed("name", "api.activeName", {
+  isActive: computed('name', 'api.activeName', {
     get() {
-      return this.get("name") === this.get("api.activeName");
+      return this.get('name') === this.get('api.activeName');
     }
   })
 });
