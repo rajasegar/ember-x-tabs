@@ -268,7 +268,7 @@ Write your own definition for the classnames
 Add a configuration for ember-x-tabs to include only the themes that you will use.
 
 ```
-ENV['ember-stylish-buttons'] = {
+ENV['ember-x-tabs'] = {
   includedThemes: ['bar', 'circle', 'flip'],
   excludedThemes: ['iconbox'],
   excludeBaseStyles: false, // defaults to false
@@ -278,7 +278,7 @@ ENV['ember-stylish-buttons'] = {
 
 To exclude or not include a theme, means that it's css styles will not be bundled with your application, thus not polluting your app.
 
-    Note: including a blank array e.g. includeThemes: [] will not include any themes, leaving you to define your own theme styles. See the vendor/ember-stylish-buttons/themes directory for reference.
+    Note: including a blank array e.g. includeThemes: [] will not include any themes, leaving you to define your own theme styles. See the vendor/ember-x-tabs/themes directory for reference.
 
     Note: you may also want to set excludeBaseStyles: true so that this addon doesn't include the styles used by all the themes.
 
