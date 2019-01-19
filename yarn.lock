@@ -2392,10 +2392,6 @@ ember-source@^3.3.1:
     jquery "^3.3.1"
     resolve "^1.6.0"
 
-ember-template-compiler@^1.9.0-alpha:
-  version "1.9.0-alpha"
-  resolved "https://registry.yarnpkg.com/ember-template-compiler/-/ember-template-compiler-1.9.0-alpha.tgz#193dfcfcf0d8c1b3595a9609eb46d90d05d34f2f"
-
 encodeurl@~1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/encodeurl/-/encodeurl-1.0.2.tgz#ad3ff4c86ec2d029322f5a02c3a9a606c95b3f59"
