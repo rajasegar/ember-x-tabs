@@ -2,9 +2,9 @@
 'use strict';
 
 module.exports = {
-  name: 'ember-x-tabs',
+  name: require('./package').name,
 
-  included: function(app, parentAddon) {
+  included(app, parentAddon) {
     var target = (parentAddon || app);
 
     // necessary for nested usage
@@ -22,7 +22,7 @@ module.exports = {
 
   },
 
-  importThemes: function(app) {
+  importThemes(app) {
     var projectConfig = this.project.config(app.env);
     var config = projectConfig['ember-x-tabs'] || {};
     var themes = [];
