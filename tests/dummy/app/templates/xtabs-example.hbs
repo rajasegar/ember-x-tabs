@@ -41,7 +41,7 @@
   {{/x-tabs}}
 </section>
 
-<h1> 1. Bar - Default  style</h1>
+<h1> 1. Bar - Default style</h1>
 {{!-- Bar - default style --}}
 <section>
   {{tab-example tabStyle="tabs-style-bar"}}
@@ -102,30 +102,45 @@
 {{!-- Shape --}}
 <section>
   {{#x-tabs tab-style="tabs-style-shape" as | xt | }}
-
-  {{!-- tab content --}}
+    {{!-- tab content --}}
     {{#xt.tabs as | tabs |}}
       {{#tabs.tab name="home"}}
-        <svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
+        <svg viewBox="0 0 80 60" preserveAspectRatio="none">
+          <use xlink:href="#tabshape"></use>
+        </svg>
         <span>Home</span>
       {{/tabs.tab}}
       {{#tabs.tab name="archive"}}
-        <svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
-        <svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
+        <svg viewBox="0 0 80 60" preserveAspectRatio="none">
+          <use xlink:href="#tabshape"></use>
+        </svg>
+        <svg viewBox="0 0 80 60" preserveAspectRatio="none">
+          <use xlink:href="#tabshape"></use>
+        </svg>
         <span>Archive</span>
       {{/tabs.tab}}
       {{#tabs.tab name="analytics"}}
-        <svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
-        <svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
+        <svg viewBox="0 0 80 60" preserveAspectRatio="none">
+          <use xlink:href="#tabshape"></use>
+        </svg>
+        <svg viewBox="0 0 80 60" preserveAspectRatio="none">
+          <use xlink:href="#tabshape"></use>
+        </svg>
         <span>Analytics</span>
       {{/tabs.tab}}
       {{#tabs.tab name="settings"}}
-        <svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
-        <svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
+        <svg viewBox="0 0 80 60" preserveAspectRatio="none">
+          <use xlink:href="#tabshape"></use>
+        </svg>
+        <svg viewBox="0 0 80 60" preserveAspectRatio="none">
+          <use xlink:href="#tabshape"></use>
+        </svg>
         <span>Settings</span>
       {{/tabs.tab}}
       {{#tabs.tab name="upload"}}
-        <svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
+        <svg viewBox="0 0 80 60" preserveAspectRatio="none">
+          <use xlink:href="#tabshape"></use>
+        </svg>
         <span>Upload</span>
       {{/tabs.tab}}
     {{/xt.tabs}}

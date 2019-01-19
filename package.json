@@ -19,8 +19,10 @@
   "scripts": {
     "build": "ember build",
     "lint:hbs": "ember-template-lint .",
+    "lint:js": "eslint .",
     "start": "ember server",
     "test": "ember test",
+    "test:all": "ember try:each",
     "deploy": "npm version patch && git push && git push --tags && npm publish",
     "deploy-demo": "rm -Rf dist/ && ember build --environment production && ember github-pages:commit --message \"Deploy gh-pages from commit $(git rev-parse HEAD)\" && git push origin gh-pages:gh-pages"
   },
@@ -49,13 +51,15 @@
     "ember-qunit": "^3.4.1",
     "ember-resolver": "^5.0.1",
     "ember-source": "~3.7.0",
+    "ember-source-channel-url": "^1.1.0",
+    "ember-try": "^1.0.0",
     "eslint-plugin-ember": "^5.2.0",
     "eslint-plugin-node": "^7.0.1",
     "loader.js": "^4.7.0",
     "qunit-dom": "^0.8.0"
   },
   "engines": {
-    "node": ">= 4"
+    "node": "6.* || 8.* || >= 10.*"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config",
