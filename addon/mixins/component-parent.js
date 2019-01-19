@@ -1,6 +1,6 @@
 import Mixin from '@ember/object/mixin';
 import { A } from '@ember/array';
-import { run } from '@ember/runloop';
+import { next } from '@ember/runloop';
 
 export default Mixin.create({
   children: null,
@@ -11,7 +11,7 @@ export default Mixin.create({
   },
 
   registerChild(child) {
-    run.schedule('sync', this, function() {
+    next(() => {
       this.get('children').addObject(child);
     });
   },
