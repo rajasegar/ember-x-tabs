@@ -1,11 +1,11 @@
 {{outlet}}
 <svg class="hidden">
-	<defs>
-		<path id="tabshape" d="M80,60C34,53.5,64.417,0,0,0v60H80z"/>
-	</defs>
+  <defs>
+    <path id="tabshape" d="M80,60C34,53.5,64.417,0,0,0v60H80z"/>
+  </defs>
 </svg>
 
-<h1> 1. Bar - Default  style</h1>
+<h1> 1. Bar - Default style</h1>
 {{!-- Bar - default style --}}
 <section>
   {{#x-tab tab-style="tabs-style-bar" as |tab|}}
@@ -529,26 +529,42 @@
     {{!-- tab navigation --}}
     {{#x-tab/navigation}}
       {{#x-tab/nav-wrap paneId="home-shape" tab=tab}}
-        <svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
+        <svg viewBox="0 0 80 60" preserveAspectRatio="none">
+          <use xlink:href="#tabshape"></use>
+        </svg>
         <span>Home</span>
       {{/x-tab/nav-wrap}}
       {{#x-tab/nav-wrap paneId="archive-shape" tab=tab}}
-        <svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
-				<svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
+        <svg viewBox="0 0 80 60" preserveAspectRatio="none">
+          <use xlink:href="#tabshape"></use>
+        </svg>
+        <svg viewBox="0 0 80 60" preserveAspectRatio="none">
+          <use xlink:href="#tabshape"></use>
+        </svg>
         <span>Archive</span>
       {{/x-tab/nav-wrap}}
       {{#x-tab/nav-wrap paneId="analytics-shape" tab=tab}}
-        <svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
-				<svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
+        <svg viewBox="0 0 80 60" preserveAspectRatio="none">
+          <use xlink:href="#tabshape"></use>
+        </svg>
+        <svg viewBox="0 0 80 60" preserveAspectRatio="none">
+          <use xlink:href="#tabshape"></use>
+        </svg>
         <span>Analytics</span>
       {{/x-tab/nav-wrap}}
       {{#x-tab/nav-wrap paneId="settings-shape" tab=tab}}
-        <svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
-				<svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
+        <svg viewBox="0 0 80 60" preserveAspectRatio="none">
+          <use xlink:href="#tabshape"></use>
+        </svg>
+        <svg viewBox="0 0 80 60" preserveAspectRatio="none">
+          <use xlink:href="#tabshape"></use>
+        </svg>
         <span>Settings</span>
       {{/x-tab/nav-wrap}}
       {{#x-tab/nav-wrap paneId="upload-shape" tab=tab}}
-        <svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
+        <svg viewBox="0 0 80 60" preserveAspectRatio="none">
+          <use xlink:href="#tabshape"></use>
+        </svg>
         <span>Upload</span>
       {{/x-tab/nav-wrap}}
     {{/x-tab/navigation}}

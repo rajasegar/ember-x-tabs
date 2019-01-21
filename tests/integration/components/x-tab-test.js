@@ -41,9 +41,9 @@ module('Integration | Component | x tab', function(hooks) {
 
   function assertActiveTab(assert, tabIndex, active = true) {
     if (findAll('nav > ul >  li').length > 0) {
-      assert.equal(this.$(`nav > ul >  li:nth-child(${tabIndex + 1})`)[0].classList.contains('tab-current'), active, active ? 'tab is active' : 'tab is inactive');
+      assert.equal(this.element.querySelector(`nav > ul >  li:nth-child(${tabIndex + 1})`).classList.contains('tab-current'), active, active ? 'tab is active' : 'tab is inactive');
     }
-    assert.equal(this.$(`.content-wrap section:nth-child(${tabIndex + 1})`)[0].classList.contains('content-current'), active, active ? 'tab pane is active' : 'tab pane is inactive');
+    assert.equal(this.element.querySelector(`.content-wrap section:nth-child(${tabIndex + 1})`).classList.contains('content-current'), active, active ? 'tab pane is active' : 'tab pane is inactive');
   }
 
 

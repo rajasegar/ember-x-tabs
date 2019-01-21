@@ -6,7 +6,7 @@ export default Component.extend({
   layout,
 
   tagName: 'li',
-  classNameBindings:['isActive:tab-current'],
+  classNameBindings: ['isActive:tab-current'],
 
   ownerName: undefined,
 
@@ -17,21 +17,21 @@ export default Component.extend({
   init() {
     this._super(...arguments);
 
-    let register = this.get("api.registerAction");
+    let register = this.get('api.registerAction');
     if (register) {
-      register(this.get("name"), this.get("data"));
+      register(this.get('name'), this.get('data'));
     }
   },
 
-  tabName: computed("ownerName", "name", {
+  tabName: computed('ownerName', 'name', {
     get() {
-      return `${this.get("ownerName")}-${this.get("name")}`;
+      return `${this.get('ownerName')}-${this.get('name')}`;
     }
   }),
 
-  isActive: computed("name", "api.activeName", {
+  isActive: computed('name', 'api.activeName', {
     get() {
-      return this.get("name") === this.get("api.activeName");
+      return this.get('name') === this.get('api.activeName');
     }
   })
 });
