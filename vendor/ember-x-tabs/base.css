@@ -49,8 +49,9 @@
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	line-height: 2.5;
-  text-decoration: none;
-  color: var(--x-tab-primary);
+	text-decoration: none;
+	color: var(--x-tab-primary);
+	cursor: pointer;
 }
 
 .tabs nav a span {
