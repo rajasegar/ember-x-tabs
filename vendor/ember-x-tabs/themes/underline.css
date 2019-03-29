@@ -3,7 +3,7 @@
 /*****************************/
 
 .tabs-style-underline nav {
-	  background: #fff;
+	  background: var(--x-tab-bg3, "#fff");
 }
 
 .tabs-style-underline nav a {
@@ -23,7 +23,7 @@
 	  left: 0;
 	  width: 100%;
 	  height: 6px;
-	  background: #2CC185;
+	  background: var(--x-tab-active, "#2CC185");
 	  content: '';
 	  -webkit-transition: -webkit-transform 0.3s;
 	  transition: transform 0.3s;

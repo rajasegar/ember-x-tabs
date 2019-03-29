@@ -24,8 +24,8 @@
 }
 
 .tabs-style-iconbox nav ul li.tab-current a {
-	background: #fff;
-	box-shadow: -1px 0 0 #fff;
+	background: var(--x-tab-bg3, "#fff");
+	box-shadow: -1px 0 0 var(--x-tab-bg3, "#fff");
 }
 
 .tabs-style-iconbox nav ul li.tab-current a::after {
@@ -37,7 +37,7 @@
 	height: 0;
 	border: solid transparent;
 	border-width: 10px;
-	border-top-color: #fff;
+	border-top-color: var(--x-tab-bg3, "#fff");
 	content: '';
 	pointer-events: none;
 }

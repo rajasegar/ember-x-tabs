@@ -10,7 +10,7 @@
 	display: inline-block;
 	overflow: visible;
 	padding: 1em 0 2em;
-	color: #74777b;
+	color: var(--x-tab-color2, "#74777b");
 	line-height: 1;
 	-webkit-transition: color 0.3s cubic-bezier(0.7,0,0.3,1); 
 	transition: color 0.3s cubic-bezier(0.7,0,0.3,1);
@@ -19,7 +19,7 @@
 .tabs-style-iconfall nav a:hover,
 .tabs-style-iconfall nav a:focus,
 .tabs-style-iconfall nav li.tab-current a {
-	color: #2CC185;
+	color: var(--x-tab-active, "#2CC185");
 }
 
 .tabs-style-iconfall nav a span {
@@ -33,7 +33,7 @@
 	margin-left: -20px;
 	width: 40px;
 	height: 4px;
-	background: #2CC185;
+	background: var(--x-tab-active, "#2CC185");
 	content: '';
 	opacity: 0;
 	-webkit-transition: -webkit-transform 0.2s ease-in;

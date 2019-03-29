@@ -22,7 +22,7 @@
 	overflow: visible;
 	margin: 0 -3em 0 0;
 	padding: 0;
-	color: #fff;
+	color: var(--x-tab-bg3, "#fff");
 	font-weight: 500;
 }
 
@@ -42,7 +42,7 @@
 	margin: 0;
 	width: 3em;
 	height: 100%;
-	fill: #bdc2c9;
+	fill: var(--x-tab-bg4, "#bdc2c9");
 }
 
 .tabs-style-shape nav li a svg:nth-child(2),
@@ -57,17 +57,17 @@
 	display: block;
 	overflow: hidden;
 	padding: 0.65em 0;
-	background-color: #bdc2c9;
+	background-color: var(--x-tab-bg4, "#bdc2c9");
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
 
 .tabs-style-shape nav li a:hover span {
-	background-color: #2CC185;
+	background-color: var(--x-tab-active, "#2CC185");
 }
 
 .tabs-style-shape nav li a:hover svg {
-	fill: #2CC185;
+	fill: var(--x-tab-active, "#2CC185");
 }
 
 /* Make only shape clickable */
@@ -86,15 +86,15 @@
 }
 
 .tabs-style-shape nav li.tab-current a span {
-	background: #fff;
+	background: var(--x-tab-bg3, "#fff");
 }
 
 .tabs-style-shape nav li.tab-current a svg {
-	fill: #fff;
+	fill: var(--x-tab-bg3, "#fff");
 }
 
 .tabs-style-shape .content-wrap {
-	background: #fff;
+	background: var(--x-tab-bg3, "#fff");
 }
 
 @media screen and (max-width: 58em) {

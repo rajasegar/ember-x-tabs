@@ -13,7 +13,7 @@
 	margin: -60px 0 0 -60px;
 	width: 120px;
 	height: 120px;
-	border: 1px solid #2CC185;
+	border: 1px solid var(--x-tab-active, "#2CC185");
 	border-radius: 50%;
 	content: '';
 	opacity: 0;
@@ -39,7 +39,7 @@
 
 .tabs-style-circle nav a {
 	overflow: visible;
-	color: #74777b;
+	color: var(--x-tab-color2, "#74777b");
 	font-weight: 700;
 	font-size: 0.9em;
 	line-height: 1.1;
@@ -59,11 +59,11 @@
 
 .tabs-style-circle nav a:hover,
 .tabs-style-circle nav a:focus {
-	color: #4a4a4b;
+	color: var(--x-tab-color3, "#4a4a4b");
 }
 
 .tabs-style-circle nav li.tab-current a {
-	color: #2CC185;
+	color: var(--x-tab-active, "#2CC185");
 }
 
 .tabs-style-circle nav li.tab-current a span {

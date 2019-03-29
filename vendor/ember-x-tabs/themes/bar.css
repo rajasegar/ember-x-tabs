@@ -12,14 +12,14 @@
 
 .tabs-style-bar nav ul li a {
 	  margin: 0 2px;
-	  background-color: #f7f7f7;
-	  color: #74777b;
+	  background-color: var(--x-tab-bg1, "#f7f7f7");
+	  color: var(--x-tab-color2, "#74777b");
 	  transition: background-color 0.2s, color 0.2s;
 }
 
 .tabs-style-bar nav ul li a:hover,
 .tabs-style-bar nav ul li a:focus {
-	  color: #2CC185;
+	  color: var(--x-tab-active, "#2CC185");
 }
 
 .tabs-style-bar nav ul li a span {
@@ -30,6 +30,6 @@
 }
 
 .tabs-style-bar nav ul li.tab-current a {
-	  background: #2CC185;
-	  color: #fff;
+	  background: var(--x-tab-active, "#2CC185");
+	  color: var(--x-tab-bg3, "#fff");
 }

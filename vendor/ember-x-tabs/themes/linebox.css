@@ -10,7 +10,7 @@
 
 .tabs-style-linebox nav a {
 	padding: 0 1.5em;
-	color: #74777b;
+	color: var(--x-tab-color2, "#74777b");
 	font-weight: 700;
 	-webkit-transition: color 0.3s;
 	transition: color 0.3s;
@@ -18,11 +18,11 @@
 
 .tabs-style-linebox nav a:hover,
 .tabs-style-linebox nav a:focus {
-	color: #2CC185;
+	color: var(--x-tab-active, "#2CC185");
 }
 
 .tabs-style-linebox nav li.tab-current a {
-	color: #fff;
+	color: var(--x-tab-bg3, "#fff");
 }
 
 .tabs-style-linebox nav a::after {
@@ -50,7 +50,7 @@
 .tabs-style-linebox nav a:hover::after,
 .tabs-style-linebox nav a:focus::after,
 .tabs-style-linebox nav li.tab-current a::after {
-	background: #2CC185;
+	background: var(--x-tab-active, "#2CC185");
 }
 
 @media screen and (max-width: 58em) {
