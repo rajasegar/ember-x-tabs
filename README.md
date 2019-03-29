@@ -226,9 +226,18 @@ For example:
 
 ``` css
 :root {
-    --x-tab-primary: #2CC185; /* Active Color */
-    --x-tab-secondary: #000;  
-    --x-tab-border: #e7ecea; /* Border color */
+  --x-tab-active: #2CC185;
+
+  --x-tab-color1: #334455;
+  --x-tab-color2: #74777b;
+  --x-tab-color3: #4a4a4b;
+  --x-tab-color4: #000;
+
+  /* Background colors */
+  --x-tab-bg1: #f7f7f7;
+  --x-tab-bg2: #f0f0f0;
+  --x-tab-bg3: #fff;
+  --x-tab-bg4: #bdc2c9;
 }
 ```
 
