@@ -280,6 +280,15 @@ body #cdawrap {
 	}
 }
 
+.content-wrap section p {
+  margin: 0;
+  padding: 0.75em 0;
+  color: rgba(40,44,42,0.05);
+  font-weight: 900;
+  font-size: 4em;
+  line-height: 1;
+}
+
 .myTabClass nav  {
     background: lightblue;
 }
@@ -300,3 +309,4 @@ body #cdawrap {
 .myTabClass nav ul li.tab-current a {
     color: white;
 }
+
