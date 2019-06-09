@@ -8,7 +8,7 @@
 [![devDependencies Status](https://david-dm.org/rajasegar/ember-x-tabs/dev-status.svg)](https://david-dm.org/rajasegar/ember-x-tabs?type=dev)
 
 
-An Ember component addon for Tab component with various style options and theme customization.
+An Ember addon for Tab component with various style options and theme customization.
 
 Heavily inspired by this [Codrops article](https://tympanus.net/codrops/2014/09/02/tab-styles-inspiration/)
 
