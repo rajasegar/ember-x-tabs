@@ -4,6 +4,9 @@
 [![npm](https://img.shields.io/npm/dm/ember-x-tabs.svg)](https://www.npmjs.com/package/ember-x-tabs)
 [![npm version](http://img.shields.io/npm/v/ember-x-tabs.svg?style=flat)](https://npmjs.org/package/ember-x-tabs "View this project on npm")
 [![EmberObserver](http://emberobserver.com/badges/ember-x-tabs.svg?branch=master)](http://emberobserver.com/addons/ember-x-tabs)
+[![dependencies Status](https://david-dm.org/rajasegar/ember-x-tabs/status.svg)](https://david-dm.org/rajasegar/ember-x-tabs)
+[![devDependencies Status](https://david-dm.org/rajasegar/ember-x-tabs/dev-status.svg)](https://david-dm.org/rajasegar/ember-x-tabs?type=dev)
+
 
 An Ember component addon for Tab component with various style options and theme customization.
 
