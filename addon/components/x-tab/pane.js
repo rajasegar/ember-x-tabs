@@ -27,7 +27,7 @@ export default Component.extend(ComponentChild, {
         this.set('contentCurrent', false);
     },
 
-    _showHide: observer('isActive', function() {
+    _showHide: observer('isActive', function() { // eslint-disable-line
         if(this.get('isActive')) {
             this.show();
         } else {
