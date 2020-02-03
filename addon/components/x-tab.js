@@ -38,7 +38,7 @@ export default Component.extend(ComponentParent, {
   actions: {
     select(id) {
       this.set('isActiveId', id);
-      // notify parent od tab click
+      // notify parent of tab click
       if (typeof this.get('onTabActive') === 'function') {
         this.get('onTabActive')(id);
       }
