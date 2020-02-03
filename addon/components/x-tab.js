@@ -38,6 +38,9 @@ export default Component.extend(ComponentParent, {
   actions: {
     select(id) {
       this.set('isActiveId', id);
+      if (typeof this.get('onTabActive') === 'function') {
+        this.get('onTabActive')(id);
+      }
     }
   }
 });
