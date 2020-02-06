@@ -1,7 +1,15 @@
-import { filter, oneWay } from '@ember/object/computed';
+import {
+  filter,
+  oneWay
+} from '@ember/object/computed';
 import Component from '@ember/component';
-import { A } from '@ember/array';
-import { getWithDefault, computed } from '@ember/object';
+import {
+  A
+} from '@ember/array';
+import {
+  getWithDefault,
+  computed
+} from '@ember/object';
 import layout from '../templates/components/x-tab';
 import ComponentParent from '../mixins/component-parent';
 import TabPane from './x-tab/pane';
@@ -11,7 +19,7 @@ export default Component.extend(ComponentParent, {
   classNames: ['tabs'],
   classNameBindings: ['tab-style', 'customClass'],
 
-  childPanes: filter('children', function(view) {
+  childPanes: filter('children', function (view) {
     return view instanceof TabPane;
   }),
 
@@ -26,7 +34,7 @@ export default Component.extend(ComponentParent, {
     }
   }),
 
-  navItems: computed('childPanes.@each.{elementId,title,icon}', function() {
+  navItems: computed('childPanes.@each.{elementId,title,icon}', function () {
     let items = A();
     this.get('childPanes').forEach((pane) => {
       let item = pane.getProperties('elementId', 'title', 'icon');
@@ -38,9 +46,9 @@ export default Component.extend(ComponentParent, {
   actions: {
     select(id) {
       this.set('isActiveId', id);
-      // notify parent of tab click
-      if (typeof this.get('onTabActive') === 'function') {
-        this.get('onTabActive')(id);
+      // notify parent of tab selection
+      if (typeof this.get('onActivate') === 'function') {
+        this.get('onActivate')(id);
       }
     }
   }
