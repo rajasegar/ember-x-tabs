@@ -12,12 +12,24 @@ export default Component.extend(ComponentChild, {
 
     activeId: null,
 
-    isActive: computed('activeId', 'elementId', function() {
-        return this.get('activeId') === this.get('elementId');
+    isActive: computed('activeId', 'paneId', function() {
+        return this.get('activeId') === this.get('paneId');
     }).readOnly(),
 
 
     contentCurrent: true,
+
+    _paneId: null,
+    paneId: computed('_paneId', {
+        get() {
+            return this.get('_paneId') || this.get('elementId');
+        },
+
+        set(key, value) {
+            this.set('_paneId', value);
+            return value;
+        }
+    }),
 
     show() {
         this.set('contentCurrent', true);

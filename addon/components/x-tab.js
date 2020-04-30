@@ -15,7 +15,7 @@ export default Component.extend(ComponentParent, {
     return view instanceof TabPane;
   }),
 
-  activeId: oneWay('childPanes.firstObject.elementId'),
+  activeId: oneWay('childPanes.firstObject.paneId'),
 
   isActiveId: computed('activeId', {
     get() {
@@ -26,10 +26,10 @@ export default Component.extend(ComponentParent, {
     }
   }),
 
-  navItems: computed('childPanes.@each.{elementId,title,icon}', function() {
+  navItems: computed('childPanes.@each.{paneId,title,icon}', function() {
     let items = A();
     this.get('childPanes').forEach((pane) => {
-      let item = pane.getProperties('elementId', 'title', 'icon');
+      let item = pane.getProperties('paneId', 'title', 'icon');
       items.push(item);
     });
     return items;
