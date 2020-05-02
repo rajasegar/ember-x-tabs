@@ -61,24 +61,24 @@ Example markup:
 
       {{!-- tab content --}}
       <div class="content-wrap">
-        {{#tab.pane elementId="home"}}
+        {{#tab.pane paneId="home"}}
           <h1>Home</h1>
           <p>This is home content</p>
         {{/tab.pane}}
 
-        {{#tab.pane elementId="archive"}}
+        {{#tab.pane paneId="archive"}}
           <h1>Archive</h1>
           <p>This is archive content</p>
         {{/tab.pane}}
-        {{#tab.pane elementId="analytics"}}
+        {{#tab.pane paneId="analytics"}}
           <h1>Analytics</h1>
           <p>This is analytics content</p>
         {{/tab.pane}}
-        {{#tab.pane elementId="settings"}}
+        {{#tab.pane paneId="settings"}}
           <h1>Settings</h1>
           <p>This is settings content</p>
         {{/tab.pane}}
-        {{#tab.pane elementId="upload"}}
+        {{#tab.pane paneId="upload"}}
           <h1>Upload</h1>
           <p>This is upload content</p>
         {{/tab.pane}}
