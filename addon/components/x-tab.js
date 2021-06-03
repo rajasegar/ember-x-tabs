@@ -1,9 +1,10 @@
 import { filter, oneWay } from '@ember/object/computed';
 import Component from '@ember/component';
 import { A } from '@ember/array';
-import { getWithDefault, computed } from '@ember/object';
+import { computed } from '@ember/object';
 import layout from '../templates/components/x-tab';
 import ComponentParent from '../mixins/component-parent';
+import { getWithDefault } from "../utils/get-with-default";
 import TabPane from './x-tab/pane';
 
 export default Component.extend(ComponentParent, {
