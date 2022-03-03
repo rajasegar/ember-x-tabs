@@ -44,51 +44,51 @@ jobs:
   #     with:
   #       github-token: ${{ secrets.GITHUB_TOKEN }}
 
-  tests_ember_compat:
-    name: Ember Compatability
-    runs-on: ubuntu-latest
-    if: "!contains(github.event.head_commit.message, 'skip ci')"
-    strategy:
-      matrix:
-        scenario:
-        - "ember-lts-3.20"
-        - "ember-lts-3.24"
-        - "ember-release"
-    steps:
-    - uses: actions/checkout@v2
-    - uses: rwjblue/setup-volta@v1
-      with:
-        node-version: 12
-    - name: Install
-      run: yarn install
-    - name: Test with ${{ matrix.scenario }}
-      run: yarn test:ember ${{ matrix.scenario }}
+  # tests_ember_compat:
+  #   name: Ember Compatability
+  #   runs-on: ubuntu-latest
+  #   if: "!contains(github.event.head_commit.message, 'skip ci')"
+  #   strategy:
+  #     matrix:
+  #       scenario:
+  #       - "ember-lts-3.20"
+  #       - "ember-lts-3.24"
+  #       - "ember-release"
+  #   steps:
+  #   - uses: actions/checkout@v2
+  #   - uses: rwjblue/setup-volta@v1
+  #     with:
+  #       node-version: 12
+  #   - name: Install
+  #     run: yarn install
+  #   - name: Test with ${{ matrix.scenario }}
+  #     run: yarn test:ember ${{ matrix.scenario }}
 
-  build-and-deploy:
-    runs-on: ubuntu-latest
-    if: "!contains(github.event.head_commit.message, 'skip ci')"
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-      with:
-        fetch-depth: 0
-    - name: Volta setup
-      uses: rwjblue/setup-volta@v1
-      with:
-        node-version: 12
-    - name: Build
-      run: |
-        yarn
-        yarn build
-    - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@releases/v3
-      with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BRANCH: gh-pages
-        FOLDER: dist
+  # build-and-deploy:
+  #   runs-on: ubuntu-latest
+  #   if: "!contains(github.event.head_commit.message, 'skip ci')"
+  #   steps:
+  #   - name: Checkout
+  #     uses: actions/checkout@v2
+  #     with:
+  #       fetch-depth: 0
+  #   - name: Volta setup
+  #     uses: rwjblue/setup-volta@v1
+  #     with:
+  #       node-version: 12
+  #   - name: Build
+  #     run: |
+  #       yarn
+  #       yarn build
+  #   - name: Deploy
+  #     uses: JamesIves/github-pages-deploy-action@releases/v3
+  #     with:
+  #       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  #       BRANCH: gh-pages
+  #       FOLDER: dist
 
-    - name: Release
-      env:
-        GITHUB_TOKEN: ${{ secrets.GH_PAT }}
-        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-      run: yarn semantic-release
+  #   - name: Release
+  #     env:
+  #       GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+  #       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+  #     run: yarn semantic-release
