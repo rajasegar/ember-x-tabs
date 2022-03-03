@@ -28,64 +28,6 @@ Heavily inspired by this [Codrops article](https://tympanus.net/codrops/2014/09/
 
 Example markup:
 
-### Bar style (x-tab)
-
-```hbs
-    {{#x-tab  tab-style="tabs-style-bar" as |tab| }}
-
-      {{!-- tab navigation --}}
-      {{#x-tab/navigation}}
-        {{#x-tab/nav-wrap paneId="home" tab=tab}}
-          <i class="icon icon-home"></i>
-          <span>Home</span>
-        {{/x-tab/nav-wrap}}
-        {{#x-tab/nav-wrap paneId="archive" tab=tab}}
-          <i class="icon icon-box"></i>
-          <span>Archive</span>
-        {{/x-tab/nav-wrap}}
-        {{#x-tab/nav-wrap paneId="analytics" tab=tab}}
-          <i class="icon icon-display"></i>
-          <span>Analytics</span>
-        {{/x-tab/nav-wrap}}
-        {{#x-tab/nav-wrap paneId="settings" tab=tab}}
-          <i class="icon icon-tools"></i>
-          <span>Settings</span>
-        {{/x-tab/nav-wrap}}
-        {{#x-tab/nav-wrap paneId="upload" tab=tab}}
-          <i class="icon icon-upload"></i>
-          <span>Upload</span>
-        {{/x-tab/nav-wrap}}
-      {{/x-tab/navigation}}
-
-      {{!-- tab content --}}
-      <div class="content-wrap">
-        {{#tab.pane paneId="home"}}
-          <h1>Home</h1>
-          <p>This is home content</p>
-        {{/tab.pane}}
-
-        {{#tab.pane paneId="archive"}}
-          <h1>Archive</h1>
-          <p>This is archive content</p>
-        {{/tab.pane}}
-        {{#tab.pane paneId="analytics"}}
-          <h1>Analytics</h1>
-          <p>This is analytics content</p>
-        {{/tab.pane}}
-        {{#tab.pane paneId="settings"}}
-          <h1>Settings</h1>
-          <p>This is settings content</p>
-        {{/tab.pane}}
-        {{#tab.pane paneId="upload"}}
-          <h1>Upload</h1>
-          <p>This is upload content</p>
-        {{/tab.pane}}
-      </div>
-
-    {{/x-tab}}
-    
-```
-
 ### Bar style (x-tabs)
 
 A fully contextual version of the tab component is provided under the name x-tabs 
