@@ -22,6 +22,7 @@
     "lint:js": "eslint .",
     "start": "ember server",
     "test": "ember test",
+    "test:ember": "ember test",
     "test:all": "ember try:each",
     "test:firefox": "ember test --launch='Firefox'",
     "deploy": "npm version patch && git push && git push --tags && npm publish",
