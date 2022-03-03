@@ -1,7 +1,7 @@
-<a href="#{{paneId}}"
+<a href="#{{@paneId}}"
    role="tab"
-   aria-controls={{paneId}}
-   {{action (action selectAction paneId)}}
+   aria-controls={{@paneId}}
+   {{action (action selectAction @paneId)}}
 >
   {{yield}}
 </a>

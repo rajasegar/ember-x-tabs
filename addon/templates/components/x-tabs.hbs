@@ -2,14 +2,14 @@
   (hash
     selectAction=(action "select")
     registerAction=(action "register")
-    activeName=activeName
-    name=name
-    activeData=activeData
+    activeName=this.activeName
+    name=this.name
+    activeData=this.activeData
   ) as | api |
 }}
   {{yield
     (hash
-      tabs=(component "x-tabs-tabs" api=api ownerName=name)
+      tabs=(component "x-tabs-tabs" api=api ownerName=@api.name)
       panes=(component "x-tabs-panes" api=api)
       dataPane=(component "x-tabs-pane-data" api=api)
       api=api

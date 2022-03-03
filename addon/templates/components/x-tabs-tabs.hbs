@@ -1,8 +1,8 @@
 <ul>
   {{yield
     (hash
-      api=api
-      tab=(component "x-tabs-tab" api=api ownerName=ownerName)
+      api=@api
+      tab=(component "x-tabs-tab" api=@api ownerName=@ownerName)
     )
   }}
 </ul>
