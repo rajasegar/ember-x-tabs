@@ -179,26 +179,6 @@
   "use strict";
 
   QUnit.module('ESLint | addon');
-  QUnit.test('addon/components/x-tab.js', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'addon/components/x-tab.js should pass ESLint\n\n');
-  });
-  QUnit.test('addon/components/x-tab/nav-item.js', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'addon/components/x-tab/nav-item.js should pass ESLint\n\n');
-  });
-  QUnit.test('addon/components/x-tab/nav-wrap.js', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'addon/components/x-tab/nav-wrap.js should pass ESLint\n\n');
-  });
-  QUnit.test('addon/components/x-tab/navigation.js', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'addon/components/x-tab/navigation.js should pass ESLint\n\n');
-  });
-  QUnit.test('addon/components/x-tab/pane.js', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'addon/components/x-tab/pane.js should pass ESLint\n\n');
-  });
   QUnit.test('addon/components/x-tabs-pane-data.js', function (assert) {
     assert.expect(1);
     assert.ok(true, 'addon/components/x-tabs-pane-data.js should pass ESLint\n\n');
