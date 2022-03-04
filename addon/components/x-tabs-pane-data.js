@@ -1,9 +1,3 @@
-import Component from '@ember/component';
-import layout from '../templates/components/x-tabs-pane-data';
+import Component from '@glimmer/component';
 
-export default Component.extend({
-  layout,
-
-  classNames: ['content-wrap']
-});
-
+export default class XTabsPaneDataComponent extends Component {}
