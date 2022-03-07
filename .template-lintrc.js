@@ -1,5 +1,10 @@
 'use strict';
 
 module.exports = {
-  extends: 'recommended'
+  extends: 'octane',
+  rules: {
+    // keep
+    'no-quoteless-attributes': false,
+    'no-bare-strings': false,
+  },
 };

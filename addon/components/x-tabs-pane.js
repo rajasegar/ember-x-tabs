@@ -1,18 +1,7 @@
-import Component from '@ember/component';
-import layout from '../templates/components/x-tabs-pane';
-import { computed } from '@ember/object';
+import Component from '@glimmer/component';
 
-export default Component.extend({
-  layout,
-  classNameBindings: ['isActive:content-current'],
-
-  tagName: 'section',
-
-  name: undefined,
-
-  isActive: computed('name', 'api.activeName', {
-    get() {
-      return this.get('name') === this.get('api.activeName');
-    }
-  })
-});
+export default class XTabsPane extends Component {
+  get isActive() {
+      return this.args.name === this.args.api?.activeName;
+  }
+}

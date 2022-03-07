@@ -1,44 +1,35 @@
-import Component from '@ember/component';
-import layout from '../templates/components/x-tabs';
+import Component from '@glimmer/component';
 import { scheduleOnce } from '@ember/runloop';
-import { computed } from '@ember/object';
+import { tracked } from '@glimmer/tracking';
+import { action } from '@ember/object';
 
-export default Component.extend({
-  layout,
+export default class XTabsComponent extends Component {
 
-  classNames: ['tabs'],
-  classNameBindings: ['tab-style', 'customClass'],
+  @tracked
+  activeName;
 
-  activeName: computed({
-    get() {
-      return undefined;
-    },
-    set(k, v) {
-      return v;
-    }
-  }),
-  activeData: undefined,
+  @tracked
+  activeData;
 
-  name: 'x-tabs',
+  name = 'x-tabs';
 
-  selectFirstTab: true,
+  @tracked
+  selectFirstTab = true;
 
-  actions: {
-    select(name, data) {
-      this.set('activeName', name);
-      this.set('activeData', data);
-    },
-    register(name, data) {
-      let activeName = this.get('activeName');
-
-      // Setting the data for the tabSelected, or selecting the firstTab
-      if (name === activeName || (this.get('selectFirstTab') === true && activeName == null)) {
-        this.set('selectFirstTab', false);
-        scheduleOnce('afterRender', this, function() {
-          this.send('select', name, data);
-        });
-      }
-    }
+  @action
+  select(name, data) {
+    this.activeName = name;
+    this.activeData = data;
   }
 
-});
+  @action
+  register(name, data) {
+    // Setting the data for the tabSelected, or selecting the firstTab
+    if (name === this.activeName || (this.selectFirstTab === true && this.activeName == null)) {
+      this.selectFirstTab = false;
+      scheduleOnce('afterRender', this, () => {
+        this.select(name, data);
+      });
+    }
+  }
+}
