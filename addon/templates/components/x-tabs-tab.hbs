@@ -1,7 +1,7 @@
 <a
   role="tab"
-  aria-controls={{tabName}}
-  onclick={{action api.selectAction name data}}
+  aria-controls={{this.tabName}}
+  onclick={{action @api.selectAction @name @data}}
 >
   {{yield}}
 </a>
