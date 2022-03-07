@@ -65523,8 +65523,8 @@ define("ember-resolver/features", [], function () {
   _exports.default = void 0;
 
   var _default = Ember.HTMLBars.template({
-    "id": "za1XSaaU",
-    "block": "{\"symbols\":[\"&default\"],\"statements\":[[0,\"  \"],[15,1,[[29,\"hash\",null,[[\"pane\",\"activeId\",\"selectAction\"],[[29,\"component\",[\"x-tab/pane\"],[[\"parent\",\"activeId\"],[[24,0,[]],[25,[\"isActiveId\"]]]]],[25,[\"isActiveId\"]],[29,\"action\",[[24,0,[]],\"select\"],null]]]]]],[0,\"\\n\"]],\"hasEval\":false}",
+    "id": "wCTJXxPZ",
+    "block": "{\"symbols\":[\"&default\"],\"statements\":[[0,\"  \"],[15,1,[[29,\"hash\",null,[[\"pane\",\"activeId\",\"selectAction\"],[[29,\"component\",[\"x-tab/pane\"],[[\"parent\",\"activeId\"],[[24,0,[]],[24,0,[\"isActiveId\"]]]]],[24,0,[\"isActiveId\"]],[29,\"action\",[[24,0,[]],\"select\"],null]]]]]],[0,\"\\n\"]],\"hasEval\":false}",
     "meta": {
       "moduleName": "ember-x-tabs/templates/components/x-tab.hbs"
     }
@@ -65541,8 +65541,8 @@ define("ember-resolver/features", [], function () {
   _exports.default = void 0;
 
   var _default = Ember.HTMLBars.template({
-    "id": "0xEI+QqG",
-    "block": "{\"symbols\":[\"&default\"],\"statements\":[[7,\"a\"],[12,\"href\",[30,[\"#\",[23,\"paneId\"]]]],[11,\"role\",\"tab\"],[12,\"aria-controls\",[23,\"paneId\"]],[9],[0,\"\\n  \"],[15,1],[0,\"\\n\"],[3,\"action\",[[24,0,[]],[29,\"action\",[[24,0,[]],[25,[\"selectAction\"]],[25,[\"paneId\"]]],null]]],[10],[0,\"\\n\"]],\"hasEval\":false}",
+    "id": "ntCXs6i5",
+    "block": "{\"symbols\":[\"@paneId\",\"&default\"],\"statements\":[[7,\"a\"],[12,\"href\",[30,[\"#\",[24,1,[]]]]],[11,\"role\",\"tab\"],[12,\"aria-controls\",[24,1,[]]],[9],[0,\"\\n  \"],[15,2],[0,\"\\n\"],[3,\"action\",[[24,0,[]],[29,\"action\",[[24,0,[]],[25,[\"selectAction\"]],[24,1,[]]],null]]],[10],[0,\"\\n\"]],\"hasEval\":false}",
     "meta": {
       "moduleName": "ember-x-tabs/templates/components/x-tab/nav-item.hbs"
     }
@@ -65559,8 +65559,8 @@ define("ember-resolver/features", [], function () {
   _exports.default = void 0;
 
   var _default = Ember.HTMLBars.template({
-    "id": "O/wZojoq",
-    "block": "{\"symbols\":[\"&default\"],\"statements\":[[4,\"x-tab/nav-item\",null,[[\"paneId\",\"active\",\"selectAction\"],[[25,[\"paneId\"]],[29,\"eq\",[[25,[\"tab\",\"activeId\"]],[25,[\"paneId\"]]],null],[25,[\"tab\",\"selectAction\"]]]],{\"statements\":[[0,\"  \"],[15,1],[0,\"\\n\"]],\"parameters\":[]},null]],\"hasEval\":false}",
+    "id": "w5qJA2/i",
+    "block": "{\"symbols\":[\"&default\",\"@tab\",\"@paneId\"],\"statements\":[[4,\"x-tab/nav-item\",null,[[\"paneId\",\"active\",\"selectAction\"],[[24,3,[]],[29,\"eq\",[[24,2,[\"activeId\"]],[24,3,[]]],null],[24,2,[\"selectAction\"]]]],{\"statements\":[[0,\"  \"],[15,1],[0,\"\\n\"]],\"parameters\":[]},null]],\"hasEval\":false}",
     "meta": {
       "moduleName": "ember-x-tabs/templates/components/x-tab/nav-wrap.hbs"
     }
@@ -65613,8 +65613,8 @@ define("ember-resolver/features", [], function () {
   _exports.default = void 0;
 
   var _default = Ember.HTMLBars.template({
-    "id": "7bWnWgyV",
-    "block": "{\"symbols\":[\"&default\"],\"statements\":[[7,\"section\"],[11,\"class\",\"content-current\"],[9],[0,\"\\n  \"],[15,1,[[29,\"hash\",null,[[\"api\",\"data\"],[[25,[\"api\"]],[25,[\"api\",\"activeData\"]]]]]]],[0,\"\\n\"],[10],[0,\"\\n\"]],\"hasEval\":false}",
+    "id": "UGvOuLca",
+    "block": "{\"symbols\":[\"@api\",\"&default\"],\"statements\":[[7,\"section\"],[11,\"class\",\"content-current\"],[9],[0,\"\\n  \"],[15,2,[[29,\"hash\",null,[[\"api\",\"data\"],[[24,1,[]],[24,1,[\"activeData\"]]]]]]],[0,\"\\n\"],[10],[0,\"\\n\"]],\"hasEval\":false}",
     "meta": {
       "moduleName": "ember-x-tabs/templates/components/x-tabs-pane-data.hbs"
     }
@@ -65649,8 +65649,8 @@ define("ember-resolver/features", [], function () {
   _exports.default = void 0;
 
   var _default = Ember.HTMLBars.template({
-    "id": "+IO9PT96",
-    "block": "{\"symbols\":[\"&default\"],\"statements\":[[15,1,[[29,\"hash\",null,[[\"api\",\"pane\"],[[25,[\"api\"]],[29,\"component\",[\"x-tabs-pane\"],[[\"api\"],[[25,[\"api\"]]]]]]]]]]],\"hasEval\":false}",
+    "id": "QO03H5Kb",
+    "block": "{\"symbols\":[\"@api\",\"&default\"],\"statements\":[[15,2,[[29,\"hash\",null,[[\"api\",\"pane\"],[[24,1,[]],[29,\"component\",[\"x-tabs-pane\"],[[\"api\"],[[24,1,[]]]]]]]]]]],\"hasEval\":false}",
     "meta": {
       "moduleName": "ember-x-tabs/templates/components/x-tabs-panes.hbs"
     }
@@ -65667,8 +65667,8 @@ define("ember-resolver/features", [], function () {
   _exports.default = void 0;
 
   var _default = Ember.HTMLBars.template({
-    "id": "O7FDLrNa",
-    "block": "{\"symbols\":[\"&default\"],\"statements\":[[7,\"a\"],[11,\"role\",\"tab\"],[12,\"aria-controls\",[23,\"tabName\"]],[12,\"onclick\",[29,\"action\",[[24,0,[]],[25,[\"api\",\"selectAction\"]],[25,[\"name\"]],[25,[\"data\"]]],null]],[9],[0,\"\\n  \"],[15,1],[0,\"\\n\"],[10],[0,\"\\n\"]],\"hasEval\":false}",
+    "id": "MXiKJX4p",
+    "block": "{\"symbols\":[\"@data\",\"@name\",\"@api\",\"&default\"],\"statements\":[[7,\"a\"],[11,\"role\",\"tab\"],[12,\"aria-controls\",[24,0,[\"tabName\"]]],[12,\"onclick\",[29,\"action\",[[24,0,[]],[24,3,[\"selectAction\"]],[24,2,[]],[24,1,[]]],null]],[9],[0,\"\\n  \"],[15,4],[0,\"\\n\"],[10],[0,\"\\n\"]],\"hasEval\":false}",
     "meta": {
       "moduleName": "ember-x-tabs/templates/components/x-tabs-tab.hbs"
     }
@@ -65685,8 +65685,8 @@ define("ember-resolver/features", [], function () {
   _exports.default = void 0;
 
   var _default = Ember.HTMLBars.template({
-    "id": "YhJ+lpfv",
-    "block": "{\"symbols\":[\"&default\"],\"statements\":[[7,\"ul\"],[9],[0,\"\\n  \"],[15,1,[[29,\"hash\",null,[[\"api\",\"tab\"],[[25,[\"api\"]],[29,\"component\",[\"x-tabs-tab\"],[[\"api\",\"ownerName\"],[[25,[\"api\"]],[25,[\"ownerName\"]]]]]]]]]],[0,\"\\n\"],[10],[0,\"\\n\"]],\"hasEval\":false}",
+    "id": "Q1AZIJ3P",
+    "block": "{\"symbols\":[\"@ownerName\",\"@api\",\"&default\"],\"statements\":[[7,\"ul\"],[9],[0,\"\\n  \"],[15,3,[[29,\"hash\",null,[[\"api\",\"tab\"],[[24,2,[]],[29,\"component\",[\"x-tabs-tab\"],[[\"api\",\"ownerName\"],[[24,2,[]],[24,1,[]]]]]]]]]],[0,\"\\n\"],[10],[0,\"\\n\"]],\"hasEval\":false}",
     "meta": {
       "moduleName": "ember-x-tabs/templates/components/x-tabs-tabs.hbs"
     }
@@ -65703,8 +65703,8 @@ define("ember-resolver/features", [], function () {
   _exports.default = void 0;
 
   var _default = Ember.HTMLBars.template({
-    "id": "Gtq7Qlg0",
-    "block": "{\"symbols\":[\"api\",\"&default\"],\"statements\":[[4,\"let\",[[29,\"hash\",null,[[\"selectAction\",\"registerAction\",\"activeName\",\"name\",\"activeData\"],[[29,\"action\",[[24,0,[]],\"select\"],null],[29,\"action\",[[24,0,[]],\"register\"],null],[25,[\"activeName\"]],[25,[\"name\"]],[25,[\"activeData\"]]]]]],null,{\"statements\":[[0,\"  \"],[15,2,[[29,\"hash\",null,[[\"tabs\",\"panes\",\"dataPane\",\"api\"],[[29,\"component\",[\"x-tabs-tabs\"],[[\"api\",\"ownerName\"],[[24,1,[]],[25,[\"name\"]]]]],[29,\"component\",[\"x-tabs-panes\"],[[\"api\"],[[24,1,[]]]]],[29,\"component\",[\"x-tabs-pane-data\"],[[\"api\"],[[24,1,[]]]]],[24,1,[]]]]]]],[0,\"\\n\"]],\"parameters\":[1]},null]],\"hasEval\":false}",
+    "id": "em7bo85L",
+    "block": "{\"symbols\":[\"api\",\"@api\",\"&default\"],\"statements\":[[4,\"let\",[[29,\"hash\",null,[[\"selectAction\",\"registerAction\",\"activeName\",\"name\",\"activeData\"],[[29,\"action\",[[24,0,[]],\"select\"],null],[29,\"action\",[[24,0,[]],\"register\"],null],[24,0,[\"activeName\"]],[24,0,[\"name\"]],[24,0,[\"activeData\"]]]]]],null,{\"statements\":[[0,\"  \"],[15,3,[[29,\"hash\",null,[[\"tabs\",\"panes\",\"dataPane\",\"api\"],[[29,\"component\",[\"x-tabs-tabs\"],[[\"api\",\"ownerName\"],[[24,1,[]],[24,2,[\"name\"]]]]],[29,\"component\",[\"x-tabs-panes\"],[[\"api\"],[[24,1,[]]]]],[29,\"component\",[\"x-tabs-pane-data\"],[[\"api\"],[[24,1,[]]]]],[24,1,[]]]]]]],[0,\"\\n\"]],\"parameters\":[1]},null]],\"hasEval\":false}",
     "meta": {
       "moduleName": "ember-x-tabs/templates/components/x-tabs.hbs"
     }
