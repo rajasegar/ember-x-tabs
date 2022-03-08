@@ -1,1 +1,1 @@
-export { default, eq } from 'ember-x-tabs/helpers/eq';
+export { default, eq } from "ember-x-tabs/helpers/eq";

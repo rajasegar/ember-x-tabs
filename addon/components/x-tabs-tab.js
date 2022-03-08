@@ -1,4 +1,4 @@
-import Component from '@glimmer/component';
+import Component from "@glimmer/component";
 
 export default class XTabsTab extends Component {
   constructor() {
@@ -11,10 +11,10 @@ export default class XTabsTab extends Component {
   }
 
   get tabName() {
-      return `${this.args.ownerName}-${this.args.name}`;
+    return `${this.args.ownerName}-${this.args.name}`;
   }
 
   get isActive() {
-      return this.args.name === this.args.api?.activeName;
+    return this.args.name === this.args.api?.activeName;
   }
 }

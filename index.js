@@ -1,11 +1,11 @@
 /* eslint-env node */
-'use strict';
+"use strict";
 
 module.exports = {
-  name: require('./package').name,
+  name: require("./package").name,
 
   included(app, parentAddon) {
-    var target = (parentAddon || app);
+    var target = parentAddon || app;
 
     // necessary for nested usage
     // parent addon should call `this._super.included.apply(this, arguments);`
@@ -19,32 +19,31 @@ module.exports = {
     // to import, thus not populating the user's app
     this.importThemes(target);
     this._super.included.apply(this, arguments);
-
   },
 
   importThemes(app) {
     var projectConfig = this.project.config(app.env);
-    var config = projectConfig['ember-x-tabs'] || {};
+    var config = projectConfig["ember-x-tabs"] || {};
     var themes = [];
     var excludedBaseStyles = false;
 
     if (config) {
       var allThemes = [
-        'bar',
-        'circle',
-        'circlefill',
-        'fillup',
-        'flip',
-        'iconbox',
-        'iconfall',
-        'line',
-        'linebox',
-        'linemove',
-        'linetriangle',
-        'shape',
-        'topline',
-        'tzoid',
-        'underline'
+        "bar",
+        "circle",
+        "circlefill",
+        "fillup",
+        "flip",
+        "iconbox",
+        "iconfall",
+        "line",
+        "linebox",
+        "linemove",
+        "linetriangle",
+        "shape",
+        "topline",
+        "tzoid",
+        "underline",
       ];
       var included = config.includedThemes;
       var excluded = config.excludedThemes;
@@ -58,24 +57,24 @@ module.exports = {
       }
 
       if (excluded && Array.isArray(excluded)) {
-        themes = themes.filter(function(theme) {
+        themes = themes.filter(function (theme) {
           return excluded.indexOf(theme) === -1;
         });
       }
 
-      themes = themes.filter(function(theme) {
+      themes = themes.filter(function (theme) {
         return theme && allThemes.indexOf(theme) !== -1;
       });
     }
 
     if (!excludedBaseStyles) {
-      app.import('vendor/ember-x-tabs/base.css');
+      app.import("vendor/ember-x-tabs/base.css");
     }
 
-    themes = themes.length ? themes : ['bar'];
+    themes = themes.length ? themes : ["bar"];
 
-    themes.forEach(function(theme) {
-      app.import('vendor/ember-x-tabs/themes/' + theme + '.css');
+    themes.forEach(function (theme) {
+      app.import("vendor/ember-x-tabs/themes/" + theme + ".css");
     });
-  }
+  },
 };

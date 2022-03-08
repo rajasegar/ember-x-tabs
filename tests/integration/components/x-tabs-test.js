@@ -1,7 +1,7 @@
-import { module, test } from 'qunit';
-import { setupRenderingTest } from 'ember-qunit';
-import { render } from '@ember/test-helpers';
-import hbs from 'htmlbars-inline-precompile';
+import { module, test } from "qunit";
+import { setupRenderingTest } from "ember-qunit";
+import { render } from "@ember/test-helpers";
+import hbs from "htmlbars-inline-precompile";
 
 import {
   create,
@@ -9,30 +9,31 @@ import {
   clickable,
   count,
   collection,
-  hasClass
-} from 'ember-cli-page-object';
+  hasClass,
+} from "ember-cli-page-object";
 
 const page = create({
   text: text(),
   switchClick: clickable("#switch"),
   sectionCount: count("section"),
-  tabs: collection('nav > ul > li', {
-    text: text('a > span'),
-    isCurrentTab: hasClass("tab-current", "")
+  tabs: collection("nav > ul > li", {
+    text: text("a > span"),
+    isCurrentTab: hasClass("tab-current", ""),
   }),
-  content: collection('.content-wrap > section', {
-    isCurrentContent: hasClass("content-current")
+  content: collection(".content-wrap > section", {
+    isCurrentContent: hasClass("content-current"),
   }),
 
   navCount: count("nav"),
 });
 
-module('Integration | Component | x-tabs', function(hooks) {
+module("Integration | Component | x-tabs", function (hooks) {
   setupRenderingTest(hooks);
 
-  const homeTab = 0, archiveTab = 1;
+  const homeTab = 0,
+    archiveTab = 1;
 
-  hooks.beforeEach(async function() {
+  hooks.beforeEach(async function () {
     await render(hbs`
     {{#x-tabs tab-style=tabStyle as | xt | }}
 
@@ -66,29 +67,42 @@ module('Integration | Component | x-tabs', function(hooks) {
   });
 
   function assertActiveTab(assert, tabIndex) {
-    assert.ok(page.tabs.objectAt(tabIndex).isCurrentTab, 'tab is active');
-    assert.ok(page.content.objectAt(tabIndex).isCurrentContent, 'tab pane is active');
+    assert.ok(page.tabs.objectAt(tabIndex).isCurrentTab, "tab is active");
+    assert.ok(
+      page.content.objectAt(tabIndex).isCurrentContent,
+      "tab pane is active"
+    );
   }
 
   function assertInActiveTab(assert, tabIndex) {
-    assert.notOk(page.tabs.objectAt(tabIndex).isCurrentTab, 'tab is inactive');
-    assert.notOk(page.content.objectAt(tabIndex).isCurrentContent, 'tab pane is inactive');
+    assert.notOk(page.tabs.objectAt(tabIndex).isCurrentTab, "tab is inactive");
+    assert.notOk(
+      page.content.objectAt(tabIndex).isCurrentContent,
+      "tab pane is inactive"
+    );
   }
 
-  test('it generates tab navigation', function(assert) {
-    assert.equal(page.navCount, 1, 'has tabs navigation');
-    assert.equal(page.tabs.length, 2, 'has tabs navigation items');
-    assert.equal(page.tabs.objectAt(homeTab).text, 'Home', 'navigation item shows pane title');
-    assert.equal(page.tabs.objectAt(archiveTab).text, 'Archive', 'navigation item shows pane title');
+  test("it generates tab navigation", function (assert) {
+    assert.equal(page.navCount, 1, "has tabs navigation");
+    assert.equal(page.tabs.length, 2, "has tabs navigation items");
+    assert.equal(
+      page.tabs.objectAt(homeTab).text,
+      "Home",
+      "navigation item shows pane title"
+    );
+    assert.equal(
+      page.tabs.objectAt(archiveTab).text,
+      "Archive",
+      "navigation item shows pane title"
+    );
   });
 
-  test('first tab is active by default', function(assert) {
-    debugger;
+  test("first tab is active by default", function (assert) {
     assertActiveTab(assert, homeTab);
     assertInActiveTab(assert, archiveTab);
   });
 
-  test('Selecting a tab displays correct pane', async function(assert) {
+  test("Selecting a tab displays correct pane", async function (assert) {
     await page.switchClick();
 
     assertInActiveTab(assert, homeTab);

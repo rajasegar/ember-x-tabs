@@ -1,1 +1,1 @@
-export { default } from 'ember-x-tabs/components/x-tabs-tab';
+export { default } from "ember-x-tabs/components/x-tabs-tab";

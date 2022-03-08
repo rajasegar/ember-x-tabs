@@ -1,30 +1,26 @@
-import { module, test } from 'qunit';
-import { setupRenderingTest } from 'ember-qunit';
+import { module, test } from "qunit";
+import { setupRenderingTest } from "ember-qunit";
 
-import { render } from '@ember/test-helpers';
+import { render } from "@ember/test-helpers";
 
-import hbs from 'htmlbars-inline-precompile';
+import hbs from "htmlbars-inline-precompile";
 
-import {
-  create,
-  text,
-} from 'ember-cli-page-object';
+import { create, text } from "ember-cli-page-object";
 
 const page = create({
-  text: text()
+  text: text(),
 });
 
-module('Integration | Component | x-tabs-pane', function(hooks) {
+module("Integration | Component | x-tabs-pane", function (hooks) {
   setupRenderingTest(hooks);
 
-  test('it renders', async function(assert) {
-
+  test("it renders", async function (assert) {
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.on('myAction', function(val) { ... });
 
     await render(hbs`{{x-tabs-pane}}`);
 
-    assert.equal(page.text, '');
+    assert.equal(page.text, "");
 
     // Template block usage:
     await render(hbs`
@@ -33,6 +29,6 @@ module('Integration | Component | x-tabs-pane', function(hooks) {
       {{/x-tabs-pane}}
     `);
 
-    assert.equal(page.text, 'template block text');
+    assert.equal(page.text, "template block text");
   });
 });
