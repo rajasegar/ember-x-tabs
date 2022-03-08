@@ -95,38 +95,39 @@ associated data object. There is only one dataPane and as the tabs are selected,
 yielded to the dataPane
 
 ```
-    {{#x-tabs activeName="archive" tab-style="tabs-style-topline" as | xt | }}
-  
-      {{#xt.tabs as | tabs |}}
-        {{#tabs.tab name="home" data=(hash name="Home data")}}
-          <i class="icon icon-home"></i>
-          <span>Home</span>
-        {{/tabs.tab}}
-        {{#tabs.tab name="archive" data=(hash name="Archive Data")}}
-          <i class="icon icon-box"></i>
-          <span>Archive</span>
-        {{/tabs.tab}}
-        {{#tabs.tab name="analytics" data=(hash name="Analytics Data")}}
-          <i class="icon icon-display"></i>
-          <span>Analytics</span>
-        {{/tabs.tab}}
-        {{#tabs.tab name="settings" data=(hash name="Settings Data")}}
-          <i class="icon icon-tools"></i>
-          <span>Settings</span>
-        {{/tabs.tab}}
-        {{#tabs.tab name="upload" data=(hash name="Upload Data")}}
-          <i class="icon icon-upload"></i>
-          <span>Upload</span>
-        {{/tabs.tab}}
-  
-      {{/xt.tabs}}
-  
-      {{#xt.dataPane as | pane |}}
-        <h1>Page Control</h1>
-        <p>Data: {{pane.data.name}}</p>
-      {{/xt.dataPane}}
-  
-    {{/x-tabs}}
+  <XTabs @activeName="archive" @tab-style="tabs-style-topline" as | xt | >
+
+    <xt.tabs as | tabs |>
+      <tabs.tab @name="home" @data=(hash name="Home data")>
+        <i class="icon icon-home"></i>
+        <span>Home</span>
+      </tabs.tab>
+      <tabs.tab @name="archive" @data=(hash name="Archive Data")>
+        <i class="icon icon-box"></i>
+        <span>Archive</span>
+      </tabs.tab>
+      <tabs.tab @name="analytics" @data=(hash name="Analytics Data")>
+        <i class="icon icon-display"></i>
+        <span>Analytics</span>
+      </tabs.tab>
+      <tabs.tab @name="settings" @data=(hash name="Settings Data")>
+        <i class="icon icon-tools"></i>
+        <span>Settings</span>
+      </tabs.tab>
+      <tabs.tab @name="upload" @data=(hash name="Upload Data")>
+        <i class="icon icon-upload"></i>
+        <span>Upload</span>
+      </tabs.tab>
+
+    </xt.tabs>
+
+    <xt.dataPane as | pane |>
+      <h1>Page Control</h1>
+      <p>Data: {{pane.data.name}}</p>
+    </xt.dataPane>
+  </XTabs>
+
+
 ```
 
 ## Tab styles
