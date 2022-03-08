@@ -28,25 +28,28 @@ jobs:
     - name: Templates
       run: npm run lint:hbs
 
-  # coverage:
-  #   name: Coverage
-  #   runs-on: ubuntu-latest
-  #   if: "!contains(github.event.head_commit.message, 'skip ci')"
-  #   steps:
+  coverage:
+    name: Coverage
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, 'skip ci')"
+    steps:
 
-  #   - uses: actions/checkout@v2
-  #   - uses: rwjblue/setup-volta@v1
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-version }}
 
-  #   - name: yarn install, run coveralls
-  #     env:
-  #       COVERALLS_REPO_TOKEN: ${{secrets.COVERALLS_REPO_TOKEN}}
-  #     run: |
-  #       yarn install
-  #       yarn test:ember
-  #   - name: Coveralls
-  #     uses: coverallsapp/github-action@master
-  #     with:
-  #       github-token: ${{ secrets.GITHUB_TOKEN }}
+    - name: npm install, run coveralls
+      env:
+        COVERALLS_REPO_TOKEN: ${{secrets.COVERALLS_REPO_TOKEN}}
+      run: |
+        npm install
+        npm run test:ember
+    - name: Coveralls
+      uses: coverallsapp/github-action@master
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
 
   tests_ember_compat:
     name: Ember Compatability
@@ -89,8 +92,8 @@ jobs:
         BRANCH: gh-pages
         FOLDER: dist
 
-    # - name: Release
-    #   env:
-    #     GITHUB_TOKEN: ${{ secrets.GH_PAT }}
-    #     NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-    #   run: yarn semantic-release
+    - name: Release
+      env:
+        GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      run: yarn semantic-release
