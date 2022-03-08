@@ -67394,7 +67394,8 @@ define("ember-x-tabs/components/x-tabs-tab", ["exports", "@glimmer/component"], 
 
   var __COLOCATED_TEMPLATE__ = Ember.HTMLBars.template(
   /*
-    <li class="{{if this.isActive "tab-current"}}">
+    {{!-- template-lint-disable  --}}
+  <li class="{{if this.isActive "tab-current"}}">
   <a
     role="tab"
     aria-controls={{this.tabName}}
@@ -67579,7 +67580,7 @@ define("ember-x-tabs/components/x-tabs", ["exports", "@glimmer/component"], func
 
       _initializerDefineProperty(_assertThisInitialized(_this), "activeData", _descriptor2, _assertThisInitialized(_this));
 
-      _defineProperty(_assertThisInitialized(_this), "name", 'x-tabs');
+      _defineProperty(_assertThisInitialized(_this), "name", "x-tabs");
 
       _initializerDefineProperty(_assertThisInitialized(_this), "selectFirstTab", _descriptor3, _assertThisInitialized(_this));
 
@@ -67600,7 +67601,7 @@ define("ember-x-tabs/components/x-tabs", ["exports", "@glimmer/component"], func
         // Setting the data for the tabSelected, or selecting the firstTab
         if (name === this.activeName || this.selectFirstTab === true && this.activeName == null) {
           this.selectFirstTab = false;
-          Ember.run.scheduleOnce('afterRender', this, function () {
+          Ember.run.scheduleOnce("afterRender", this, function () {
             _this2.select(name, data);
           });
         }

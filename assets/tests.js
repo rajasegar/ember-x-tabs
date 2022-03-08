@@ -27,9 +27,9 @@ define("dummy/tests/integration/components/x-tabs-pane-data-test", ["qunit", "em
   var page = (0, _emberCliPageObject.create)({
     text: (0, _emberCliPageObject.text)()
   });
-  (0, _qunit.module)('Integration | Component | x-tabs-pane-data', function (hooks) {
+  (0, _qunit.module)("Integration | Component | x-tabs-pane-data", function (hooks) {
     (0, _emberQunit.setupRenderingTest)(hooks);
-    (0, _qunit.test)('it renders', /*#__PURE__*/function () {
+    (0, _qunit.test)("it renders", /*#__PURE__*/function () {
       var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(assert) {
         return regeneratorRuntime.wrap(function _callee$(_context) {
           while (1) {
@@ -47,7 +47,7 @@ define("dummy/tests/integration/components/x-tabs-pane-data-test", ["qunit", "em
                 }));
 
               case 2:
-                assert.equal(page.text, '', "non-block form"); // Template block usage:
+                assert.equal(page.text, "", "non-block form"); // Template block usage:
 
                 _context.next = 5;
                 return (0, _testHelpers.render)(Ember.HTMLBars.template(
@@ -65,7 +65,7 @@ define("dummy/tests/integration/components/x-tabs-pane-data-test", ["qunit", "em
                 }));
 
               case 5:
-                assert.equal(page.text, 'template block text', "Block form");
+                assert.equal(page.text, "template block text", "Block form");
 
               case 6:
               case "end":
@@ -91,9 +91,9 @@ define("dummy/tests/integration/components/x-tabs-pane-test", ["qunit", "ember-q
   var page = (0, _emberCliPageObject.create)({
     text: (0, _emberCliPageObject.text)()
   });
-  (0, _qunit.module)('Integration | Component | x-tabs-pane', function (hooks) {
+  (0, _qunit.module)("Integration | Component | x-tabs-pane", function (hooks) {
     (0, _emberQunit.setupRenderingTest)(hooks);
-    (0, _qunit.test)('it renders', /*#__PURE__*/function () {
+    (0, _qunit.test)("it renders", /*#__PURE__*/function () {
       var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(assert) {
         return regeneratorRuntime.wrap(function _callee$(_context) {
           while (1) {
@@ -111,7 +111,7 @@ define("dummy/tests/integration/components/x-tabs-pane-test", ["qunit", "ember-q
                 }));
 
               case 2:
-                assert.equal(page.text, ''); // Template block usage:
+                assert.equal(page.text, ""); // Template block usage:
 
                 _context.next = 5;
                 return (0, _testHelpers.render)(Ember.HTMLBars.template(
@@ -129,7 +129,7 @@ define("dummy/tests/integration/components/x-tabs-pane-test", ["qunit", "ember-q
                 }));
 
               case 5:
-                assert.equal(page.text, 'template block text');
+                assert.equal(page.text, "template block text");
 
               case 6:
               case "end":
@@ -155,9 +155,9 @@ define("dummy/tests/integration/components/x-tabs-panes-test", ["qunit", "ember-
   var page = (0, _emberCliPageObject.create)({
     text: (0, _emberCliPageObject.text)()
   });
-  (0, _qunit.module)('Integration | Component | x-tabs-panes', function (hooks) {
+  (0, _qunit.module)("Integration | Component | x-tabs-panes", function (hooks) {
     (0, _emberQunit.setupRenderingTest)(hooks);
-    (0, _qunit.test)('it renders', /*#__PURE__*/function () {
+    (0, _qunit.test)("it renders", /*#__PURE__*/function () {
       var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(assert) {
         return regeneratorRuntime.wrap(function _callee$(_context) {
           while (1) {
@@ -175,7 +175,7 @@ define("dummy/tests/integration/components/x-tabs-panes-test", ["qunit", "ember-
                 }));
 
               case 2:
-                assert.equal(page.text, ''); // Template block usage:
+                assert.equal(page.text, ""); // Template block usage:
 
                 _context.next = 5;
                 return (0, _testHelpers.render)(Ember.HTMLBars.template(
@@ -193,7 +193,7 @@ define("dummy/tests/integration/components/x-tabs-panes-test", ["qunit", "ember-
                 }));
 
               case 5:
-                assert.equal(page.text, 'template block text');
+                assert.equal(page.text, "template block text");
 
               case 6:
               case "end":
@@ -219,15 +219,15 @@ define("dummy/tests/integration/components/x-tabs-tab-test", ["qunit", "ember-qu
   var page = (0, _emberCliPageObject.create)({
     text: (0, _emberCliPageObject.text)()
   });
-  (0, _qunit.module)('Integration | Component | x-tabs-tab', function (hooks) {
+  (0, _qunit.module)("Integration | Component | x-tabs-tab", function (hooks) {
     (0, _emberQunit.setupRenderingTest)(hooks);
-    (0, _qunit.test)('it renders', /*#__PURE__*/function () {
+    (0, _qunit.test)("it renders", /*#__PURE__*/function () {
       var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(assert) {
         return regeneratorRuntime.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                this.set('api', {
+                this.set("api", {
                   selectAction: function selectAction() {}
                 });
                 _context.next = 3;
@@ -242,7 +242,7 @@ define("dummy/tests/integration/components/x-tabs-tab-test", ["qunit", "ember-qu
                 }));
 
               case 3:
-                assert.equal(page.text, ''); // Template block usage:
+                assert.equal(page.text, ""); // Template block usage:
 
                 _context.next = 6;
                 return (0, _testHelpers.render)(Ember.HTMLBars.template(
@@ -260,7 +260,7 @@ define("dummy/tests/integration/components/x-tabs-tab-test", ["qunit", "ember-qu
                 }));
 
               case 6:
-                assert.equal(page.text, 'template block text');
+                assert.equal(page.text, "template block text");
 
               case 7:
               case "end":
@@ -286,9 +286,9 @@ define("dummy/tests/integration/components/x-tabs-tabs-test", ["qunit", "ember-q
   var page = (0, _emberCliPageObject.create)({
     text: (0, _emberCliPageObject.text)()
   });
-  (0, _qunit.module)('Integration | Component | x-tabs-tabs', function (hooks) {
+  (0, _qunit.module)("Integration | Component | x-tabs-tabs", function (hooks) {
     (0, _emberQunit.setupRenderingTest)(hooks);
-    (0, _qunit.test)('it renders', /*#__PURE__*/function () {
+    (0, _qunit.test)("it renders", /*#__PURE__*/function () {
       var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(assert) {
         return regeneratorRuntime.wrap(function _callee$(_context) {
           while (1) {
@@ -306,7 +306,7 @@ define("dummy/tests/integration/components/x-tabs-tabs-test", ["qunit", "ember-q
                 }));
 
               case 2:
-                assert.equal(page.text, ''); // Template block usage:
+                assert.equal(page.text, ""); // Template block usage:
 
                 _context.next = 5;
                 return (0, _testHelpers.render)(Ember.HTMLBars.template(
@@ -324,7 +324,7 @@ define("dummy/tests/integration/components/x-tabs-tabs-test", ["qunit", "ember-q
                 }));
 
               case 5:
-                assert.equal(page.text, 'template block text');
+                assert.equal(page.text, "template block text");
 
               case 6:
               case "end":
@@ -351,16 +351,16 @@ define("dummy/tests/integration/components/x-tabs-test", ["qunit", "ember-qunit"
     text: (0, _emberCliPageObject.text)(),
     switchClick: (0, _emberCliPageObject.clickable)("#switch"),
     sectionCount: (0, _emberCliPageObject.count)("section"),
-    tabs: (0, _emberCliPageObject.collection)('nav > ul > li', {
-      text: (0, _emberCliPageObject.text)('a > span'),
+    tabs: (0, _emberCliPageObject.collection)("nav > ul > li", {
+      text: (0, _emberCliPageObject.text)("a > span"),
       isCurrentTab: (0, _emberCliPageObject.hasClass)("tab-current", "")
     }),
-    content: (0, _emberCliPageObject.collection)('.content-wrap > section', {
+    content: (0, _emberCliPageObject.collection)(".content-wrap > section", {
       isCurrentContent: (0, _emberCliPageObject.hasClass)("content-current")
     }),
     navCount: (0, _emberCliPageObject.count)("nav")
   });
-  (0, _qunit.module)('Integration | Component | x-tabs', function (hooks) {
+  (0, _qunit.module)("Integration | Component | x-tabs", function (hooks) {
     (0, _emberQunit.setupRenderingTest)(hooks);
     var homeTab = 0,
         archiveTab = 1;
@@ -418,27 +418,26 @@ define("dummy/tests/integration/components/x-tabs-test", ["qunit", "ember-qunit"
     })));
 
     function assertActiveTab(assert, tabIndex) {
-      assert.ok(page.tabs.objectAt(tabIndex).isCurrentTab, 'tab is active');
-      assert.ok(page.content.objectAt(tabIndex).isCurrentContent, 'tab pane is active');
+      assert.ok(page.tabs.objectAt(tabIndex).isCurrentTab, "tab is active");
+      assert.ok(page.content.objectAt(tabIndex).isCurrentContent, "tab pane is active");
     }
 
     function assertInActiveTab(assert, tabIndex) {
-      assert.notOk(page.tabs.objectAt(tabIndex).isCurrentTab, 'tab is inactive');
-      assert.notOk(page.content.objectAt(tabIndex).isCurrentContent, 'tab pane is inactive');
+      assert.notOk(page.tabs.objectAt(tabIndex).isCurrentTab, "tab is inactive");
+      assert.notOk(page.content.objectAt(tabIndex).isCurrentContent, "tab pane is inactive");
     }
 
-    (0, _qunit.test)('it generates tab navigation', function (assert) {
-      assert.equal(page.navCount, 1, 'has tabs navigation');
-      assert.equal(page.tabs.length, 2, 'has tabs navigation items');
-      assert.equal(page.tabs.objectAt(homeTab).text, 'Home', 'navigation item shows pane title');
-      assert.equal(page.tabs.objectAt(archiveTab).text, 'Archive', 'navigation item shows pane title');
+    (0, _qunit.test)("it generates tab navigation", function (assert) {
+      assert.equal(page.navCount, 1, "has tabs navigation");
+      assert.equal(page.tabs.length, 2, "has tabs navigation items");
+      assert.equal(page.tabs.objectAt(homeTab).text, "Home", "navigation item shows pane title");
+      assert.equal(page.tabs.objectAt(archiveTab).text, "Archive", "navigation item shows pane title");
     });
-    (0, _qunit.test)('first tab is active by default', function (assert) {
-      debugger;
+    (0, _qunit.test)("first tab is active by default", function (assert) {
       assertActiveTab(assert, homeTab);
       assertInActiveTab(assert, archiveTab);
     });
-    (0, _qunit.test)('Selecting a tab displays correct pane', /*#__PURE__*/function () {
+    (0, _qunit.test)("Selecting a tab displays correct pane", /*#__PURE__*/function () {
       var _ref3 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(assert) {
         return regeneratorRuntime.wrap(function _callee2$(_context2) {
           while (1) {
@@ -472,16 +471,16 @@ define("dummy/tests/integration/helpers/eq-test", ["qunit", "ember-qunit", "@emb
 
   function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
-  (0, _qunit.module)('helper:eq', function (hooks) {
+  (0, _qunit.module)("helper:eq", function (hooks) {
     (0, _emberQunit.setupRenderingTest)(hooks); // Replace this with your real tests.
 
-    (0, _qunit.test)('it renders', /*#__PURE__*/function () {
+    (0, _qunit.test)("it renders", /*#__PURE__*/function () {
       var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(assert) {
         return regeneratorRuntime.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                this.set('inputValue', '1234');
+                this.set("inputValue", "1234");
                 _context.next = 3;
                 return (0, _testHelpers.render)(Ember.HTMLBars.template(
                 /*
@@ -494,7 +493,7 @@ define("dummy/tests/integration/helpers/eq-test", ["qunit", "ember-qunit", "@emb
                 }));
 
               case 3:
-                assert.dom('*').hasText('true');
+                assert.dom("*").hasText("true");
 
               case 4:
               case "end":

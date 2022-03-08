@@ -2,21 +2,68 @@
 
 
 
-;define("dummy/app", ["exports", "dummy/resolver", "ember-load-initializers", "dummy/config/environment"], function (_exports, _resolver, _emberLoadInitializers, _environment) {
+;function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+define("dummy/app", ["exports", "ember-resolver", "ember-load-initializers", "dummy/config/environment"], function (_exports, _emberResolver, _emberLoadInitializers, _environment) {
   "use strict";
 
   Object.defineProperty(_exports, "__esModule", {
     value: true
   });
   _exports.default = void 0;
-  var App = Ember.Application.extend({
-    modulePrefix: _environment.default.modulePrefix,
-    podModulePrefix: _environment.default.podModulePrefix,
-    Resolver: _resolver.default
-  });
+
+  function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+  function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+  function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+  function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+  function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+  function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+  function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+  function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+  function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+  var App = /*#__PURE__*/function (_Ember$Application) {
+    _inherits(App, _Ember$Application);
+
+    var _super = _createSuper(App);
+
+    function App() {
+      var _this;
+
+      _classCallCheck(this, App);
+
+      for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+        args[_key] = arguments[_key];
+      }
+
+      _this = _super.call.apply(_super, [this].concat(args));
+
+      _defineProperty(_assertThisInitialized(_this), "modulePrefix", _environment.default.modulePrefix);
+
+      _defineProperty(_assertThisInitialized(_this), "podModulePrefix", _environment.default.podModulePrefix);
+
+      _defineProperty(_assertThisInitialized(_this), "Resolver", _emberResolver.default);
+
+      return _this;
+    }
+
+    return _createClass(App);
+  }(Ember.Application);
+
+  _exports.default = App;
   (0, _emberLoadInitializers.default)(App, _environment.default.modulePrefix);
-  var _default = App;
-  _exports.default = _default;
 });
 ;define("dummy/component-managers/glimmer", ["exports", "@glimmer/component/-private/ember-component-manager"], function (_exports, _emberComponentManager) {
   "use strict";
@@ -41,62 +88,62 @@
 
   var __COLOCATED_TEMPLATE__ = Ember.HTMLBars.template(
   /*
-    {{#x-tabs tab-style=@tabStyle as | xt | }}
+    <XTabs @tab-style={{@tabStyle}} as |xt|>
   
     {{!-- tab content --}}
-    {{#xt.tabs as | tabs |}}
-      {{#tabs.tab name="home"}}
+    <xt.tabs as |tabs|>
+      <tabs.tab @name="home">
         <i class="icon icon-home"></i>
         <span>Home</span>
-      {{/tabs.tab}}
-      {{#tabs.tab name="archive"}}
+      </tabs.tab>
+      <tabs.tab @name="archive">
         <i class="icon icon-box"></i>
         <span>Archive</span>
-      {{/tabs.tab}}
-      {{#tabs.tab name="analytics"}}
+      </tabs.tab>
+      <tabs.tab @name="analytics">
         <i class="icon icon-display"></i>
         <span>Analytics</span>
-      {{/tabs.tab}}
-      {{#tabs.tab name="settings"}}
+      </tabs.tab>
+      <tabs.tab @name="settings">
         <i class="icon icon-tools"></i>
         <span>Settings</span>
-      {{/tabs.tab}}
-      {{#tabs.tab name="upload"}}
+      </tabs.tab>
+      <tabs.tab @name="upload">
         <i class="icon icon-upload"></i>
         <span>Upload</span>
-      {{/tabs.tab}}
-    {{/xt.tabs}}
+      </tabs.tab>
+    </xt.tabs>
   
     {{!-- tab content --}}
-    {{#xt.panes as | panes |}}
-      {{#panes.pane name="home"}}
+    <xt.panes as |panes|>
+      <panes.pane @name="home">
         <h1>Home</h1>
         <p>This is home content</p>
-      {{/panes.pane}}
-      {{#panes.pane name="archive"}}
+      </panes.pane>
+      <panes.pane @name="archive">
         <h1>Archive</h1>
         <p>This is archive content</p>
-      {{/panes.pane}}
-      {{#panes.pane name="analytics"}}
+      </panes.pane>
+      <panes.pane @name="analytics">
         <h1>Analytics</h1>
         <p>This is analytics content</p>
-      {{/panes.pane}}
-      {{#panes.pane name="settings"}}
+      </panes.pane>
+      <panes.pane @name="settings">
         <h1>Settings</h1>
         <p>This is settings content</p>
-      {{/panes.pane}}
-      {{#panes.pane name="upload"}}
+      </panes.pane>
+      <panes.pane @name="upload">
         <h1>Upload</h1>
         <p>This is upload content</p>
-      {{/panes.pane}}
-    {{/xt.panes}}
+      </panes.pane>
+    </xt.panes>
   
-  {{/x-tabs}}
+  </XTabs>
   
   */
   {
-    "id": "H3bDayUV",
-    "block": "{\"symbols\":[\"xt\",\"panes\",\"tabs\",\"@tabStyle\"],\"statements\":[[4,\"x-tabs\",null,[[\"tab-style\"],[[23,4,[]]]],{\"statements\":[[0,\"\\n\"],[4,\"component\",[[28,\"-assert-implicit-component-helper-argument\",[[23,1,[\"tabs\"]],\"expected `xt.tabs` to be a contextual component but found a string. Did you mean `(component xt.tabs)`? ('dummy/components/tab-example.hbs' @ L4:C5) \"],null]],null,{\"statements\":[[4,\"component\",[[28,\"-assert-implicit-component-helper-argument\",[[23,3,[\"tab\"]],\"expected `tabs.tab` to be a contextual component but found a string. Did you mean `(component tabs.tab)`? ('dummy/components/tab-example.hbs' @ L5:C7) \"],null]],[[\"name\"],[\"home\"]],{\"statements\":[[0,\"      \"],[7,\"i\",true],[10,\"class\",\"icon icon-home\"],[8],[9],[0,\"\\n      \"],[7,\"span\",true],[8],[0,\"Home\"],[9],[0,\"\\n\"]],\"parameters\":[]},null],[4,\"component\",[[28,\"-assert-implicit-component-helper-argument\",[[23,3,[\"tab\"]],\"expected `tabs.tab` to be a contextual component but found a string. Did you mean `(component tabs.tab)`? ('dummy/components/tab-example.hbs' @ L9:C7) \"],null]],[[\"name\"],[\"archive\"]],{\"statements\":[[0,\"      \"],[7,\"i\",true],[10,\"class\",\"icon icon-box\"],[8],[9],[0,\"\\n      \"],[7,\"span\",true],[8],[0,\"Archive\"],[9],[0,\"\\n\"]],\"parameters\":[]},null],[4,\"component\",[[28,\"-assert-implicit-component-helper-argument\",[[23,3,[\"tab\"]],\"expected `tabs.tab` to be a contextual component but found a string. Did you mean `(component tabs.tab)`? ('dummy/components/tab-example.hbs' @ L13:C7) \"],null]],[[\"name\"],[\"analytics\"]],{\"statements\":[[0,\"      \"],[7,\"i\",true],[10,\"class\",\"icon icon-display\"],[8],[9],[0,\"\\n      \"],[7,\"span\",true],[8],[0,\"Analytics\"],[9],[0,\"\\n\"]],\"parameters\":[]},null],[4,\"component\",[[28,\"-assert-implicit-component-helper-argument\",[[23,3,[\"tab\"]],\"expected `tabs.tab` to be a contextual component but found a string. Did you mean `(component tabs.tab)`? ('dummy/components/tab-example.hbs' @ L17:C7) \"],null]],[[\"name\"],[\"settings\"]],{\"statements\":[[0,\"      \"],[7,\"i\",true],[10,\"class\",\"icon icon-tools\"],[8],[9],[0,\"\\n      \"],[7,\"span\",true],[8],[0,\"Settings\"],[9],[0,\"\\n\"]],\"parameters\":[]},null],[4,\"component\",[[28,\"-assert-implicit-component-helper-argument\",[[23,3,[\"tab\"]],\"expected `tabs.tab` to be a contextual component but found a string. Did you mean `(component tabs.tab)`? ('dummy/components/tab-example.hbs' @ L21:C7) \"],null]],[[\"name\"],[\"upload\"]],{\"statements\":[[0,\"      \"],[7,\"i\",true],[10,\"class\",\"icon icon-upload\"],[8],[9],[0,\"\\n      \"],[7,\"span\",true],[8],[0,\"Upload\"],[9],[0,\"\\n\"]],\"parameters\":[]},null]],\"parameters\":[3]},null],[0,\"\\n\"],[4,\"component\",[[28,\"-assert-implicit-component-helper-argument\",[[23,1,[\"panes\"]],\"expected `xt.panes` to be a contextual component but found a string. Did you mean `(component xt.panes)`? ('dummy/components/tab-example.hbs' @ L28:C5) \"],null]],null,{\"statements\":[[4,\"component\",[[28,\"-assert-implicit-component-helper-argument\",[[23,2,[\"pane\"]],\"expected `panes.pane` to be a contextual component but found a string. Did you mean `(component panes.pane)`? ('dummy/components/tab-example.hbs' @ L29:C7) \"],null]],[[\"name\"],[\"home\"]],{\"statements\":[[0,\"      \"],[7,\"h1\",true],[8],[0,\"Home\"],[9],[0,\"\\n      \"],[7,\"p\",true],[8],[0,\"This is home content\"],[9],[0,\"\\n\"]],\"parameters\":[]},null],[4,\"component\",[[28,\"-assert-implicit-component-helper-argument\",[[23,2,[\"pane\"]],\"expected `panes.pane` to be a contextual component but found a string. Did you mean `(component panes.pane)`? ('dummy/components/tab-example.hbs' @ L33:C7) \"],null]],[[\"name\"],[\"archive\"]],{\"statements\":[[0,\"      \"],[7,\"h1\",true],[8],[0,\"Archive\"],[9],[0,\"\\n      \"],[7,\"p\",true],[8],[0,\"This is archive content\"],[9],[0,\"\\n\"]],\"parameters\":[]},null],[4,\"component\",[[28,\"-assert-implicit-component-helper-argument\",[[23,2,[\"pane\"]],\"expected `panes.pane` to be a contextual component but found a string. Did you mean `(component panes.pane)`? ('dummy/components/tab-example.hbs' @ L37:C7) \"],null]],[[\"name\"],[\"analytics\"]],{\"statements\":[[0,\"      \"],[7,\"h1\",true],[8],[0,\"Analytics\"],[9],[0,\"\\n      \"],[7,\"p\",true],[8],[0,\"This is analytics content\"],[9],[0,\"\\n\"]],\"parameters\":[]},null],[4,\"component\",[[28,\"-assert-implicit-component-helper-argument\",[[23,2,[\"pane\"]],\"expected `panes.pane` to be a contextual component but found a string. Did you mean `(component panes.pane)`? ('dummy/components/tab-example.hbs' @ L41:C7) \"],null]],[[\"name\"],[\"settings\"]],{\"statements\":[[0,\"      \"],[7,\"h1\",true],[8],[0,\"Settings\"],[9],[0,\"\\n      \"],[7,\"p\",true],[8],[0,\"This is settings content\"],[9],[0,\"\\n\"]],\"parameters\":[]},null],[4,\"component\",[[28,\"-assert-implicit-component-helper-argument\",[[23,2,[\"pane\"]],\"expected `panes.pane` to be a contextual component but found a string. Did you mean `(component panes.pane)`? ('dummy/components/tab-example.hbs' @ L45:C7) \"],null]],[[\"name\"],[\"upload\"]],{\"statements\":[[0,\"      \"],[7,\"h1\",true],[8],[0,\"Upload\"],[9],[0,\"\\n      \"],[7,\"p\",true],[8],[0,\"This is upload content\"],[9],[0,\"\\n\"]],\"parameters\":[]},null]],\"parameters\":[2]},null],[0,\"\\n\"]],\"parameters\":[1]},null]],\"hasEval\":false}",
+    "id": "rbvFq4mx",
+    "block": "{\"symbols\":[\"xt\",\"panes\",\"tabs\",\"@tabStyle\"],\"statements\":[[5,\"x-tabs\",[],[[\"@tab-style\"],[[23,4,[]]]],{\"statements\":[[0,\"\\n\\n\"],[0,\"  \"],[6,[23,1,[\"tabs\"]],[],[[],[]],{\"statements\":[[0,\"\\n    \"],[6,[23,3,[\"tab\"]],[],[[\"@name\"],[\"home\"]],{\"statements\":[[0,\"\\n      \"],[7,\"i\",true],[10,\"class\",\"icon icon-home\"],[8],[9],[0,\"\\n      \"],[7,\"span\",true],[8],[0,\"Home\"],[9],[0,\"\\n    \"]],\"parameters\":[]}],[0,\"\\n    \"],[6,[23,3,[\"tab\"]],[],[[\"@name\"],[\"archive\"]],{\"statements\":[[0,\"\\n      \"],[7,\"i\",true],[10,\"class\",\"icon icon-box\"],[8],[9],[0,\"\\n      \"],[7,\"span\",true],[8],[0,\"Archive\"],[9],[0,\"\\n    \"]],\"parameters\":[]}],[0,\"\\n    \"],[6,[23,3,[\"tab\"]],[],[[\"@name\"],[\"analytics\"]],{\"statements\":[[0,\"\\n      \"],[7,\"i\",true],[10,\"class\",\"icon icon-display\"],[8],[9],[0,\"\\n      \"],[7,\"span\",true],[8],[0,\"Analytics\"],[9],[0,\"\\n    \"]],\"parameters\":[]}],[0,\"\\n    \"],[6,[23,3,[\"tab\"]],[],[[\"@name\"],[\"settings\"]],{\"statements\":[[0,\"\\n      \"],[7,\"i\",true],[10,\"class\",\"icon icon-tools\"],[8],[9],[0,\"\\n      \"],[7,\"span\",true],[8],[0,\"Settings\"],[9],[0,\"\\n    \"]],\"parameters\":[]}],[0,\"\\n    \"],[6,[23,3,[\"tab\"]],[],[[\"@name\"],[\"upload\"]],{\"statements\":[[0,\"\\n      \"],[7,\"i\",true],[10,\"class\",\"icon icon-upload\"],[8],[9],[0,\"\\n      \"],[7,\"span\",true],[8],[0,\"Upload\"],[9],[0,\"\\n    \"]],\"parameters\":[]}],[0,\"\\n  \"]],\"parameters\":[3]}],[0,\"\\n\\n\"],[0,\"  \"],[6,[23,1,[\"panes\"]],[],[[],[]],{\"statements\":[[0,\"\\n    \"],[6,[23,2,[\"pane\"]],[],[[\"@name\"],[\"home\"]],{\"statements\":[[0,\"\\n      \"],[7,\"h1\",true],[8],[0,\"Home\"],[9],[0,\"\\n      \"],[7,\"p\",true],[8],[0,\"This is home content\"],[9],[0,\"\\n    \"]],\"parameters\":[]}],[0,\"\\n    \"],[6,[23,2,[\"pane\"]],[],[[\"@name\"],[\"archive\"]],{\"statements\":[[0,\"\\n      \"],[7,\"h1\",true],[8],[0,\"Archive\"],[9],[0,\"\\n      \"],[7,\"p\",true],[8],[0,\"This is archive content\"],[9],[0,\"\\n    \"]],\"parameters\":[]}],[0,\"\\n    \"],[6,[23,2,[\"pane\"]],[],[[\"@name\"],[\"analytics\"]],{\"statements\":[[0,\"\\n      \"],[7,\"h1\",true],[8],[0,\"Analytics\"],[9],[0,\"\\n      \"],[7,\"p\",true],[8],[0,\"This is analytics content\"],[9],[0,\"\\n    \"]],\"parameters\":[]}],[0,\"\\n    \"],[6,[23,2,[\"pane\"]],[],[[\"@name\"],[\"settings\"]],{\"statements\":[[0,\"\\n      \"],[7,\"h1\",true],[8],[0,\"Settings\"],[9],[0,\"\\n      \"],[7,\"p\",true],[8],[0,\"This is settings content\"],[9],[0,\"\\n    \"]],\"parameters\":[]}],[0,\"\\n    \"],[6,[23,2,[\"pane\"]],[],[[\"@name\"],[\"upload\"]],{\"statements\":[[0,\"\\n      \"],[7,\"h1\",true],[8],[0,\"Upload\"],[9],[0,\"\\n      \"],[7,\"p\",true],[8],[0,\"This is upload content\"],[9],[0,\"\\n    \"]],\"parameters\":[]}],[0,\"\\n  \"]],\"parameters\":[2]}],[0,\"\\n\\n\"]],\"parameters\":[1]}],[0,\"\\n\"]],\"hasEval\":false}",
     "meta": {
       "moduleName": "dummy/components/tab-example.hbs"
     }
@@ -287,32 +334,66 @@
   var _default = _emberResolver.default;
   _exports.default = _default;
 });
-;define("dummy/router", ["exports", "dummy/config/environment"], function (_exports, _environment) {
+;function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+define("dummy/router", ["exports", "dummy/config/environment"], function (_exports, _environment) {
   "use strict";
 
   Object.defineProperty(_exports, "__esModule", {
     value: true
   });
   _exports.default = void 0;
-  var Router = Ember.Router.extend({
-    location: _environment.default.locationType,
-    rootURL: _environment.default.rootURL
-  });
+
+  function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+  function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+  function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+  function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+  function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+  function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+  function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+  function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+  function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+  var Router = /*#__PURE__*/function (_Ember$Router) {
+    _inherits(Router, _Ember$Router);
+
+    var _super = _createSuper(Router);
+
+    function Router() {
+      var _this;
+
+      _classCallCheck(this, Router);
+
+      for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+        args[_key] = arguments[_key];
+      }
+
+      _this = _super.call.apply(_super, [this].concat(args));
+
+      _defineProperty(_assertThisInitialized(_this), "location", _environment.default.locationType);
+
+      _defineProperty(_assertThisInitialized(_this), "rootURL", _environment.default.rootURL);
+
+      return _this;
+    }
+
+    return _createClass(Router);
+  }(Ember.Router);
+
+  _exports.default = Router;
   Router.map(function () {});
-  var _default = Router;
-  _exports.default = _default;
-});
-;define("dummy/routes/index", ["exports"], function (_exports) {
-  "use strict";
-
-  Object.defineProperty(_exports, "__esModule", {
-    value: true
-  });
-  _exports.default = void 0;
-
-  var _default = Ember.Route.extend({});
-
-  _exports.default = _default;
 });
 ;define("dummy/templates/application", ["exports"], function (_exports) {
   "use strict";
