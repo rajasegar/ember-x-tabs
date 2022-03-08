@@ -41,13 +41,13 @@ define("dummy/tests/integration/components/x-tabs-pane-data-test", ["qunit", "em
                   {{x-tabs-pane-data}}
                 */
                 {
-                  id: "Ab6PDXhG",
-                  block: "{\"symbols\":[],\"statements\":[[1,[23,\"x-tabs-pane-data\"],false]],\"hasEval\":false}",
-                  meta: {}
+                  "id": "fxphGVyc",
+                  "block": "{\"symbols\":[],\"statements\":[[1,[22,\"x-tabs-pane-data\"],false]],\"hasEval\":false}",
+                  "meta": {}
                 }));
 
               case 2:
-                assert.equal(page.text, ''); // Template block usage:
+                assert.equal(page.text, '', "non-block form"); // Template block usage:
 
                 _context.next = 5;
                 return (0, _testHelpers.render)(Ember.HTMLBars.template(
@@ -59,13 +59,13 @@ define("dummy/tests/integration/components/x-tabs-pane-data-test", ["qunit", "em
                     
                 */
                 {
-                  id: "dX65+YCE",
-                  block: "{\"symbols\":[],\"statements\":[[0,\"\\n\"],[4,\"x-tabs-pane-data\",null,null,{\"statements\":[[0,\"        template block text\\n\"]],\"parameters\":[]},null],[0,\"    \"]],\"hasEval\":false}",
-                  meta: {}
+                  "id": "dX65+YCE",
+                  "block": "{\"symbols\":[],\"statements\":[[0,\"\\n\"],[4,\"x-tabs-pane-data\",null,null,{\"statements\":[[0,\"        template block text\\n\"]],\"parameters\":[]},null],[0,\"    \"]],\"hasEval\":false}",
+                  "meta": {}
                 }));
 
               case 5:
-                assert.equal(page.text, 'template block text');
+                assert.equal(page.text, 'template block text', "Block form");
 
               case 6:
               case "end":
@@ -105,9 +105,9 @@ define("dummy/tests/integration/components/x-tabs-pane-test", ["qunit", "ember-q
                   {{x-tabs-pane}}
                 */
                 {
-                  id: "xkB78nWW",
-                  block: "{\"symbols\":[],\"statements\":[[1,[23,\"x-tabs-pane\"],false]],\"hasEval\":false}",
-                  meta: {}
+                  "id": "gXmk6IZ4",
+                  "block": "{\"symbols\":[],\"statements\":[[1,[22,\"x-tabs-pane\"],false]],\"hasEval\":false}",
+                  "meta": {}
                 }));
 
               case 2:
@@ -123,9 +123,9 @@ define("dummy/tests/integration/components/x-tabs-pane-test", ["qunit", "ember-q
                     
                 */
                 {
-                  id: "QR7RIoOz",
-                  block: "{\"symbols\":[],\"statements\":[[0,\"\\n\"],[4,\"x-tabs-pane\",null,null,{\"statements\":[[0,\"        template block text\\n\"]],\"parameters\":[]},null],[0,\"    \"]],\"hasEval\":false}",
-                  meta: {}
+                  "id": "QR7RIoOz",
+                  "block": "{\"symbols\":[],\"statements\":[[0,\"\\n\"],[4,\"x-tabs-pane\",null,null,{\"statements\":[[0,\"        template block text\\n\"]],\"parameters\":[]},null],[0,\"    \"]],\"hasEval\":false}",
+                  "meta": {}
                 }));
 
               case 5:
@@ -169,9 +169,9 @@ define("dummy/tests/integration/components/x-tabs-panes-test", ["qunit", "ember-
                   {{x-tabs-panes}}
                 */
                 {
-                  id: "hFoxSz4r",
-                  block: "{\"symbols\":[],\"statements\":[[1,[23,\"x-tabs-panes\"],false]],\"hasEval\":false}",
-                  meta: {}
+                  "id": "/NnC9l0M",
+                  "block": "{\"symbols\":[],\"statements\":[[1,[22,\"x-tabs-panes\"],false]],\"hasEval\":false}",
+                  "meta": {}
                 }));
 
               case 2:
@@ -187,9 +187,9 @@ define("dummy/tests/integration/components/x-tabs-panes-test", ["qunit", "ember-
                     
                 */
                 {
-                  id: "QbEH2T+I",
-                  block: "{\"symbols\":[],\"statements\":[[0,\"\\n\"],[4,\"x-tabs-panes\",null,null,{\"statements\":[[0,\"        template block text\\n\"]],\"parameters\":[]},null],[0,\"    \"]],\"hasEval\":false}",
-                  meta: {}
+                  "id": "QbEH2T+I",
+                  "block": "{\"symbols\":[],\"statements\":[[0,\"\\n\"],[4,\"x-tabs-panes\",null,null,{\"statements\":[[0,\"        template block text\\n\"]],\"parameters\":[]},null],[0,\"    \"]],\"hasEval\":false}",
+                  "meta": {}
                 }));
 
               case 5:
@@ -233,12 +233,12 @@ define("dummy/tests/integration/components/x-tabs-tab-test", ["qunit", "ember-qu
                 _context.next = 3;
                 return (0, _testHelpers.render)(Ember.HTMLBars.template(
                 /*
-                  {{x-tabs-tab api=api}}
+                  {{x-tabs-tab api=this.api}}
                 */
                 {
-                  id: "M3rOptXK",
-                  block: "{\"symbols\":[],\"statements\":[[1,[29,\"x-tabs-tab\",null,[[\"api\"],[[25,[\"api\"]]]]],false]],\"hasEval\":false}",
-                  meta: {}
+                  "id": "8DmhMbg3",
+                  "block": "{\"symbols\":[],\"statements\":[[1,[28,\"x-tabs-tab\",null,[[\"api\"],[[23,0,[\"api\"]]]]],false]],\"hasEval\":false}",
+                  "meta": {}
                 }));
 
               case 3:
@@ -248,15 +248,15 @@ define("dummy/tests/integration/components/x-tabs-tab-test", ["qunit", "ember-qu
                 return (0, _testHelpers.render)(Ember.HTMLBars.template(
                 /*
                   
-                      {{#x-tabs-tab api=api}}
+                      {{#x-tabs-tab api=this.api}}
                         template block text
                       {{/x-tabs-tab}}
                     
                 */
                 {
-                  id: "uxjL98ts",
-                  block: "{\"symbols\":[],\"statements\":[[0,\"\\n\"],[4,\"x-tabs-tab\",null,[[\"api\"],[[25,[\"api\"]]]],{\"statements\":[[0,\"        template block text\\n\"]],\"parameters\":[]},null],[0,\"    \"]],\"hasEval\":false}",
-                  meta: {}
+                  "id": "Zn2lF7tM",
+                  "block": "{\"symbols\":[],\"statements\":[[0,\"\\n\"],[4,\"x-tabs-tab\",null,[[\"api\"],[[23,0,[\"api\"]]]],{\"statements\":[[0,\"        template block text\\n\"]],\"parameters\":[]},null],[0,\"    \"]],\"hasEval\":false}",
+                  "meta": {}
                 }));
 
               case 6:
@@ -300,9 +300,9 @@ define("dummy/tests/integration/components/x-tabs-tabs-test", ["qunit", "ember-q
                   {{x-tabs-tabs}}
                 */
                 {
-                  id: "20fltTyZ",
-                  block: "{\"symbols\":[],\"statements\":[[1,[23,\"x-tabs-tabs\"],false]],\"hasEval\":false}",
-                  meta: {}
+                  "id": "zM00ESyg",
+                  "block": "{\"symbols\":[],\"statements\":[[1,[22,\"x-tabs-tabs\"],false]],\"hasEval\":false}",
+                  "meta": {}
                 }));
 
               case 2:
@@ -318,9 +318,9 @@ define("dummy/tests/integration/components/x-tabs-tabs-test", ["qunit", "ember-q
                     
                 */
                 {
-                  id: "+LsvGRvr",
-                  block: "{\"symbols\":[],\"statements\":[[0,\"\\n\"],[4,\"x-tabs-tabs\",null,null,{\"statements\":[[0,\"        template block text\\n\"]],\"parameters\":[]},null],[0,\"    \"]],\"hasEval\":false}",
-                  meta: {}
+                  "id": "+LsvGRvr",
+                  "block": "{\"symbols\":[],\"statements\":[[0,\"\\n\"],[4,\"x-tabs-tabs\",null,null,{\"statements\":[[0,\"        template block text\\n\"]],\"parameters\":[]},null],[0,\"    \"]],\"hasEval\":false}",
+                  "meta": {}
                 }));
 
               case 5:
@@ -374,7 +374,7 @@ define("dummy/tests/integration/components/x-tabs-test", ["qunit", "ember-qunit"
               /*
                 
                   {{#x-tabs tab-style=tabStyle as | xt | }}
-                  
+              
                   {{!-- tab content --}}
                     {{#xt.tabs as | tabs |}}
                       {{#tabs.tab name="home"}}
@@ -386,7 +386,7 @@ define("dummy/tests/integration/components/x-tabs-test", ["qunit", "ember-qunit"
                         <span>Archive</span>
                       {{/tabs.tab}}
                     {{/xt.tabs}}
-                  
+              
                     {{!-- tab content --}}
                     {{#xt.panes as | panes |}}
                       {{#panes.pane name="home"}}
@@ -404,9 +404,9 @@ define("dummy/tests/integration/components/x-tabs-test", ["qunit", "ember-qunit"
                 
               */
               {
-                id: "SdxK6aTE",
-                block: "{\"symbols\":[\"xt\",\"panes\",\"tabs\"],\"statements\":[[0,\"\\n\"],[4,\"x-tabs\",null,[[\"tab-style\"],[[25,[\"tabStyle\"]]]],{\"statements\":[[0,\"    \\n\"],[4,\"component\",[[29,\"-assert-implicit-component-helper-argument\",[[24,1,[\"tabs\"]],\"expected `xt.tabs` to be a contextual component but found a string. Did you mean `(component xt.tabs)`? (L5:C9) \"],null]],null,{\"statements\":[[4,\"component\",[[29,\"-assert-implicit-component-helper-argument\",[[24,3,[\"tab\"]],\"expected `tabs.tab` to be a contextual component but found a string. Did you mean `(component tabs.tab)`? (L6:C11) \"],null]],[[\"name\"],[\"home\"]],{\"statements\":[[0,\"          \"],[7,\"i\"],[11,\"class\",\"icon icon-home\"],[9],[10],[0,\"\\n          \"],[7,\"span\"],[9],[0,\"Home\"],[10],[0,\"\\n\"]],\"parameters\":[]},null],[4,\"component\",[[29,\"-assert-implicit-component-helper-argument\",[[24,3,[\"tab\"]],\"expected `tabs.tab` to be a contextual component but found a string. Did you mean `(component tabs.tab)`? (L10:C11) \"],null]],[[\"name\"],[\"archive\"]],{\"statements\":[[0,\"          \"],[7,\"i\"],[11,\"class\",\"icon icon-box\"],[9],[10],[0,\"\\n          \"],[7,\"span\"],[9],[0,\"Archive\"],[10],[0,\"\\n\"]],\"parameters\":[]},null]],\"parameters\":[3]},null],[0,\"    \\n\"],[4,\"component\",[[29,\"-assert-implicit-component-helper-argument\",[[24,1,[\"panes\"]],\"expected `xt.panes` to be a contextual component but found a string. Did you mean `(component xt.panes)`? (L17:C9) \"],null]],null,{\"statements\":[[4,\"component\",[[29,\"-assert-implicit-component-helper-argument\",[[24,2,[\"pane\"]],\"expected `panes.pane` to be a contextual component but found a string. Did you mean `(component panes.pane)`? (L18:C11) \"],null]],[[\"name\"],[\"home\"]],{\"statements\":[[0,\"          \"],[7,\"h1\"],[9],[0,\"Home\"],[10],[0,\"\\n          \"],[7,\"p\"],[9],[0,\"This is home content\"],[10],[0,\"\\n\"]],\"parameters\":[]},null],[4,\"component\",[[29,\"-assert-implicit-component-helper-argument\",[[24,2,[\"pane\"]],\"expected `panes.pane` to be a contextual component but found a string. Did you mean `(component panes.pane)`? (L22:C11) \"],null]],[[\"name\"],[\"archive\"]],{\"statements\":[[0,\"          \"],[7,\"h1\"],[9],[0,\"Archive\"],[10],[0,\"\\n          \"],[7,\"p\"],[9],[0,\"This is archive content\"],[10],[0,\"\\n\"]],\"parameters\":[]},null]],\"parameters\":[2]},null],[0,\"      \"],[7,\"div\"],[11,\"id\",\"activeName\"],[9],[1,[24,1,[\"activeName\"]],false],[10],[0,\"\\n      \"],[7,\"div\"],[11,\"id\",\"switch\"],[12,\"onclick\",[29,\"action\",[[24,0,[]],[24,1,[\"api\",\"selectAction\"]],\"archive\"],null]],[9],[10],[0,\"\\n\"]],\"parameters\":[1]},null],[0,\"  \"]],\"hasEval\":false}",
-                meta: {}
+                "id": "ny3kMKDH",
+                "block": "{\"symbols\":[\"xt\",\"panes\",\"tabs\"],\"statements\":[[0,\"\\n\"],[4,\"x-tabs\",null,[[\"tab-style\"],[[24,[\"tabStyle\"]]]],{\"statements\":[[0,\"\\n\"],[4,\"component\",[[28,\"-assert-implicit-component-helper-argument\",[[23,1,[\"tabs\"]],\"expected `xt.tabs` to be a contextual component but found a string. Did you mean `(component xt.tabs)`? (L5:C9) \"],null]],null,{\"statements\":[[4,\"component\",[[28,\"-assert-implicit-component-helper-argument\",[[23,3,[\"tab\"]],\"expected `tabs.tab` to be a contextual component but found a string. Did you mean `(component tabs.tab)`? (L6:C11) \"],null]],[[\"name\"],[\"home\"]],{\"statements\":[[0,\"          \"],[7,\"i\",true],[10,\"class\",\"icon icon-home\"],[8],[9],[0,\"\\n          \"],[7,\"span\",true],[8],[0,\"Home\"],[9],[0,\"\\n\"]],\"parameters\":[]},null],[4,\"component\",[[28,\"-assert-implicit-component-helper-argument\",[[23,3,[\"tab\"]],\"expected `tabs.tab` to be a contextual component but found a string. Did you mean `(component tabs.tab)`? (L10:C11) \"],null]],[[\"name\"],[\"archive\"]],{\"statements\":[[0,\"          \"],[7,\"i\",true],[10,\"class\",\"icon icon-box\"],[8],[9],[0,\"\\n          \"],[7,\"span\",true],[8],[0,\"Archive\"],[9],[0,\"\\n\"]],\"parameters\":[]},null]],\"parameters\":[3]},null],[0,\"\\n\"],[4,\"component\",[[28,\"-assert-implicit-component-helper-argument\",[[23,1,[\"panes\"]],\"expected `xt.panes` to be a contextual component but found a string. Did you mean `(component xt.panes)`? (L17:C9) \"],null]],null,{\"statements\":[[4,\"component\",[[28,\"-assert-implicit-component-helper-argument\",[[23,2,[\"pane\"]],\"expected `panes.pane` to be a contextual component but found a string. Did you mean `(component panes.pane)`? (L18:C11) \"],null]],[[\"name\"],[\"home\"]],{\"statements\":[[0,\"          \"],[7,\"h1\",true],[8],[0,\"Home\"],[9],[0,\"\\n          \"],[7,\"p\",true],[8],[0,\"This is home content\"],[9],[0,\"\\n\"]],\"parameters\":[]},null],[4,\"component\",[[28,\"-assert-implicit-component-helper-argument\",[[23,2,[\"pane\"]],\"expected `panes.pane` to be a contextual component but found a string. Did you mean `(component panes.pane)`? (L22:C11) \"],null]],[[\"name\"],[\"archive\"]],{\"statements\":[[0,\"          \"],[7,\"h1\",true],[8],[0,\"Archive\"],[9],[0,\"\\n          \"],[7,\"p\",true],[8],[0,\"This is archive content\"],[9],[0,\"\\n\"]],\"parameters\":[]},null]],\"parameters\":[2]},null],[0,\"      \"],[7,\"div\",true],[10,\"id\",\"activeName\"],[8],[1,[23,1,[\"activeName\"]],false],[9],[0,\"\\n      \"],[7,\"div\",true],[10,\"id\",\"switch\"],[11,\"onclick\",[28,\"action\",[[23,0,[]],[23,1,[\"api\",\"selectAction\"]],\"archive\"],null]],[8],[9],[0,\"\\n\"]],\"parameters\":[1]},null],[0,\"  \"]],\"hasEval\":false}",
+                "meta": {}
               }));
 
             case 2:
@@ -434,6 +434,7 @@ define("dummy/tests/integration/components/x-tabs-test", ["qunit", "ember-qunit"
       assert.equal(page.tabs.objectAt(archiveTab).text, 'Archive', 'navigation item shows pane title');
     });
     (0, _qunit.test)('first tab is active by default', function (assert) {
+      debugger;
       assertActiveTab(assert, homeTab);
       assertInActiveTab(assert, archiveTab);
     });
@@ -487,9 +488,9 @@ define("dummy/tests/integration/helpers/eq-test", ["qunit", "ember-qunit", "@emb
                   {{eq inputValue '1234'}}
                 */
                 {
-                  id: "hDOnYlb2",
-                  block: "{\"symbols\":[],\"statements\":[[1,[29,\"eq\",[[25,[\"inputValue\"]],\"1234\"],null],false]],\"hasEval\":false}",
-                  meta: {}
+                  "id": "YauBDZLf",
+                  "block": "{\"symbols\":[],\"statements\":[[1,[28,\"eq\",[[24,[\"inputValue\"]],\"1234\"],null],false]],\"hasEval\":false}",
+                  "meta": {}
                 }));
 
               case 3:
@@ -509,39 +510,6 @@ define("dummy/tests/integration/helpers/eq-test", ["qunit", "ember-qunit", "@emb
     }());
   });
 });
-define("dummy/tests/lint/app.lint-test", [], function () {
-  "use strict";
-
-  QUnit.module('ESLint | app');
-  QUnit.test('app.js', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'app.js should pass ESLint\n\n');
-  });
-  QUnit.test('components/tab-example.js', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'components/tab-example.js should pass ESLint\n\n');
-  });
-  QUnit.test('resolver.js', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'resolver.js should pass ESLint\n\n');
-  });
-  QUnit.test('router.js', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'router.js should pass ESLint\n\n');
-  });
-  QUnit.test('routes/custom-class.js', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'routes/custom-class.js should pass ESLint\n\n');
-  });
-  QUnit.test('routes/index.js', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'routes/index.js should pass ESLint\n\n');
-  });
-  QUnit.test('routes/xtabs-example.js', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'routes/xtabs-example.js should pass ESLint\n\n');
-  });
-});
 define("dummy/tests/lint/templates.template.lint-test", [], function () {
   "use strict";
 
@@ -550,66 +518,9 @@ define("dummy/tests/lint/templates.template.lint-test", [], function () {
     assert.expect(1);
     assert.ok(true, 'dummy/templates/application.hbs should pass TemplateLint.\n\n');
   });
-  QUnit.test('dummy/templates/components/tab-example.hbs', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'dummy/templates/components/tab-example.hbs should pass TemplateLint.\n\n');
-  });
-  QUnit.test('dummy/templates/custom-class.hbs', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'dummy/templates/custom-class.hbs should pass TemplateLint.\n\n');
-  });
   QUnit.test('dummy/templates/index.hbs', function (assert) {
     assert.expect(1);
     assert.ok(true, 'dummy/templates/index.hbs should pass TemplateLint.\n\n');
-  });
-});
-define("dummy/tests/lint/tests.lint-test", [], function () {
-  "use strict";
-
-  QUnit.module('ESLint | tests');
-  QUnit.test('helpers/resolver.js', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'helpers/resolver.js should pass ESLint\n\n');
-  });
-  QUnit.test('integration/components/x-tabs-pane-data-test.js', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'integration/components/x-tabs-pane-data-test.js should pass ESLint\n\n');
-  });
-  QUnit.test('integration/components/x-tabs-pane-test.js', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'integration/components/x-tabs-pane-test.js should pass ESLint\n\n');
-  });
-  QUnit.test('integration/components/x-tabs-panes-test.js', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'integration/components/x-tabs-panes-test.js should pass ESLint\n\n');
-  });
-  QUnit.test('integration/components/x-tabs-tab-test.js', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'integration/components/x-tabs-tab-test.js should pass ESLint\n\n');
-  });
-  QUnit.test('integration/components/x-tabs-tabs-test.js', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'integration/components/x-tabs-tabs-test.js should pass ESLint\n\n');
-  });
-  QUnit.test('integration/components/x-tabs-test.js', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'integration/components/x-tabs-test.js should pass ESLint\n\n');
-  });
-  QUnit.test('integration/helpers/eq-test.js', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'integration/helpers/eq-test.js should pass ESLint\n\n');
-  });
-  QUnit.test('test-helper.js', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'test-helper.js should pass ESLint\n\n');
-  });
-  QUnit.test('unit/mixins/component-child-test.js', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'unit/mixins/component-child-test.js should pass ESLint\n\n');
-  });
-  QUnit.test('unit/mixins/component-parent-test.js', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'unit/mixins/component-parent-test.js should pass ESLint\n\n');
   });
 });
 define("dummy/tests/page-object", ["exports", "ember-cli-page-object"], function (_exports, _emberCliPageObject) {
@@ -628,6 +539,12 @@ define("dummy/tests/page-object", ["exports", "ember-cli-page-object"], function
     enumerable: true,
     get: function get() {
       return _emberCliPageObject.attribute;
+    }
+  });
+  Object.defineProperty(_exports, "buildSelector", {
+    enumerable: true,
+    get: function get() {
+      return _emberCliPageObject.buildSelector;
     }
   });
   Object.defineProperty(_exports, "clickOnText", {
@@ -666,22 +583,41 @@ define("dummy/tests/page-object", ["exports", "ember-cli-page-object"], function
       return _emberCliPageObject.create;
     }
   });
+  _exports.default = void 0;
   Object.defineProperty(_exports, "fillable", {
     enumerable: true,
     get: function get() {
       return _emberCliPageObject.fillable;
     }
   });
-  Object.defineProperty(_exports, "selectable", {
+  Object.defineProperty(_exports, "findElement", {
     enumerable: true,
     get: function get() {
-      return _emberCliPageObject.fillable;
+      return _emberCliPageObject.findElement;
+    }
+  });
+  Object.defineProperty(_exports, "findElementWithAssert", {
+    enumerable: true,
+    get: function get() {
+      return _emberCliPageObject.findElementWithAssert;
     }
   });
   Object.defineProperty(_exports, "focusable", {
     enumerable: true,
     get: function get() {
       return _emberCliPageObject.focusable;
+    }
+  });
+  Object.defineProperty(_exports, "fullScope", {
+    enumerable: true,
+    get: function get() {
+      return _emberCliPageObject.fullScope;
+    }
+  });
+  Object.defineProperty(_exports, "getContext", {
+    enumerable: true,
+    get: function get() {
+      return _emberCliPageObject.getContext;
     }
   });
   Object.defineProperty(_exports, "hasClass", {
@@ -726,6 +662,12 @@ define("dummy/tests/page-object", ["exports", "ember-cli-page-object"], function
       return _emberCliPageObject.property;
     }
   });
+  Object.defineProperty(_exports, "selectable", {
+    enumerable: true,
+    get: function get() {
+      return _emberCliPageObject.fillable;
+    }
+  });
   Object.defineProperty(_exports, "text", {
     enumerable: true,
     get: function get() {
@@ -750,37 +692,6 @@ define("dummy/tests/page-object", ["exports", "ember-cli-page-object"], function
       return _emberCliPageObject.visitable;
     }
   });
-  Object.defineProperty(_exports, "buildSelector", {
-    enumerable: true,
-    get: function get() {
-      return _emberCliPageObject.buildSelector;
-    }
-  });
-  Object.defineProperty(_exports, "findElementWithAssert", {
-    enumerable: true,
-    get: function get() {
-      return _emberCliPageObject.findElementWithAssert;
-    }
-  });
-  Object.defineProperty(_exports, "findElement", {
-    enumerable: true,
-    get: function get() {
-      return _emberCliPageObject.findElement;
-    }
-  });
-  Object.defineProperty(_exports, "getContext", {
-    enumerable: true,
-    get: function get() {
-      return _emberCliPageObject.getContext;
-    }
-  });
-  Object.defineProperty(_exports, "fullScope", {
-    enumerable: true,
-    get: function get() {
-      return _emberCliPageObject.fullScope;
-    }
-  });
-  _exports.default = void 0;
   var _default = {
     alias: _emberCliPageObject.alias,
     attribute: _emberCliPageObject.attribute,
@@ -819,30 +730,6 @@ define("dummy/tests/test-helper", ["dummy/app", "dummy/config/environment", "@em
   (0, _extend.useNativeEvents)();
   (0, _testHelpers.setApplication)(_app.default.create(_environment.default.APP));
   (0, _emberQunit.start)();
-});
-define("dummy/tests/unit/mixins/component-child-test", ["ember-x-tabs/mixins/component-child", "qunit"], function (_componentChild, _qunit) {
-  "use strict";
-
-  (0, _qunit.module)('Unit | Mixin | component child', function () {
-    // Replace this with your real tests.
-    (0, _qunit.test)('it works', function (assert) {
-      var ComponentChildObject = Ember.Object.extend(_componentChild.default);
-      var subject = ComponentChildObject.create();
-      assert.ok(subject);
-    });
-  });
-});
-define("dummy/tests/unit/mixins/component-parent-test", ["ember-x-tabs/mixins/component-parent", "qunit"], function (_componentParent, _qunit) {
-  "use strict";
-
-  (0, _qunit.module)('Unit | Mixin | component parent', function () {
-    // Replace this with your real tests.
-    (0, _qunit.test)('it works', function (assert) {
-      var ComponentParentObject = Ember.Object.extend(_componentParent.default);
-      var subject = ComponentParentObject.create();
-      assert.ok(subject);
-    });
-  });
 });
 define('dummy/config/environment', [], function() {
   var prefix = 'dummy';
