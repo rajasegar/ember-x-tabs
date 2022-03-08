@@ -23,8 +23,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: Install
       run: npm install
-    - name: ESLint
-      run: npm run lint:js
+    # - name: ESLint
+      # run: npm run lint:js
     - name: Templates
       run: npm run lint:hbs
 
