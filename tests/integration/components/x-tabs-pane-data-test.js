@@ -22,7 +22,7 @@ module('Integration | Component | x-tabs-pane-data', function(hooks) {
 
     await render(hbs`{{x-tabs-pane-data}}`);
 
-    assert.equal(page.text, '');
+    assert.equal(page.text, '', "non-block form");
 
     // Template block usage:
     await render(hbs`
@@ -31,6 +31,6 @@ module('Integration | Component | x-tabs-pane-data', function(hooks) {
       {{/x-tabs-pane-data}}
     `);
 
-    assert.equal(page.text, 'template block text');
+    assert.equal(page.text, 'template block text', "Block form");
   });
 });

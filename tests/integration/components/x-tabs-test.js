@@ -35,7 +35,7 @@ module('Integration | Component | x-tabs', function(hooks) {
   hooks.beforeEach(async function() {
     await render(hbs`
     {{#x-tabs tab-style=tabStyle as | xt | }}
-    
+
     {{!-- tab content --}}
       {{#xt.tabs as | tabs |}}
         {{#tabs.tab name="home"}}
@@ -47,7 +47,7 @@ module('Integration | Component | x-tabs', function(hooks) {
           <span>Archive</span>
         {{/tabs.tab}}
       {{/xt.tabs}}
-    
+
       {{!-- tab content --}}
       {{#xt.panes as | panes |}}
         {{#panes.pane name="home"}}
@@ -83,6 +83,7 @@ module('Integration | Component | x-tabs', function(hooks) {
   });
 
   test('first tab is active by default', function(assert) {
+    debugger;
     assertActiveTab(assert, homeTab);
     assertInActiveTab(assert, archiveTab);
   });
