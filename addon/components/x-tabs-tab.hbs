@@ -1,10 +1,10 @@
 {{!-- template-lint-disable  --}}
-<li class="{{if this.isActive "tab-current"}}">
-<a
-  role="tab"
-  aria-controls={{this.tabName}}
-  onclick={{action @api.selectAction @name @data}}
->
-  {{yield}}
-</a>
+<li class="{{if this.isActive "tab-current"}}" ...attributes>
+  <a
+    role="tab"
+    aria-controls={{this.tabName}}
+    onclick={{action @api.selectAction @name @data}}
+  >
+    {{yield}}
+  </a>
 </li>
