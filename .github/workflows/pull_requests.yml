@@ -25,5 +25,9 @@ jobs:
         with:
           version: 6.23.5
           run_install: true
-      # - run: npm install
+      - name: ESLint
+        run: pnpm run lint:js
+      - name: Template Lint
+        run: pnpm run lint:hbs
+
       - run: pnpm run test:ember
