@@ -33,7 +33,7 @@ specifiers:
   ember-source: 3.16.10
   ember-source-channel-url: 2.0.1
   ember-template-lint: 2.21.0
-  ember-try: 1.2.1
+  ember-try: 1.4.0
   eslint: 8.10.0
   eslint-config-prettier: 8.5.0
   eslint-plugin-ember: 10.5.9
@@ -79,7 +79,7 @@ devDependencies:
   ember-source: 3.16.10
   ember-source-channel-url: 2.0.1
   ember-template-lint: 2.21.0
-  ember-try: 1.2.1
+  ember-try: 1.4.0
   eslint: 8.10.0
   eslint-config-prettier: 8.5.0_eslint@8.10.0
   eslint-plugin-ember: 10.5.9_eslint@8.10.0
@@ -5234,8 +5234,8 @@ packages:
       semver: 5.7.1
     dev: true
 
-  /ember-try/1.2.1:
-    resolution: {integrity: sha512-/10g+5bvGNBoN3uN+MMGxidUj4bw0ne453aphjeFf4T/ZF1UoFTPZ8JV+g4XhdVL49zAoeTOLpsbwV0D1M+X6w==}
+  /ember-try/1.4.0:
+    resolution: {integrity: sha512-o0SoCH4K8umCf8etphla8FDygKfQGkwY+w47wEuYFVKaESrOZaK63ObnAK7DTKkjJU74Fss2abf+r+pAWpX43g==}
     engines: {node: 6.* || 8.* || >= 10.*}
     dependencies:
       chalk: 2.4.2
