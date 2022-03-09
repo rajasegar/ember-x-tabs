@@ -29,7 +29,7 @@ specifiers:
   ember-load-initializers: 2.1.2
   ember-maybe-import-regenerator: 0.1.6
   ember-qunit: 4.6.0
-  ember-resolver: 5.1.3
+  ember-resolver: 5.3.0
   ember-source: 3.16.10
   ember-source-channel-url: 2.0.1
   ember-template-lint: 2.21.0
@@ -75,7 +75,7 @@ devDependencies:
   ember-load-initializers: 2.1.2
   ember-maybe-import-regenerator: 0.1.6
   ember-qunit: 4.6.0
-  ember-resolver: 5.1.3
+  ember-resolver: 5.3.0
   ember-source: 3.16.10
   ember-source-channel-url: 2.0.1
   ember-template-lint: 2.21.0
@@ -5075,8 +5075,8 @@ packages:
       - supports-color
     dev: true
 
-  /ember-resolver/5.1.3:
-    resolution: {integrity: sha512-ud7Sw8R3hcGnGSvom96p56zdLEqEgVQEAo4HySJjBP0n7JT1lWSvLb7JrJwAZ7d9g1c2tm5ZlxBPUDwQrwMOuQ==}
+  /ember-resolver/5.3.0:
+    resolution: {integrity: sha512-NWin+WzmsRnZxFvDlx9B3rb3kxwK0MNblJemoRvNbbxLK6z5lGxVoBfpU4/nqItWfwmpVb9ZK8bqXYs5q8HT4A==}
     engines: {node: 6.* || 8.* || >= 10.*}
     dependencies:
       '@glimmer/resolver': 0.4.3
