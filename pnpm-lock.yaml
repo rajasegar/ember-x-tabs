@@ -22,7 +22,7 @@ specifiers:
   ember-cli-page-object: ^1.15.3
   ember-cli-release: ^1.0.0-beta.2
   ember-cli-sri: ^2.1.1
-  ember-cli-template-lint: ^1.0.0-beta.1
+  ember-cli-template-lint: 1.0.0-beta.3
   ember-cli-uglify: ^3.0.0
   ember-disable-prototype-extensions: ^1.1.3
   ember-export-application-global: ^2.0.0
@@ -68,7 +68,7 @@ devDependencies:
   ember-cli-page-object: 1.17.7
   ember-cli-release: 1.0.0-beta.2
   ember-cli-sri: 2.1.1
-  ember-cli-template-lint: 1.0.0
+  ember-cli-template-lint: 1.0.0-beta.3
   ember-cli-uglify: 3.0.0
   ember-disable-prototype-extensions: 1.1.3
   ember-export-application-global: 2.0.1
@@ -4907,15 +4907,15 @@ packages:
     resolution: {integrity: sha1-ObZ3/CgF9VFzc1N2/O8njqpEUqE=}
     dev: true
 
-  /ember-cli-template-lint/1.0.0:
-    resolution: {integrity: sha512-acWyJUvRFo2aA/0kqeUxfCPwLtPk3ckZ/1I0BzBX9qW/Gi8qWqYnwnI/vEotIqmsQl+npbl0/SXeQHFrUdyB0g==}
+  /ember-cli-template-lint/1.0.0-beta.3:
+    resolution: {integrity: sha512-ivrvYih+cx7VUlyyMQBmk61Ki+gT5axfppWrk6fSvHaoxHZadXU3zRJMT5DPkeRaayRu0y1dls4wqfrUhzQ1PA==}
     engines: {node: 6.* || 8.* || >= 10.*}
     dependencies:
       aot-test-generators: 0.1.0
       broccoli-concat: 3.7.5
       broccoli-persistent-filter: 2.3.1
       chalk: 2.4.2
-      debug: 4.3.1
+      debug: 4.3.3
       ember-cli-version-checker: 3.1.3
       ember-template-lint: 1.14.0
       json-stable-stringify: 1.0.1
@@ -7118,16 +7118,10 @@ packages:
     resolution: {integrity: sha512-nsuwtxZfMX67Oryl9LCQ+upnC0Z0BgpwntpS89m1H/TLF0zNfzfLMV/9Wa/6MZsj0acpEjAO0KF1xT6ZdLl95w==}
     engines: {node: '>= 0.4'}
 
-  /is-core-module/2.2.0:
-    resolution: {integrity: sha512-XRAfAdyyY5F5cOXn7hYQDqh2Xmii+DEfIcQGxK/uNwMHhIkPWO0g8msXcbzLe+MpGoR951MlqM/2iIlU4vKDdQ==}
-    dependencies:
-      has: 1.0.3
-
   /is-core-module/2.8.1:
     resolution: {integrity: sha512-SdNCUs284hr40hFTFP6l0IfZ/RSrMXF3qgoRHd3/79unUTvrFO/JoXwkGm+5J/Oe3E/b5GsnG330uUNgRpu1PA==}
     dependencies:
       has: 1.0.3
-    dev: true
 
   /is-data-descriptor/0.1.4:
     resolution: {integrity: sha1-C17mSDiOLIYCgueT8YVv7D8wG1Y=}
@@ -9694,7 +9688,7 @@ packages:
   /resolve/1.20.0:
     resolution: {integrity: sha512-wENBPt4ySzg4ybFQW2TT1zMQucPK95HSh/nq2CFTZVOGut2+pQvSsgtda4d26YrYcr067wjbmzOG8byDPBX63A==}
     dependencies:
-      is-core-module: 2.2.0
+      is-core-module: 2.8.1
       path-parse: 1.0.6
 
   /responselike/1.0.2:
@@ -10115,6 +10109,7 @@ packages:
 
   /source-map-resolve/0.5.3:
     resolution: {integrity: sha512-Htz+RnsXWk5+P2slx5Jh3Q66vhQj1Cllm0zvnaY98+NFx+Dv2CF/f5O/t8x+KaNdrdIAsruNzoh/KpialbqAnw==}
+    deprecated: See https://github.com/lydell/source-map-resolve#deprecated
     dependencies:
       atob: 2.1.2
       decode-uri-component: 0.2.0
@@ -10138,10 +10133,12 @@ packages:
 
   /source-map-url/0.3.0:
     resolution: {integrity: sha1-fsrxO1e80J2opAxdJp2zN5nUqvk=}
+    deprecated: See https://github.com/lydell/source-map-url#deprecated
     dev: true
 
   /source-map-url/0.4.1:
     resolution: {integrity: sha512-cPiFOTLUKvJFIg4SKVScy4ilPPW6rFgMgfuZJPNoDuMs3nC1HbMUycBoJw77xFIp6z1UJQJOfx6C9GMH80DiTw==}
+    deprecated: See https://github.com/lydell/source-map-url#deprecated
     dev: true
 
   /source-map/0.1.43:
