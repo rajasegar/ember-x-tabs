@@ -27,7 +27,6 @@
     "test": "ember test",
     "test:ember": "COVERAGE=true ember test",
     "test:all": "ember try:each",
-    "test:firefox": "ember test --launch='Firefox'",
     "semantic-release": "semantic-release"
   },
   "dependencies": {
