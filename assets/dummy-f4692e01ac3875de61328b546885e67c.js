@@ -27,7 +27,7 @@ if("undefined"!=typeof window)n=window
 else if("undefined"!=typeof global)n=global
 else{if("undefined"==typeof self)return
 n=self}var a,r=t.default.exportApplicationGlobal
-a="string"==typeof r?r:Ember.String.classify(t.default.modulePrefix),n[a]||(n[a]=e,e.reopen({willDestroy:function(){this._super.apply(this,arguments),delete n[a]}}))}}Object.defineProperty(e,"__esModule",{value:!0}),e.initialize=n,e.default=void 0
+a="string"==typeof r?r:Ember.String.classify(t.default.modulePrefix),n[a]||(n[a]=e,e.reopen({willDestroy:function(){this._super.apply(this,arguments),delete n[a]}}))}}Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0,e.initialize=n
 var a={name:"export-application-global",initialize:n}
 e.default=a})),define("dummy/resolver",["exports","ember-resolver"],(function(e,t){Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0
 var n=t.default
