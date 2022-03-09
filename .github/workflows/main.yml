@@ -17,77 +17,82 @@ jobs:
     if: "!contains(github.event.head_commit.message, 'skip ci')"
     steps:
     - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v2
+    - uses: pnpm/action-setup@v2.1.0
       with:
-        node-version: ${{ matrix.node-version }}
-    - name: Install
-      run: npm install
+        version: 6.23.5
+        run_install: true
+
+    # - name: Use Node.js ${{ matrix.node-version }}
+    #   uses: actions/setup-node@v2
+    #   with:
+    #     node-version: ${{ matrix.node-version }}
+    # - name: Install
+    #   run: npm install
     # - name: ESLint
       # run: npm run lint:js
     - name: Templates
-      run: npm run lint:hbs
+      run: pnpm run lint:hbs
 
-  coverage:
-    name: Coverage
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [12.x]
-    if: "!contains(github.event.head_commit.message, 'skip ci')"
-    steps:
+  # coverage:
+  #   name: Coverage
+  #   runs-on: ubuntu-latest
+  #   strategy:
+  #     matrix:
+  #       node-version: [12.x]
+  #   if: "!contains(github.event.head_commit.message, 'skip ci')"
+  #   steps:
 
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v2
-      with:
-        node-version: ${{ matrix.node-version }}
+  #   - uses: actions/checkout@v2
+  #   - name: Use Node.js ${{ matrix.node-version }}
+  #     uses: actions/setup-node@v2
+  #     with:
+  #       node-version: ${{ matrix.node-version }}
 
     - name: npm install, run coveralls
       env:
         COVERALLS_REPO_TOKEN: ${{secrets.COVERALLS_REPO_TOKEN}}
       run: |
-        npm install
-        npm run test:ember
+        # npm install
+        pnpm run test:ember
     - name: Coveralls
       uses: coverallsapp/github-action@master
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
 
-  tests_ember_compat:
-    name: Ember Compatability
-    runs-on: ubuntu-latest
-    if: "!contains(github.event.head_commit.message, 'skip ci')"
-    strategy:
-      matrix:
-        node-version: [12.x]
-    steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v2
-      with:
-        node-version: ${{ matrix.node-version }}
-    - name: Install
-      run: npm install
+  # tests_ember_compat:
+  #   name: Ember Compatability
+  #   runs-on: ubuntu-latest
+  #   if: "!contains(github.event.head_commit.message, 'skip ci')"
+  #   strategy:
+  #     matrix:
+  #       node-version: [12.x]
+  #   steps:
+  #   - uses: actions/checkout@v2
+  #   - name: Use Node.js ${{ matrix.node-version }}
+  #     uses: actions/setup-node@v2
+  #     with:
+  #       node-version: ${{ matrix.node-version }}
+  #   - name: Install
+  #     run: npm install
     - name: Test
-      run: npm run test:ember
+      run: pnpm run test:ember
 
-  build-and-deploy:
-    runs-on: ubuntu-latest
-    if: "!contains(github.event.head_commit.message, 'skip ci')"
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-      with:
-        fetch-depth: 0
-    - name: Node setup
-      uses: actions/setup-node@v2
-      with:
-        node-version: 14
+  # build-and-deploy:
+  #   runs-on: ubuntu-latest
+  #   if: "!contains(github.event.head_commit.message, 'skip ci')"
+  #   steps:
+  #   - name: Checkout
+  #     uses: actions/checkout@v2
+  #     with:
+  #       fetch-depth: 0
+  #   - name: Node setup
+  #     uses: actions/setup-node@v2
+  #     with:
+  #       node-version: 14
     - name: Build
       run: |
-        npm install
-        npm run build
+        # npm install
+        pnpm run build
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
@@ -99,4 +104,4 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GH_PAT }}
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-      run: npm run semantic-release
+      run: pnpm run semantic-release
