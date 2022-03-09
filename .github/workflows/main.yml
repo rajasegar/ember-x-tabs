@@ -37,8 +37,8 @@ jobs:
         run_install: true
     # - name: Install
     #   run: npm install
-    # - name: ESLint
-      # run: npm run lint:js
+    - name: ESLint
+      run: pnpm run lint:js
     - name: Templates
       run: pnpm run lint:hbs
 
