@@ -28,7 +28,7 @@ specifiers:
   ember-export-application-global: 2.0.1
   ember-load-initializers: 2.1.2
   ember-maybe-import-regenerator: 0.1.6
-  ember-qunit: 4.4.1
+  ember-qunit: 4.6.0
   ember-resolver: 5.1.3
   ember-source: 3.16.10
   ember-source-channel-url: 2.0.1
@@ -74,7 +74,7 @@ devDependencies:
   ember-export-application-global: 2.0.1
   ember-load-initializers: 2.1.2
   ember-maybe-import-regenerator: 0.1.6
-  ember-qunit: 4.4.1
+  ember-qunit: 4.6.0
   ember-resolver: 5.1.3
   ember-source: 3.16.10
   ember-source-channel-url: 2.0.1
@@ -5059,8 +5059,8 @@ packages:
       - '@babel/core'
     dev: true
 
-  /ember-qunit/4.4.1:
-    resolution: {integrity: sha512-RYyEqn3UpwLri4+lL9sFdDp1uPa0AfN587661iKm7r3kTAzYHxZE7jRsBDIejhgSH2kVSky0+Q9Y7oLULYiM/Q==}
+  /ember-qunit/4.6.0:
+    resolution: {integrity: sha512-i5VOGn0RP8XH+5qkYDOZshbqAvO6lHgF65D0gz8vRx4DszCIvJMJO+bbftBTfYMxp6rqG85etAA6pfNxE0DqsQ==}
     engines: {node: 6.* || 8.* || >= 10.*}
     dependencies:
       '@ember/test-helpers': 1.7.3
