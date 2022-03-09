@@ -41,7 +41,7 @@ specifiers:
   eslint-plugin-prettier: 4.0.0
   loader.js: 4.7.0
   prettier: 2.5.1
-  qunit-dom: 0.8.5
+  qunit-dom: 0.9.2
   semantic-release: 19.0.2
 
 dependencies:
@@ -87,7 +87,7 @@ devDependencies:
   eslint-plugin-prettier: 4.0.0_f3d13a703a9c1079e3d1af6044603beb
   loader.js: 4.7.0
   prettier: 2.5.1
-  qunit-dom: 0.8.5
+  qunit-dom: 0.9.2
   semantic-release: 19.0.2
 
 packages:
@@ -9172,9 +9172,9 @@ packages:
       rimraf: 2.7.1
       underscore.string: 3.3.5
 
-  /qunit-dom/0.8.5:
-    resolution: {integrity: sha512-I4GSy22ESUkoZYDSYsqFJoMvqhpmgd2iCYlrN7aWLEOdmumUkao3qz24/qVNZd1PAnoOQA78FefzNPRHePFx1A==}
-    engines: {node: 6.* || 8.* || >= 10.*}
+  /qunit-dom/0.9.2:
+    resolution: {integrity: sha512-BPf7OZjhXo9ekgsViNjQVS9BWkm2yQsPvBoy0juvt5nOFlcBVVwHSYsgpsJOunWkI1IgA3eStAC9mQx3Zw734g==}
+    engines: {node: 8.* || >= 10.*}
     dependencies:
       broccoli-funnel: 2.0.2
       broccoli-merge-trees: 3.0.2
