@@ -12,7 +12,6 @@
   "license": "MIT",
   "author": "Rajasegar Chandran",
   "directories": {
-    "doc": "doc",
     "test": "tests"
   },
   "repository": "https://github.com/rajasegar/ember-x-tabs",

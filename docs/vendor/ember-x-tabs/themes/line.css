@@ -1,0 +1,46 @@
+/*****************************/
+/* Line */
+/*****************************/
+
+.tabs-style-line nav ul {
+	  padding: 0 2em;
+	  max-width: none;
+	  box-shadow: inset 0 -2px #d1d3d2;
+}
+
+.tabs-style-line nav a {
+	  padding: 0.7em 0.4em;
+	  box-shadow: inset 0 -2px #d1d3d2;
+	  color: var(--x-tab-color2, "#74777b");
+	  text-align: left;
+	  text-transform: uppercase;
+	  letter-spacing: 1px;
+	  font-weight: 700;
+	  font-size: 0.8em;
+	  line-height: 1;
+	  -webkit-transition: color 0.3s, box-shadow 0.3s;
+	  transition: color 0.3s, box-shadow 0.3s;
+}
+
+.tabs-style-line nav a:hover,
+.tabs-style-line nav a:focus {
+	  box-shadow: inset 0 -2px var(--x-tab-color2, "#74777b");
+}
+
+.tabs-style-line nav li.tab-current a {
+	  box-shadow: inset 0 -2px var(--x-tab-active, "#2CC185");
+	  color: var(--x-tab-active, "#2CC185");
+}
+
+@media screen and (max-width: 58em) {
+	  .tabs-style-line nav ul {
+		    display: block;
+		    box-shadow: none;
+	  }
+	  .tabs-style-line nav ul li {
+		    display: block;
+		    -webkit-flex: none;
+		    flex: none;
+	  }
+}
+

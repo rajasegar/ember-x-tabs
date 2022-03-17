@@ -1,0 +1,41 @@
+/*****************************/
+/* Underline */
+/*****************************/
+
+.tabs-style-underline nav {
+	  background: var(--x-tab-bg3, "#fff");
+}
+
+.tabs-style-underline nav a {
+	  padding: 0.25em 0 0.5em;
+	  border-left: 1px solid #e7ecea;
+	  -webkit-transition: color 0.2s;
+	  transition: color 0.2s;
+}
+
+.tabs-style-underline nav li:last-child a {
+	  border-right: 1px solid #e7ecea;
+}
+
+.tabs-style-underline nav li a::after {
+	  position: absolute;
+	  bottom: 0;
+	  left: 0;
+	  width: 100%;
+	  height: 6px;
+	  background: var(--x-tab-active, "#2CC185");
+	  content: '';
+	  -webkit-transition: -webkit-transform 0.3s;
+	  transition: transform 0.3s;
+	  -webkit-transform: translate3d(0,150%,0);
+	  transform: translate3d(0,150%,0);
+}
+
+.tabs-style-underline nav li.tab-current a::after {
+	  -webkit-transform: translate3d(0,0,0);
+	  transform: translate3d(0,0,0);
+}
+
+.tabs-style-underline nav a span {
+	  font-weight: 700;
+}
