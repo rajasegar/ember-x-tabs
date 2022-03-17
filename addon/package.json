@@ -20,26 +20,55 @@
     "lint:hbs": "ember-template-lint .",
     "lint:hbs:fix": "ember-template-lint . --fix",
     "lint:js": "eslint .",
-    "lint:js:fix": "eslint . --fix"
+    "lint:js:fix": "eslint . --fix",
+    "build": "rollup --config",
+    "prepublishOnly": "rollup --config",
+    "start": "rollup --config --watch"
   },
+  "exports": {
+    ".": "./dist/index.js",
+    "./*": "./dist/*",
+    "./test-support": "./dist/test-support/index.js",
+    "./addon-main.js": "./addon-main.js"
+  },
+  "files": [
+    "addon-main.js",
+    "dist"
+  ],
   "dependencies": {
-    "ember-cli-babel": "7.26.11",
-    "ember-cli-htmlbars": "5.7.2"
+    "@embroider/addon-shim": "^1.5.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.17.7",
     "@babel/eslint-parser": "7.17.0",
+    "@babel/plugin-proposal-class-properties": "^7.16.7",
+    "@babel/plugin-proposal-decorators": "^7.17.2",
+    "@embroider/addon-dev": "^1.5.0",
+    "@rollup/plugin-babel": "^5.3.1",
     "eslint": "8.10.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-ember": "10.5.9",
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-prettier": "4.0.0",
     "npm-run-all": "^4.1.5",
-    "prettier": "2.5.1"
+    "prettier": "2.5.1",
+    "rollup": "^2.70.1"
   },
   "engines": {
     "node": "10.* || >= 12"
   },
   "ember-addon": {
-    "demoURL": "https://rajasegar.github.io/ember-x-tabs/"
+    "main": "addon-main.js",
+    "type": "addon",
+    "version": 2,
+    "demoURL": "https://rajasegar.github.io/ember-x-tabs/",
+    "app-js": {
+      "./components/x-tabs-pane-data.js": "./dist/_app_/components/x-tabs-pane-data.js",
+      "./components/x-tabs-pane.js": "./dist/_app_/components/x-tabs-pane.js",
+      "./components/x-tabs-panes.js": "./dist/_app_/components/x-tabs-panes.js",
+      "./components/x-tabs-tab.js": "./dist/_app_/components/x-tabs-tab.js",
+      "./components/x-tabs-tabs.js": "./dist/_app_/components/x-tabs-tabs.js",
+      "./components/x-tabs.js": "./dist/_app_/components/x-tabs.js"
+    }
   }
 }
