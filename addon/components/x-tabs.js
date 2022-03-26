@@ -12,7 +12,6 @@ export default class XTabsComponent extends Component {
 
   name = "x-tabs";
 
-  @tracked
   selectFirstTab = true;
 
   @action
