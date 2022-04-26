@@ -53,13 +53,13 @@
     "@babel/plugin-proposal-decorators": "^7.17.2",
     "@embroider/addon-dev": "^1.5.0",
     "@rollup/plugin-babel": "^5.3.1",
-    "eslint": "8.10.0",
+    "eslint": "8.11.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-ember": "10.5.9",
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-prettier": "4.0.0",
     "npm-run-all": "^4.1.5",
-    "prettier": "2.5.1",
+    "prettier": "2.6.0",
     "rollup": "^2.70.1"
   },
   "engines": {
