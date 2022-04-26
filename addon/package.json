@@ -23,7 +23,8 @@
     "lint:js:fix": "eslint . --fix",
     "build": "rollup --config",
     "prepublishOnly": "rollup --config",
-    "start": "rollup --config --watch"
+    "start": "rollup --config --watch",
+    "prepare": "rollup --config"
   },
   "exports": {
     ".": "./dist/index.js",
