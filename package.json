@@ -6,10 +6,7 @@
     "test-app"
   ],
   "scripts": {
-    "prepare": "yarn workspace ember-x-tabs run prepare",
-    "start": "npm-run-all --parallel start:*",
-    "start:addon": "yarn workspace ember-x-tabs run start",
-    "start:test-app": "yarn workspace test-app run start",
+    "build": "pnpm run --filter addon build",
     "lint": "npm-run-all --aggregate-output --continue-on-error --parallel lint:*",
     "lint:addon": "yarn workspace ember-x-tabs run lint",
     "lint:test-app": "yarn workspace test-app run lint",
