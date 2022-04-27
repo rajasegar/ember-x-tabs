@@ -37,7 +37,9 @@ jobs:
       - name: Template Lint Test App
         run: pnpm run lint:hbs
         working-directory: ./test-app
-
+      - name: Install
+        run: pnpm install
+        working-directory: .
       - run: pnpm run test:ember
         working-directory: ./test-app
 

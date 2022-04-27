@@ -37,6 +37,7 @@ jobs:
         run_install: true
     - name: Install
       run: pnpm install
+      working-directory: .
     - name: ESLint Addon
       run: pnpm run lint:js
       working-directory: ./addon
