@@ -24,7 +24,9 @@ jobs:
       - uses: pnpm/action-setup@v2.2.1
         with:
           version: 6.23.5
-          run_install: true
+      - name: Install
+        run: pnpm install
+        working-directory: .
       - name: ESLint Addon
         run: pnpm run lint:js
         working-directory: ./addon
@@ -37,9 +39,6 @@ jobs:
       - name: Template Lint Test App
         run: pnpm run lint:hbs
         working-directory: ./test-app
-      - name: Install
-        run: pnpm install
-        working-directory: .
       - run: pnpm run test:ember
         working-directory: ./test-app
 
