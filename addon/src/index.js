@@ -2,9 +2,9 @@ import { getOwnConfig } from "@ember/macros";
 
 export default class {
     configure(requests) {
-        console.log("requests", requests);
+        // console.log("requests", requests);
         const config = getOwnConfig();
-        console.log("ownConfig", config);
+        // console.log("ownConfig", config);
         var themes = [];
         var excludedBaseStyles = false;
 
