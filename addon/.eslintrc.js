@@ -28,6 +28,7 @@ module.exports = {
     "ember/no-jquery": "error",
     "prettier/prettier": "error",
     "ember/no-incorrect-calls-with-inline-anonymous-functions": 0,
+    "ember/no-empty-glimmer-component-classes": 0,
   },
   overrides: [
     // node files
