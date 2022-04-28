@@ -1,4 +1,4 @@
-# ember-x-tabs
+# ember-x-tabs [test-ci]
 
 ![Build and Deploy](https://github.com/rajasegar/ember-x-tabs/workflows/Build%20and%20Deploy/badge.svg)
 [![Coverage Status](https://coveralls.io/repos/github/rajasegar/ember-x-tabs/badge.svg?branch=master)](https://coveralls.io/github/rajasegar/ember-x-tabs?branch=master)
