@@ -1,4 +1,3 @@
-import Component from "@glimmer/component";
+import Component from '@glimmer/component';
 
-export default class XTabsTabs extends Component {
-}
+export default class XTabsTabs extends Component {}

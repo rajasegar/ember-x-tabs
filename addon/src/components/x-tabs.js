@@ -1,7 +1,7 @@
-import Component from "@glimmer/component";
-import { scheduleOnce } from "@ember/runloop";
-import { tracked } from "@glimmer/tracking";
-import { action } from "@ember/object";
+import Component from '@glimmer/component';
+import { scheduleOnce } from '@ember/runloop';
+import { tracked } from '@glimmer/tracking';
+import { action } from '@ember/object';
 
 export default class XTabsComponent extends Component {
   @tracked
@@ -10,7 +10,7 @@ export default class XTabsComponent extends Component {
   @tracked
   activeData;
 
-  name = "x-tabs";
+  name = 'x-tabs';
 
   selectFirstTab = true;
 
@@ -28,7 +28,7 @@ export default class XTabsComponent extends Component {
       (this.selectFirstTab === true && this.activeName == null)
     ) {
       this.selectFirstTab = false;
-      scheduleOnce("afterRender", this, () => {
+      scheduleOnce('afterRender', this, () => {
         this.select(name, data);
       });
     }

@@ -1,9 +1,9 @@
-"use strict";
+'use strict';
 
 module.exports = {
   rules: {
     // keep
-    "no-quoteless-attributes": false,
-    "no-bare-strings": false,
+    'no-quoteless-attributes': false,
+    'no-bare-strings': false,
   },
 };
