@@ -8,7 +8,7 @@ specifiers:
   '@ember/test-helpers': 2.6.0
   '@glimmer/component': 1.0.4
   '@glimmer/tracking': 1.0.4
-  '@semantic-release/changelog': 6.0.1
+  '@semantic-release/changelog': 6.0.2
   '@semantic-release/git': 10.0.1
   broccoli-asset-rev: 3.0.0
   coveralls: 3.1.1
@@ -56,7 +56,7 @@ devDependencies:
   '@ember/test-helpers': 2.6.0
   '@glimmer/component': 1.0.4
   '@glimmer/tracking': 1.0.4
-  '@semantic-release/changelog': 6.0.1_semantic-release@19.0.5
+  '@semantic-release/changelog': 6.0.2_semantic-release@19.0.5
   '@semantic-release/git': 10.0.1_semantic-release@19.0.5
   broccoli-asset-rev: 3.0.0
   coveralls: 3.1.1
@@ -1774,15 +1774,15 @@ packages:
       '@octokit/openapi-types': 11.2.0
     dev: true
 
-  /@semantic-release/changelog/6.0.1_semantic-release@19.0.5:
-    resolution: {integrity: sha512-FT+tAGdWHr0RCM3EpWegWnvXJ05LQtBkQUaQRIExONoXjVjLuOILNm4DEKNaV+GAQyJjbLRVs57ti//GypH6PA==}
+  /@semantic-release/changelog/6.0.2_semantic-release@19.0.5:
+    resolution: {integrity: sha512-jHqfTkoPbDEOAgAP18mGP53IxeMwxTISN+GwTRy9uLu58UjARoZU8ScCgWGeO2WPkEsm57H8AkyY02W2ntIlIw==}
     engines: {node: '>=14.17'}
     peerDependencies:
       semantic-release: '>=18.0.0'
     dependencies:
       '@semantic-release/error': 3.0.0
       aggregate-error: 3.1.0
-      fs-extra: 9.1.0
+      fs-extra: 11.1.0
       lodash: 4.17.21
       semantic-release: 19.0.5
     dev: true
@@ -6644,6 +6644,15 @@ packages:
   /fs-extra/10.0.1:
     resolution: {integrity: sha512-NbdoVMZso2Lsrn/QwLXOy6rm0ufY2zEOKCDzJR/0kBsb0E6qed0P3iYK+Ath3BfvXEeu4JhEtXLgILx5psUfag==}
     engines: {node: '>=12'}
+    dependencies:
+      graceful-fs: 4.2.6
+      jsonfile: 6.1.0
+      universalify: 2.0.0
+    dev: true
+
+  /fs-extra/11.1.0:
+    resolution: {integrity: sha512-0rcTq621PD5jM/e0a3EJoGC/1TC5ZBCERW82LQuwfGnCa1V8w7dpYH1yNu+SLb6E5dkeCBzKEyLGlFrnr+dUyw==}
+    engines: {node: '>=14.14'}
     dependencies:
       graceful-fs: 4.2.6
       jsonfile: 6.1.0
