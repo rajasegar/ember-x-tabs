@@ -19,7 +19,7 @@ specifiers:
   ember-cli-github-pages: 0.2.2
   ember-cli-htmlbars: 5.7.2
   ember-cli-inject-live-reload: 2.1.0
-  ember-cli-page-object: 1.17.10
+  ember-cli-page-object: 1.17.12
   ember-cli-release: 1.0.0-beta.2
   ember-cli-sri: 2.1.1
   ember-cli-template-lint: 1.0.0-beta.3
@@ -65,7 +65,7 @@ devDependencies:
   ember-cli-dependency-checker: 3.2.0
   ember-cli-github-pages: 0.2.2
   ember-cli-inject-live-reload: 2.1.0
-  ember-cli-page-object: 1.17.10
+  ember-cli-page-object: 1.17.12
   ember-cli-release: 1.0.0-beta.2
   ember-cli-sri: 2.1.1
   ember-cli-template-lint: 1.0.0-beta.3
@@ -3511,7 +3511,7 @@ packages:
     dev: true
 
   /broccoli-funnel/1.2.0:
-    resolution: {integrity: sha1-zdw6/F/xaFqAI0iP/3TOb7WlEpY=}
+    resolution: {integrity: sha512-0pbFNUA5Ml+gPPd58Rj/M26OS21+bMiV0F+m6+9OVzAhAdppVLxylSsXfWAt2WOD3kS+D8UsDv6GSmnZhbw/dw==}
     dependencies:
       array-equal: 1.0.0
       blank-object: 1.0.2
@@ -3751,7 +3751,7 @@ packages:
     dev: true
 
   /broccoli-source/1.1.0:
-    resolution: {integrity: sha1-VPDoLItz9GWAy7xPV48LMvyo+Ak=}
+    resolution: {integrity: sha512-ahvqmwF6Yvh6l+sTJJdey4o4ynwSH8swSSBSGmUXGSPPCqBWvquWB/4rWN65ZArKilBFq/29O0yQnZNIf//sTg==}
     dev: true
 
   /broccoli-source/2.1.2:
@@ -5133,8 +5133,8 @@ packages:
       - supports-color
     dev: true
 
-  /ember-cli-page-object/1.17.10:
-    resolution: {integrity: sha512-J7OQZ4IWftHLunsCicFbaVb/GrI+/DMWMPO5EAca9+0x9K+rxml351Tl1Z/Fpr8UmHg1q/KGwqGx9xGodrRxbg==}
+  /ember-cli-page-object/1.17.12:
+    resolution: {integrity: sha512-G5HCIp8Fp2ywrlBoaxdKNsAsJClnLyG+6Xg7liygnJxYpjc2e9BNcCXShxVsfkG3thlEFhNRWm5TY2TXNguOVA==}
     engines: {node: ^4.5 || 6.* || >= 7.*}
     dependencies:
       broccoli-file-creator: 2.1.1
@@ -6167,7 +6167,7 @@ packages:
     dev: true
 
   /exists-sync/0.0.4:
-    resolution: {integrity: sha1-l0TCxCjMA7AQYNtFTUsS8O88iHk=}
+    resolution: {integrity: sha512-cy5z7K+05RFxHAWY37dSDkPWmuTi+VzrA/xLwPDHmwQPMnO/kVhu6jheGaItlnNRoOE6f5MAjxy3VEupfrHigQ==}
     deprecated: Please replace with usage of fs.existsSync
     dev: true
 
