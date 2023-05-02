@@ -13,19 +13,19 @@ module("Integration | Component | x-tabs-tab", function (hooks) {
   setupRenderingTest(hooks);
 
   test("it renders", async function (assert) {
-    this.set("api", {
+    this.api = {
       selectAction: () => {},
-    });
+    };
 
-    await render(hbs`{{x-tabs-tab api=this.api}}`);
+    await render(hbs`<XTabsTab @api={{this.api}} />`);
 
     assert.equal(page.text, "");
 
     // Template block usage:
     await render(hbs`
-      {{#x-tabs-tab api=this.api}}
+      <XTabsTab @api={{this.api}}>
         template block text
-      {{/x-tabs-tab}}
+      </XTabsTab>
     `);
 
     assert.equal(page.text, "template block text");
