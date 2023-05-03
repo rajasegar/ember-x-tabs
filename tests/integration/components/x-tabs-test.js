@@ -1,7 +1,6 @@
 import { module, test } from "qunit";
 import { setupRenderingTest } from "ember-qunit";
 import { render, settled } from "@ember/test-helpers";
-import { set } from "@ember/object";
 import hbs from "htmlbars-inline-precompile";
 
 import {
@@ -35,7 +34,7 @@ module("Integration | Component | x-tabs", function (hooks) {
     this.homeTab = 0;
     this.homeName = "home";
     this.archiveTab = 1;
-    this.archiveName = 'archive';
+    this.archiveName = "archive";
   });
 
   async function renderTabs() {
@@ -129,5 +128,4 @@ module("Integration | Component | x-tabs", function (hooks) {
     assertInActiveTab(assert, this.homeTab);
     assertActiveTab(assert, this.archiveTab);
   });
-
 });
