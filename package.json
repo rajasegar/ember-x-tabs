@@ -14,7 +14,6 @@
     "lint:fix:addon": "yarn workspace ember-x-tabs run lint:fix",
     "lint:fix:test-app": "yarn workspace test-app run lint:fix",
     "test": "npm-run-all --aggregate-output --continue-on-error --parallel test:*",
-    "test:addon": "yarn workspace ember-x-tabs run test",
     "test:test-app": "yarn workspace test-app run test"
   },
   "devDependencies": {
