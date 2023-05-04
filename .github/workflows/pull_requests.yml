@@ -25,9 +25,19 @@ jobs:
         with:
           version: 6.23.5
           run_install: true
-      - name: ESLint
+      - name: ESLint Addon
         run: pnpm run lint:js
-      - name: Template Lint
+        working-directory: addon
+      - name: Template Lint Addon
         run: pnpm run lint:hbs
+        working-directory: addon
+      - name: ESLint Test App
+        run: pnpm run lint:js
+        working-directory: test-app
+      - name: Template Lint Test App
+        run: pnpm run lint:hbs
+        working-directory: test-app
 
       - run: pnpm run test:ember
+        working-directory: test-app
+

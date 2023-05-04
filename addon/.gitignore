@@ -1,0 +1,33 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/dist/
+/tmp/
+
+# dependencies
+/node_modules/
+
+# misc
+/.env*
+/.sass-cache
+/connect.lock
+/coverage/
+/libpeerconnection.log
+/npm-debug.log*
+/testem.log
+/yarn-error.log
+
+# ember-try
+/.node_modules.ember-try/
+/bower.json.ember-try
+/package.json.ember-try
+
+# .DS_Store
+.DS_Store
+
+# Intellij + plugins
+/.idea
+**/atlassian-ide-plugin.xml
+
+# Gradle
+/.gradle

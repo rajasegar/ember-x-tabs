@@ -2,7 +2,7 @@
 "use strict";
 
 module.exports = {
-  name: require("./package").name,
+  name: require("./package.json").name,
 
   included(app, parentAddon) {
     var target = parentAddon || app;
