@@ -24,7 +24,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
 
     - name: Cache pnpm modules
-      uses: actions/cache@v2
+      uses: actions/cache@v3
       with:
           path: ~/.pnpm-store
           key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
@@ -34,13 +34,21 @@ jobs:
     - uses: pnpm/action-setup@v2.2.1
       with:
         version: 6.23.5
-        run_install: true
-    # - name: Install
-    #   run: npm install
-    - name: ESLint
+    - name: Install
+      run: pnpm install
+      working-directory: .
+    - name: ESLint Addon
       run: pnpm run lint:js
-    - name: Templates
+      working-directory: ./addon
+    - name: ESLint Test App
+      run: pnpm run lint:js
+      working-directory: ./addon
+    - name: Templates Addon
       run: pnpm run lint:hbs
+      working-directory: ./addon
+    - name: Templates Test App
+      run: pnpm run lint:hbs
+      working-directory: ./test-app
 
   # coverage:
   #   name: Coverage
@@ -61,8 +69,9 @@ jobs:
       env:
         COVERALLS_REPO_TOKEN: ${{secrets.COVERALLS_REPO_TOKEN}}
       run: |
-        # npm install
+        pnpm install
         pnpm run test:ember
+        working-directory: ./test-app
     - name: Coveralls action
       uses: coverallsapp/github-action@master
       with:
@@ -85,6 +94,7 @@ jobs:
   #     run: npm install
     - name: Test
       run: pnpm run test:ember
+      working-directory: ./test-app
 
   # build-and-deploy:
   #   runs-on: ubuntu-latest
@@ -100,14 +110,14 @@ jobs:
   #       node-version: 14
     - name: Build
       run: |
-        # npm install
         pnpm run build
+      working-directory: ./docs
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: gh-pages
-        FOLDER: dist
+        FOLDER: ./docs/dist
 
     - name: Release
       env:

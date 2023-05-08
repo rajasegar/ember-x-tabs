@@ -1,0 +1,61 @@
+
+
+/*****************************/
+/* Moving Line */
+/*****************************/
+
+.tabs-style-linemove nav {
+	background: var(--x-tab-bg3, "#fff");
+}
+
+.tabs-style-linemove nav li:last-child::before {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 4px;
+	background: var(--x-tab-active, "#2CC185");
+	content: '';
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+}
+
+/* Move the line */
+.tabs-style-linemove nav li:first-child.tab-current ~ li:last-child::before {
+	-webkit-transform: translate3d(-400%,0,0);
+	transform: translate3d(-400%,0,0);
+}
+
+.tabs-style-linemove nav li:nth-child(2).tab-current ~ li:last-child::before {
+	-webkit-transform: translate3d(-300%,0,0);
+	transform: translate3d(-300%,0,0);
+}
+
+.tabs-style-linemove nav li:nth-child(3).tab-current ~ li:last-child::before {
+	-webkit-transform: translate3d(-200%,0,0);
+	transform: translate3d(-200%,0,0);
+}
+
+.tabs-style-linemove nav li:nth-child(4).tab-current ~ li:last-child::before {
+	-webkit-transform: translate3d(-100%,0,0);
+	transform: translate3d(-100%,0,0);
+}
+
+.tabs-style-linemove nav a {
+	padding: 1em 0;
+	color: var(--x-tab-color2, "#74777b");
+	line-height: 1;
+	-webkit-transition: color 0.3s, -webkit-transform 0.3s; 
+	transition: color 0.3s, transform 0.3s;
+}
+
+.tabs-style-linemove nav li.tab-current a {
+	color: var(--x-tab-active, "#2CC185");
+	-webkit-transform: translate3d(0,8px,0);
+	transform: translate3d(0,8px,0);
+}
+
+.tabs-style-linemove nav a span {
+	font-weight: 700;
+}
+

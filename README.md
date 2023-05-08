@@ -131,6 +131,7 @@ yielded to the dataPane
 ```
 
 ## Tab styles
+See the configuration section for including these styles
 
 You can replace the **tab-style** property of the component to any of the following styles to get 
 a different style variation of your tab component.
@@ -209,25 +210,38 @@ Write your own definition for the classnames
 
 ## Configuring
 
-Add a configuration for ember-x-tabs to include only the themes that you will use.
+By default the styles are not included. To include the styles in your application include the following imports. A good place to add these imports would be in the `app.js`.
 
-```
-ENV['ember-x-tabs'] = {
-  includedThemes: ['bar', 'circle', 'flip'],
-  excludedThemes: ['iconbox'],
-  excludeBaseStyles: false, // defaults to false
-  defaultTheme: 'bar',    // defaults to 'bar'
-};
+The following will include all the themes. If you do not wish to include the `base.ccs` or only the `base.css` remove the appropriate imports.
+```js
+import 'ember-x-tabs/base.css';
+import 'ember-x-tabs/all-themes.js';
 ```
 
-To exclude or not include a theme, means that it's css styles will not be bundled with your application, thus not polluting your app.
+if you want to include only some of the themes, replace the `all-themes.js` with the appropriate imports. For example, if you only want the line and shape themes
 
-    Note: including a blank array e.g. includeThemes: [] will not include any themes, leaving you to define your own theme styles. See the vendor/ember-x-tabs/themes directory for reference.
+```js
+import "ember-x-tabs/themes/line.css";
+import "ember-x-tabs/themes/shape.css";
+```
+The following themes are available under `ember-x-tabs/themes/`
 
-    Note: you may also want to set excludeBaseStyles: true so that this addon doesn't include the styles used by all the themes.
+* bar.css
+* circle.css
+* circlefill.css
+* fillup.css
+* flip.css
+* iconbox.css
+* iconfall.css
+* line.css
+* linebox.css
+* linemove.css
+* linetriangle.css
+* shape.css
+* topline.css
+* tzoidv.css
+* underline.css
 
-
-A big Thanks to Ilya Radchenko for making this configuration possible to have a small memory footprint of css in your app when you are using the addon.
 
 ## Running
 

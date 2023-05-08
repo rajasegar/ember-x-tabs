@@ -1,0 +1,85 @@
+{
+  "name": "ember-x-tabs",
+  "version": "2.0.1",
+  "description": "A mix of various tab component styles with theme customization options.",
+  "keywords": [
+    "ember-addon",
+    "tabs",
+    "component",
+    "tab component",
+    "tab"
+  ],
+  "license": "MIT",
+  "author": "Rajasegar Chandran",
+  "directories": {
+    "test": "tests"
+  },
+  "repository": "https://github.com/rajasegar/ember-x-tabs",
+  "scripts": {
+    "lint": "npm-run-all --aggregate-output --continue-on-error --parallel lint:*",
+    "lint:hbs": "ember-template-lint .",
+    "lint:hbs:fix": "ember-template-lint . --fix",
+    "lint:js": "eslint .",
+    "lint:js:fix": "eslint . --fix",
+    "build": "rollup --config",
+    "prepublishOnly": "rollup --config",
+    "start": "rollup --config --watch",
+    "prepare": "rollup --config"
+  },
+  "exports": {
+    ".": "./dist/index.js",
+    "./*": "./dist/*",
+    "./test-support": "./dist/test-support/index.js",
+    "./addon-main.js": "./addon-main.js",
+    "./base.css": "./vendor/base.css",
+    "./all-themes.js": "./vendor/all-themes.js",
+    "./themes": "./vendor/themes/*"
+  },
+  "files": [
+    "addon-main.js",
+    "index.js",
+    "dist",
+    "vendor/base.css",
+    "vendor/all-themes.js",
+    "vendor/themes"
+  ],
+  "dependencies": {
+    "@embroider/addon-shim": "^1.5.0",
+    "ember-get-config": "^1.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.7",
+    "@babel/eslint-parser": "7.21.3",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/plugin-proposal-decorators": "^7.21.0",
+    "@embroider/addon-dev": "^1.5.0",
+    "@rollup/plugin-babel": "^5.3.1",
+    "ember-template-lint": "4.5.0",
+    "eslint": "8.11.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-ember": "10.5.9",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-prettier": "4.0.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "2.6.0",
+    "rollup": "^2.70.1"
+  },
+  "engines": {
+    "node": "10.* || >= 12"
+  },
+  "ember-addon": {
+    "main": "addon-main.js",
+    "type": "addon",
+    "version": 2,
+    "demoURL": "https://rajasegar.github.io/ember-x-tabs/",
+    "app-js": {
+      "./components/x-tabs-pane-data.js": "./dist/_app_/components/x-tabs-pane-data.js",
+      "./components/x-tabs-pane.js": "./dist/_app_/components/x-tabs-pane.js",
+      "./components/x-tabs-panes.js": "./dist/_app_/components/x-tabs-panes.js",
+      "./components/x-tabs-tab.js": "./dist/_app_/components/x-tabs-tab.js",
+      "./components/x-tabs-tabs.js": "./dist/_app_/components/x-tabs-tabs.js",
+      "./components/x-tabs.js": "./dist/_app_/components/x-tabs.js"
+    },
+    "build": "index.js"
+  }
+}

@@ -1,0 +1,70 @@
+/*****************************/
+/* Circle fill */
+/*****************************/
+
+.tabs-style-circlefill {
+	max-width: 700px;
+	border: 1px solid var(--x-tab-active, "#2CC185");
+}
+
+.tabs-style-circlefill nav ul li {
+	overflow: hidden;
+	border-right: 1px solid var(--x-tab-active, "#2CC185");
+}
+
+.tabs-style-circlefill nav li a {
+	padding: 1.5em 0;
+	color: var(--x-tab-bg3, "#fff");
+	font-size: 1.25em;
+}
+
+.tabs-style-circlefill nav li:first-child {
+	border-left: none;
+}
+
+.tabs-style-circlefill nav li:last-child {
+	border: none;
+}
+
+.tabs-style-circlefill nav li::before {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -40px 0 0 -40px;
+	width: 80px;
+	height: 80px;
+	border: 1px solid var(--x-tab-active, "#2CC185");
+	border-radius: 50%;
+	background: var(--x-tab-active, "#2CC185");
+	content: '';
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+}
+
+.tabs-style-circlefill nav li.tab-current::before {
+	-webkit-transform: scale3d(2.5,2.5,1);
+	transform: scale3d(2.5,2.5,1);
+}
+
+.tabs-style-circlefill nav a {
+	-webkit-transition: color 0.3s; 
+	transition: color 0.3s;
+}
+
+.tabs-style-circlefill nav a span {
+	display: none;
+}
+
+.tabs-style-circlefill nav li.tab-current a {
+	color: var(--x-tab-bg3, "#fff");
+}
+
+.tabs-style-circlefill .icon::before {
+	display: block;
+	margin: 0;
+	pointer-events: none;
+}
+
+.tabs-style-circlefill .content-wrap {
+	border-top: 1px solid var(--x-tab-active, "#2CC185");
+}

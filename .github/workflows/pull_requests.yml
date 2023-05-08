@@ -14,7 +14,7 @@ jobs:
           node-version: 12
 
       - name: Cache pnpm modules
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
             path: ~/.pnpm-store
             key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
@@ -24,10 +24,21 @@ jobs:
       - uses: pnpm/action-setup@v2.2.1
         with:
           version: 6.23.5
-          run_install: true
-      - name: ESLint
+      - name: Install
+        run: pnpm install
+        working-directory: .
+      - name: ESLint Addon
         run: pnpm run lint:js
-      - name: Template Lint
+        working-directory: ./addon
+      - name: Template Lint Addon
         run: pnpm run lint:hbs
-
+        working-directory: ./addon
+      - name: ESLint Test App
+        run: pnpm run lint:js
+        working-directory: ./test-app
+      - name: Template Lint Test App
+        run: pnpm run lint:hbs
+        working-directory: ./test-app
       - run: pnpm run test:ember
+        working-directory: ./test-app
+
