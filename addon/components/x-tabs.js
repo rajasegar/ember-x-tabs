@@ -5,7 +5,7 @@ import { action } from "@ember/object";
 
 export default class XTabsComponent extends Component {
   @tracked
-  activeName;
+  activeName = this.args.activeName;
 
   @tracked
   activeData;

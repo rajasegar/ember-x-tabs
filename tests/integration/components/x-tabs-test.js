@@ -1,6 +1,6 @@
 import { module, test } from "qunit";
 import { setupRenderingTest } from "ember-qunit";
-import { render } from "@ember/test-helpers";
+import { render, settled } from "@ember/test-helpers";
 import hbs from "htmlbars-inline-precompile";
 
 import {
@@ -30,41 +30,45 @@ const page = create({
 module("Integration | Component | x-tabs", function (hooks) {
   setupRenderingTest(hooks);
 
-  const homeTab = 0,
-    archiveTab = 1;
-
   hooks.beforeEach(async function () {
+    this.homeTab = 0;
+    this.homeName = "home";
+    this.archiveTab = 1;
+    this.archiveName = "archive";
+  });
+
+  async function renderTabs() {
     await render(hbs`
-    {{#x-tabs tab-style=tabStyle as | xt | }}
+    <XTabs @activeName={{this.activeTabName}} @tab-style={{tabStyle}} as | xt | >
 
     {{!-- tab content --}}
-      {{#xt.tabs as | tabs |}}
-        {{#tabs.tab name="home"}}
+      <xt.tabs as | tabs |>
+        <tabs.tab @name={{this.homeName}}>
           <i class="icon icon-home"></i>
           <span>Home</span>
-        {{/tabs.tab}}
-        {{#tabs.tab name="archive"}}
+        </tabs.tab>
+        <tabs.tab @name={{this.archiveName}}>
           <i class="icon icon-box"></i>
           <span>Archive</span>
-        {{/tabs.tab}}
-      {{/xt.tabs}}
+        </tabs.tab>
+      </xt.tabs>
 
       {{!-- tab content --}}
-      {{#xt.panes as | panes |}}
-        {{#panes.pane name="home"}}
+      <xt.panes as | panes |>
+        <panes.pane @name={{this.homeName}}>
           <h1>Home</h1>
           <p>This is home content</p>
-        {{/panes.pane}}
-        {{#panes.pane name="archive"}}
+        </panes.pane>
+        <panes.pane @name={{this.archiveName}}>
           <h1>Archive</h1>
           <p>This is archive content</p>
-        {{/panes.pane}}
-      {{/xt.panes}}
+        </panes.pane>
+      </xt.panes>
       <div id="activeName">{{xt.activeName}}</div>
-      <div id="switch" onclick={{action xt.api.selectAction "archive"}}></div>
-    {{/x-tabs}}
+      <div id="switch" {{on "click" (fn xt.api.selectAction this.archiveName)}}></div>
+    </XTabs>
   `);
-  });
+  }
 
   function assertActiveTab(assert, tabIndex) {
     assert.ok(page.tabs.objectAt(tabIndex).isCurrentTab, "tab is active");
@@ -82,30 +86,46 @@ module("Integration | Component | x-tabs", function (hooks) {
     );
   }
 
-  test("it generates tab navigation", function (assert) {
+  test("it generates tab navigation", async function (assert) {
+    await renderTabs();
+
     assert.equal(page.navCount, 1, "has tabs navigation");
     assert.equal(page.tabs.length, 2, "has tabs navigation items");
     assert.equal(
-      page.tabs.objectAt(homeTab).text,
+      page.tabs.objectAt(this.homeTab).text,
       "Home",
       "navigation item shows pane title"
     );
     assert.equal(
-      page.tabs.objectAt(archiveTab).text,
+      page.tabs.objectAt(this.archiveTab).text,
       "Archive",
       "navigation item shows pane title"
     );
   });
 
-  test("first tab is active by default", function (assert) {
-    assertActiveTab(assert, homeTab);
-    assertInActiveTab(assert, archiveTab);
+  test("first tab is active by default", async function (assert) {
+    await renderTabs();
+
+    assertActiveTab(assert, this.homeTab);
+    assertInActiveTab(assert, this.archiveTab);
   });
 
   test("Selecting a tab displays correct pane", async function (assert) {
+    await renderTabs();
     await page.switchClick();
 
-    assertInActiveTab(assert, homeTab);
-    assertActiveTab(assert, archiveTab);
+    assertInActiveTab(assert, this.homeTab);
+    assertActiveTab(assert, this.archiveTab);
+  });
+
+  test("Can set tab via activeName", async function (assert) {
+    this.activeTabName = this.archiveName;
+
+    await renderTabs();
+
+    await settled();
+
+    assertInActiveTab(assert, this.homeTab);
+    assertActiveTab(assert, this.archiveTab);
   });
 });

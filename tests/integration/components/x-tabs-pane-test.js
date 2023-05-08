@@ -18,15 +18,15 @@ module("Integration | Component | x-tabs-pane", function (hooks) {
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.on('myAction', function(val) { ... });
 
-    await render(hbs`{{x-tabs-pane}}`);
+    await render(hbs`<XTabsPane />`);
 
     assert.equal(page.text, "");
 
     // Template block usage:
     await render(hbs`
-      {{#x-tabs-pane}}
+      <XTabsPane>
         template block text
-      {{/x-tabs-pane}}
+      </XTabsPane>
     `);
 
     assert.equal(page.text, "template block text");
