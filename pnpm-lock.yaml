@@ -36,7 +36,7 @@ specifiers:
   ember-try: 1.4.0
   eslint: 8.40.0
   eslint-config-prettier: 8.8.0
-  eslint-plugin-ember: 10.5.9
+  eslint-plugin-ember: 10.6.1
   eslint-plugin-node: 11.1.0
   eslint-plugin-prettier: 4.0.0
   loader.js: 4.7.0
@@ -82,7 +82,7 @@ devDependencies:
   ember-try: 1.4.0
   eslint: 8.40.0
   eslint-config-prettier: 8.8.0_eslint@8.40.0
-  eslint-plugin-ember: 10.5.9_eslint@8.40.0
+  eslint-plugin-ember: 10.6.1_eslint@8.40.0
   eslint-plugin-node: 11.1.0_eslint@8.40.0
   eslint-plugin-prettier: 4.0.0_a1922783143d3d6bfc4f98e506796621
   loader.js: 4.7.0
@@ -6060,8 +6060,8 @@ packages:
       eslint: 8.40.0
     dev: true
 
-  /eslint-plugin-ember/10.5.9_eslint@8.40.0:
-    resolution: {integrity: sha512-kJsdAaKNcfRvZBZ+YZ67pxxUgl+aPLFAnoFJNwTo+BsaptiOCsHUEc4xUKXiInH2BJOC6mg0FQcZKn1a6gwKrA==}
+  /eslint-plugin-ember/10.6.1_eslint@8.40.0:
+    resolution: {integrity: sha512-R+TN3jwhYQ2ytZCA1VkfJDZSGgHFOHjsHU1DrBlRXYRepThe56PpuGxywAyDvQ7inhoAz3e6G6M60PzpvjzmNg==}
     engines: {node: 10.* || 12.* || >= 14}
     peerDependencies:
       eslint: '>= 6'
@@ -8524,7 +8524,7 @@ packages:
     dev: true
 
   /lodash.kebabcase/4.1.1:
-    resolution: {integrity: sha1-hImxyw0p/4gZXM7KRI/21swpXDY=}
+    resolution: {integrity: sha512-N8XRTIMMqqDgSy4VLKPnJ/+hpGZN+PHQiJnSenYqPaVV/NCqEogTnAdZLQiGKhxX+JCs8waWq2t1XHWKOmlY8g==}
     dev: true
 
   /lodash.keys/3.1.2:
