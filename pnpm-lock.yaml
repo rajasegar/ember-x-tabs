@@ -6,8 +6,8 @@ specifiers:
   '@babel/plugin-proposal-decorators': 7.21.0
   '@ember/optional-features': 2.0.0
   '@ember/test-helpers': 2.9.3
-  '@glimmer/component': 1.0.4
-  '@glimmer/tracking': 1.0.4
+  '@glimmer/component': 1.1.2
+  '@glimmer/tracking': 1.1.2
   '@semantic-release/changelog': 6.0.3
   '@semantic-release/git': 10.0.1
   broccoli-asset-rev: 3.0.0
@@ -54,8 +54,8 @@ devDependencies:
   '@babel/plugin-proposal-decorators': 7.21.0
   '@ember/optional-features': 2.0.0
   '@ember/test-helpers': 2.9.3_ember-source@3.16.10
-  '@glimmer/component': 1.0.4
-  '@glimmer/tracking': 1.0.4
+  '@glimmer/component': 1.1.2
+  '@glimmer/tracking': 1.1.2
   '@semantic-release/changelog': 6.0.3_semantic-release@19.0.5
   '@semantic-release/git': 10.0.1_semantic-release@19.0.5
   broccoli-asset-rev: 3.0.0
@@ -1572,8 +1572,8 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
-  /@glimmer/component/1.0.4:
-    resolution: {integrity: sha512-sS4N8wtcKfYdUJ6O3m8nbTut6NjErdz94Ap8VB1ekcg4WSD+7sI7Nmv6kt2rdPoe363nUdjUbRBzHNWhLzraBw==}
+  /@glimmer/component/1.1.2:
+    resolution: {integrity: sha512-XyAsEEa4kWOPy+gIdMjJ8XlzA3qrGH55ZDv6nA16ibalCR17k74BI0CztxuRds+Rm6CtbUVgheCVlcCULuqD7A==}
     engines: {node: 6.* || 8.* || >= 10.*}
     dependencies:
       '@glimmer/di': 0.1.11
@@ -1596,7 +1596,7 @@ packages:
     dev: true
 
   /@glimmer/di/0.1.11:
-    resolution: {integrity: sha1-poeMB6E6LCx2/N5ZilyXY3v8QoA=}
+    resolution: {integrity: sha512-moRwafNDwHTnTHzyyZC9D+mUSvYrs1Ak0tRPjjmCghdoHHIvMshVbEnwKb/1WmW5CUlKc2eL9rlAV32n3GiItg==}
     dev: true
 
   /@glimmer/di/0.2.1:
@@ -1604,7 +1604,7 @@ packages:
     dev: true
 
   /@glimmer/env/0.1.7:
-    resolution: {integrity: sha1-/S0rVakCnGs3psk16MiHGucN+gc=}
+    resolution: {integrity: sha512-JKF/a9I9jw6fGoz8kA7LEQslrwJ5jms5CXhu/aqkBWk+PmZ6pTl8mlb/eJ/5ujBGTiQzBhy5AIWF712iA+4/mw==}
     dev: true
 
   /@glimmer/global-context/0.65.4:
@@ -1659,8 +1659,8 @@ packages:
       simple-html-tokenizer: 0.5.11
     dev: true
 
-  /@glimmer/tracking/1.0.4:
-    resolution: {integrity: sha512-F+oT8I55ba2puSGIzInmVrv/8QA2PcK1VD+GWgFMhF6WC97D+uZX7BFg+a3s/2N4FVBq5KHE+QxZzgazM151Yw==}
+  /@glimmer/tracking/1.1.2:
+    resolution: {integrity: sha512-cyV32zsHh+CnftuRX84ALZpd2rpbDrhLhJnTXn9W//QpqdRZ5rdMsxSY9fOsj0CKEc706tmEU299oNnDc0d7tA==}
     dependencies:
       '@glimmer/env': 0.1.7
       '@glimmer/validator': 0.44.0
@@ -3733,7 +3733,7 @@ packages:
       mkdirp: 0.5.5
 
   /broccoli-merge-trees/1.2.4:
-    resolution: {integrity: sha1-oAFRm7UGfwZYnZGvopQkRaLQ/bU=}
+    resolution: {integrity: sha512-RXJAleytlED0dxXGEo2EXwrg5cCesY8LQzzGRogwGQmluoz+ijzxajpyWAW6wu/AyuQZj1vgnIqnld8jvuuXtQ==}
     dependencies:
       broccoli-plugin: 1.3.1
       can-symlink: 1.0.0
@@ -4125,7 +4125,7 @@ packages:
     dev: true
 
   /can-symlink/1.0.0:
-    resolution: {integrity: sha1-l7YH2KhLtsbiKLkC2GTstZS50hk=}
+    resolution: {integrity: sha512-RbsNrFyhwkx+6psk/0fK/Q9orOUr9VMxohGd8vTa4djf4TGLfblBgUfqZChrZuW0Q+mz2eBPFLusw9Jfukzmhg==}
     hasBin: true
     dependencies:
       tmp: 0.0.28
@@ -5195,7 +5195,7 @@ packages:
     dev: true
 
   /ember-cli-get-component-path-option/1.0.0:
-    resolution: {integrity: sha1-DXtZVVni+QUKvtgE8djv8bCLx3E=}
+    resolution: {integrity: sha512-k47TDwcJ2zPideBCZE8sCiShSxQSpebY2BHcX2DdipMmBox5gsfyVrbKJWIHeSTTKyEUgmBIvQkqTOozEziCZA==}
     dev: true
 
   /ember-cli-github-pages/0.2.2:
@@ -5278,7 +5278,7 @@ packages:
     dev: true
 
   /ember-cli-is-package-missing/1.0.0:
-    resolution: {integrity: sha1-bmGEyvuSY13ZPKbJRrEEKS1OM5A=}
+    resolution: {integrity: sha512-9hEoZj6Au5onlSDdcoBqYEPT8ehlYntZPxH8pBKV0GO7LNel88otSAQsCfXvbi2eKE+MaSeLG/gNaCI5UdWm9g==}
     dev: true
 
   /ember-cli-lodash-subset/2.0.1:
@@ -5301,7 +5301,7 @@ packages:
     dev: true
 
   /ember-cli-normalize-entity-name/1.0.0:
-    resolution: {integrity: sha1-CxT3vLxZmqEXtf3cgeT9A8S61bc=}
+    resolution: {integrity: sha512-rF4P1rW2P1gVX1ynZYPmuIf7TnAFDiJmIUFI1Xz16VYykUAyiOCme0Y22LeZq8rTzwBMiwBwoE3RO4GYWehXZA==}
     dependencies:
       silent-error: 1.1.1
     transitivePeerDependencies:
@@ -5326,7 +5326,7 @@ packages:
     dev: true
 
   /ember-cli-path-utils/1.0.0:
-    resolution: {integrity: sha1-Tjmvi1UwHN3FAXc5t3qAT7ogce0=}
+    resolution: {integrity: sha512-Qq0vvquzf4cFHoDZavzkOy3Izc893r/5spspWgyzLCPTaG78fM3HsrjZm7UWEltbXUqwHHYrqZd/R0jS08NqSA==}
     dev: true
 
   /ember-cli-preprocess-registry/3.3.0:
@@ -5369,7 +5369,7 @@ packages:
     dev: true
 
   /ember-cli-string-utils/1.1.0:
-    resolution: {integrity: sha1-ObZ3/CgF9VFzc1N2/O8njqpEUqE=}
+    resolution: {integrity: sha512-PlJt4fUDyBrC/0X+4cOpaGCiMawaaB//qD85AXmDRikxhxVzfVdpuoec02HSiTGTTB85qCIzWBIh8lDOiMyyFg==}
     dev: true
 
   /ember-cli-template-lint/1.0.0-beta.3:
@@ -6982,7 +6982,7 @@ packages:
     dev: true
 
   /get-stream/3.0.0:
-    resolution: {integrity: sha1-jpQ9E1jcN1VQVOy+LtsFqhdO3hQ=}
+    resolution: {integrity: sha512-GlhdIUuVakc8SJ6kK0zAFbiGzRFzNnY4jUuEbV9UROo4Y+0Ny4fjvcZFVTeDA4odpFyOQzaw6hXukJSq/f28sQ==}
     engines: {node: '>=4'}
     dev: true
 
@@ -7968,7 +7968,7 @@ packages:
     resolution: {integrity: sha512-IU0NmyknYZN0rChcKhRO1X8LYz5Isj/Fsqh8NJOSf+N/hCOTwy29F32Ik7a+QszE63IdvmwdTPDd6cZ5pg4cwA==}
 
   /is-stream/1.1.0:
-    resolution: {integrity: sha1-EtSj3U5o4Lec6428hBc66A2RykQ=}
+    resolution: {integrity: sha512-uQPm8kcs47jx38atAcWTVxyltQYoPT68y9aWYdV6yWXSyW8mzSat0TL6CiWdZeCdF3KrAvpVtnHbTv4RN+rqdQ==}
     engines: {node: '>=0.10.0'}
     dev: true
 
@@ -8960,7 +8960,7 @@ packages:
     dev: true
 
   /mktemp/0.4.0:
-    resolution: {integrity: sha1-bQUVYRyKjITkhKogABKbmOmB/ws=}
+    resolution: {integrity: sha512-IXnMcJ6ZyTuhRmJSjzvHSRhlVPiN9Jwc6e59V0bEJ0ba6OBeX2L0E+mRN1QseeOF4mM+F1Rit6Nh7o+rl2Yn/A==}
     engines: {node: '>0.9'}
 
   /modify-values/1.0.1:
@@ -9185,7 +9185,7 @@ packages:
     dev: true
 
   /npm-run-path/2.0.2:
-    resolution: {integrity: sha1-NakjLfo11wZ7TLLd8jV7GHFTbF8=}
+    resolution: {integrity: sha512-lJxZYlT4DW/bRUtFh1MQIWqmLwQfAxnqWG4HhEdjMlkrJYnJn0Jrr2u3mgxqaWsdiBc76TYkTG/mhrnYTuzfHw==}
     engines: {node: '>=4'}
     dependencies:
       path-key: 2.0.1
@@ -9515,7 +9515,7 @@ packages:
     dev: true
 
   /os-tmpdir/1.0.2:
-    resolution: {integrity: sha1-u+Z0BseaqFxc/sdm/lc0VV36EnQ=}
+    resolution: {integrity: sha512-D2FR03Vir7FIu45XBY20mTb+/ZSWB00sjU9jdQXt83gDrI4Ztz5Fs7/yy74g2N5SVQY4xY1qDr4rNddwYRVX0g==}
     engines: {node: '>=0.10.0'}
 
   /osenv/0.1.5:
@@ -9548,7 +9548,7 @@ packages:
     dev: true
 
   /p-finally/1.0.0:
-    resolution: {integrity: sha1-P7z7FbiZpEEjs0ttzBi3JDNqLK4=}
+    resolution: {integrity: sha512-LICb2p9CB7FS+0eR1oqWnHhp0FljGLZCWBE9aix0Uye9W8LTQPwMTYVGWQWIw9RdQiDg4+epXQODwIYJtSJaow==}
     engines: {node: '>=4'}
     dev: true
 
@@ -9742,11 +9742,11 @@ packages:
     resolution: {integrity: sha1-BrJhE/Vr6rBCVFojv6iAA8ysJg8=}
 
   /path-root-regex/0.1.2:
-    resolution: {integrity: sha1-v8zcjfWxLcUsi0PsONGNcsBLqW0=}
+    resolution: {integrity: sha512-4GlJ6rZDhQZFE0DPVKh0e9jmZ5egZfxTkp7bcRDuPlJXbAwhxcl2dINPUAsjLdejqaLsCeg8axcLjIbvBjN4pQ==}
     engines: {node: '>=0.10.0'}
 
   /path-root/0.1.1:
-    resolution: {integrity: sha1-mkpoFMrBwM1zNgqV8yCDyOpHRbc=}
+    resolution: {integrity: sha512-QLcPegTHF11axjfojBIoDygmS2E3Lf+8+jI6wOVmNVenrKSo3mFdSGiIgdSHenczw3wPtlVMQaFVwGmM7BJdtg==}
     engines: {node: '>=0.10.0'}
     dependencies:
       path-root-regex: 0.1.2
@@ -9887,7 +9887,7 @@ packages:
     dev: true
 
   /promise-map-series/0.2.3:
-    resolution: {integrity: sha1-wtN3r8kyU/a9A9u3d1XriKsgqEc=}
+    resolution: {integrity: sha512-wx9Chrutvqu1N/NHzTayZjE1BgIwt6SJykQoCOic4IZ9yUDjKyVYrpLa/4YCNsV61eRENfs29hrEquVuB13Zlw==}
     dependencies:
       rsvp: 3.6.2
 
@@ -9970,7 +9970,7 @@ packages:
     dev: true
 
   /quick-temp/0.1.8:
-    resolution: {integrity: sha1-urAqJCq4+w3XWKPJd2sy+aXZRAg=}
+    resolution: {integrity: sha512-YsmIFfD9j2zaFwJkzI6eMG7y0lQP7YeWzgtFgNl38pGWZBSXJooZbOWwkcRot7Vt0Fg9L23pX0tqWU3VvLDsiA==}
     dependencies:
       mktemp: 0.4.0
       rimraf: 2.7.1
@@ -10957,7 +10957,7 @@ packages:
     dev: true
 
   /sprintf-js/1.0.3:
-    resolution: {integrity: sha1-BOaSb2YolTVPPdAVIDYzuFcpfiw=}
+    resolution: {integrity: sha512-D9cPgkvLlV3t3IzL0D0YLvGA9Ahk4PcvVwUbN0dSGr1aP0Nrt4AEnTUbuGvquEC0mA64Gqt1fzirlRs5ibXx8g==}
     dev: true
 
   /sprintf-js/1.1.2:
@@ -11428,7 +11428,7 @@ packages:
     dev: true
 
   /tmp/0.0.28:
-    resolution: {integrity: sha1-Fyc1t/YU6nrzlmT6hM8N5OUV0SA=}
+    resolution: {integrity: sha512-c2mmfiBmND6SOVxzogm1oda0OJ1HZVIk/5n26N59dDTh80MUeavpiCls4PGAdkX1PFkKokLpcf7prSjCeXLsJg==}
     engines: {node: '>=0.4.0'}
     dependencies:
       os-tmpdir: 1.0.2
