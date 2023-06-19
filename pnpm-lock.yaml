@@ -27,7 +27,7 @@ specifiers:
   ember-disable-prototype-extensions: 1.1.3
   ember-export-application-global: 2.0.1
   ember-load-initializers: 2.1.2
-  ember-maybe-import-regenerator: 0.1.6
+  ember-maybe-import-regenerator: 1.0.0
   ember-qunit: 4.6.0
   ember-resolver: 5.3.0
   ember-source: 3.16.10
@@ -73,7 +73,7 @@ devDependencies:
   ember-disable-prototype-extensions: 1.1.3
   ember-export-application-global: 2.0.1
   ember-load-initializers: 2.1.2
-  ember-maybe-import-regenerator: 0.1.6
+  ember-maybe-import-regenerator: 1.0.0
   ember-qunit: 4.6.0
   ember-resolver: 5.3.0
   ember-source: 3.16.10
@@ -2424,7 +2424,7 @@ packages:
     dev: true
 
   /array-equal/1.0.0:
-    resolution: {integrity: sha1-jCpe8kcv2ep0KwTHenUJO6J1fJM=}
+    resolution: {integrity: sha512-H3LU5RLiSsGXPhN+Nipar0iR0IofH+8r89G2y1tBKxQ/agagKyAjhkAFDRBfodP2caPrNKHpAWNIM/c9yeL7uA==}
 
   /array-flatten/1.1.1:
     resolution: {integrity: sha1-ml9pkFGx5wczKPKgCJaLZOopVdI=}
@@ -3337,7 +3337,7 @@ packages:
     dev: true
 
   /blank-object/1.0.2:
-    resolution: {integrity: sha1-+ZB5P76ajI3QE/syGUIL7IHV9Lk=}
+    resolution: {integrity: sha512-kXQ19Xhoghiyw66CUiGypnuRpWlbHAzY/+NyvqTEdTfhfQGH1/dbEMYiXju7fYKIFePpzp/y9dsu5Cu/PkmawQ==}
 
   /bluebird/3.7.2:
     resolution: {integrity: sha512-XpNj6GDQzdfW+r2Wnn7xiSAd7TM3jzkxGXBGTtWKuSXv1xUV+azxAm8jdWZN06QTQk+2N2XB9jRDkvbmQmcRtg==}
@@ -5692,16 +5692,15 @@ packages:
       - supports-color
     dev: true
 
-  /ember-maybe-import-regenerator/0.1.6:
-    resolution: {integrity: sha1-NdQYKK+m1qWbwNo85H80xXPXdso=}
-    engines: {node: '>= 0.10.0'}
+  /ember-maybe-import-regenerator/1.0.0:
+    resolution: {integrity: sha512-wtjgjEV0Hk4fgiAwFjOfPrGWfmFrbRW3zgNZO4oA3H5FlbMssMvWuR8blQ3QSWYHODVK9r+ThsRAs8lG4kbxqA==}
+    engines: {node: '>= 12.*'}
     dependencies:
-      broccoli-funnel: 1.2.0
-      broccoli-merge-trees: 1.2.4
-      ember-cli-babel: 6.18.0
-      regenerator-runtime: 0.9.6
+      broccoli-funnel: 2.0.2
+      broccoli-merge-trees: 3.0.2
+      ember-cli-babel: 7.26.11
+      regenerator-runtime: 0.13.7
     transitivePeerDependencies:
-      - '@babel/core'
       - supports-color
     dev: true
 
@@ -6512,7 +6511,7 @@ packages:
     dev: true
 
   /fast-ordered-set/1.0.3:
-    resolution: {integrity: sha1-P7s2Y097555PftvbSjV97iXRhOs=}
+    resolution: {integrity: sha512-MxBW4URybFszOx1YlACEoK52P6lE3xiFcPaGCUZ7QQOZ6uJXKo++Se8wa31SjcZ+NC/fdAWX7UtKEfaGgHS2Vg==}
     dependencies:
       blank-object: 1.0.2
 
@@ -9393,7 +9392,7 @@ packages:
     dev: true
 
   /object-assign/4.1.1:
-    resolution: {integrity: sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=}
+    resolution: {integrity: sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg==}
     engines: {node: '>=0.10.0'}
 
   /object-copy/0.1.0:
@@ -9739,7 +9738,7 @@ packages:
     resolution: {integrity: sha512-GSmOT2EbHrINBf9SR7CDELwlJ8AENk3Qn7OikK4nFYAu3Ote2+JYNVvkpAEQm3/TLNEJFD/xZJjzyxg3KBWOzw==}
 
   /path-posix/1.0.0:
-    resolution: {integrity: sha1-BrJhE/Vr6rBCVFojv6iAA8ysJg8=}
+    resolution: {integrity: sha512-1gJ0WpNIiYcQydgg3Ed8KzvIqTsDpNwq+cjBCssvBtuTWjEqY1AW+i+OepiEMqDCzyro9B2sLAe4RBPajMYFiA==}
 
   /path-root-regex/0.1.2:
     resolution: {integrity: sha512-4GlJ6rZDhQZFE0DPVKh0e9jmZ5egZfxTkp7bcRDuPlJXbAwhxcl2dINPUAsjLdejqaLsCeg8axcLjIbvBjN4pQ==}
@@ -10129,7 +10128,7 @@ packages:
     resolution: {integrity: sha512-zrceR/XhGYU/d/opr2EKO7aRHUeiBI8qjtfHqADTwZd6Szfy16la6kqD0MIUs5z5hx6AaKa+PixpPrR289+I0A==}
 
   /regenerator-runtime/0.10.5:
-    resolution: {integrity: sha1-M2w+/BIgrc7dosn6tntaeVWjNlg=}
+    resolution: {integrity: sha512-02YopEIhAgiBHWeoTiA8aitHDt8z6w+rQqNuIftlM+ZtvSl/brTouaU7DW6GO/cHtvxJvS4Hwv2ibKdxIRi24w==}
     dev: true
 
   /regenerator-runtime/0.11.1:
@@ -10138,10 +10137,6 @@ packages:
 
   /regenerator-runtime/0.13.7:
     resolution: {integrity: sha512-a54FxoJDIr27pgf7IgeQGxmqUNYrcV338lf/6gH456HZ/PhX+5BcwHXG9ajESmwe6WRO0tAzRUrRmNONWgkrew==}
-
-  /regenerator-runtime/0.9.6:
-    resolution: {integrity: sha1-0z65XQ0gAaS+OWWXB8UbDLcc4Ck=}
-    dev: true
 
   /regenerator-transform/0.10.1:
     resolution: {integrity: sha512-PJepbvDbuK1xgIgnau7Y90cwaAmO/LCLMI2mPvaXq2heGMR3aWW5/BQvYrhJ8jgmQjXewXvBjzfqKcVOmhjZ6Q==}
